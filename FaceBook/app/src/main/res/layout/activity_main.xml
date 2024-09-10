@@ -27,7 +27,7 @@
         android:id="@+id/contentFragment"
         android:name="vn.edu.usth.facebook.Content"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="680dp"
         android:layout_weight="0"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="1dp"/>
