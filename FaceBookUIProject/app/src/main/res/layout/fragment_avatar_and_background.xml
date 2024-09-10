@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".profile.AvatarAndBackgroundFragment">
+    <!--Background section-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+        <!--Background image-->
+        <!--TODO: implement as Button-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_background_img"/>
+        <!--Background options-->
+        <!--TODO: implement as Button-->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/profile_camera_img"
+            android:background="@drawable/profile_camera_bg"
+            android:padding="11dp"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+    <!--Avatar section-->
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp">
+        <!--Avatar image-->
+        <!--TODO: implement as Button-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile_avatar_img"
+            app:civ_border_width="7dp"
+            app:civ_border_color="@color/white"/>
+        <!--Avatar option-->
+        <!--TODO: implement as Button-->
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/profile_camera_img"
+            android:background="@drawable/profile_camera_bg"
+            android:padding="11dp"
+            android:layout_margin="15dp"/>
+    </RelativeLayout>
+</FrameLayout>
