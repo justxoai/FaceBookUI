@@ -11,7 +11,7 @@
 
     <!--activity_profile-->
     <color name="profileButtonBackground">#dfe4e7</color>
-    <color name="profileEditButton">#0766fe</color>
+    <color name="profileMainColor">#0766fe</color>
     <!-- <color name="what">#06549e</color> -->
     <color name="profileTabIndicator">#e9f4fc</color>
 </resources>

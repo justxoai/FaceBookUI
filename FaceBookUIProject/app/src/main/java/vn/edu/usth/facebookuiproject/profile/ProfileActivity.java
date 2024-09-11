@@ -3,7 +3,6 @@ package vn.edu.usth.facebookuiproject.profile;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +15,8 @@ import androidx.fragment.app.FragmentTransaction;
 import vn.edu.usth.facebookuiproject.R;
 import vn.edu.usth.facebookuiproject.profile.fragment.ProfileAvatarAndBackgroundFragment;
 import vn.edu.usth.facebookuiproject.profile.fragment.ProfileBioFragment;
+import vn.edu.usth.facebookuiproject.profile.fragment.ProfileEditFragment;
+import vn.edu.usth.facebookuiproject.profile.fragment.subs.ProfileSubsFragment;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -25,9 +26,11 @@ public class ProfileActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile);
 
-        LinearLayout linearLayout = findViewById(R.id.profile_fragment_container);
+        LinearLayout linearLayout = findViewById(R.id.profile_container);
         addFragmentToLinearLayout(linearLayout, new ProfileAvatarAndBackgroundFragment());
         addFragmentToLinearLayout(linearLayout, new ProfileBioFragment());
+        addFragmentToLinearLayout(linearLayout, new ProfileEditFragment());
+        addFragmentToLinearLayout(linearLayout, new ProfileSubsFragment());
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.profile), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
