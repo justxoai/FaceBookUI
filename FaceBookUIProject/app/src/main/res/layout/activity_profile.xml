@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ProfileActivity">
+    <LinearLayout
+        android:id="@+id/profile_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="TEST"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="300sp"/>&ndash;&gt;-->
+<!--        <androidx.fragment.app.FragmentContainerView-->
+<!--            android:id="@+id/fragment_profile_avatar_and_background"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:name="vn.edu.usth.facebookuiproject.profile.fragment.ProfileAvatarAndBackgroundFragment"-->
+<!--            tools:layout="@layout/fragment_profile_avatar_and_background"/>-->
+    </LinearLayout>
+</ScrollView>

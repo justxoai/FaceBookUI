@@ -47,4 +47,6 @@ dependencies {
 
     // Thư viện Fragment
     implementation("androidx.fragment:fragment-ktx:1.6.0")
+    // as the name suggests
+    implementation(libs.circleimageview)
 }
