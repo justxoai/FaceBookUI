@@ -24,7 +24,7 @@
         android:layout_weight="0" />
 
     <fragment
-        android:id="@+id/contentFragment"
+        android:id="@+id/content"
         android:name="vn.edu.usth.facebook.Content"
         android:layout_width="match_parent"
         android:layout_height="680dp"
@@ -33,7 +33,7 @@
         android:layout_marginBottom="1dp"/>
 
     <fragment
-        android:id="@+id/footerFragment"
+        android:id="@+id/footer"
         android:name="vn.edu.usth.facebook.Footer"
         android:layout_width="match_parent"
         android:layout_height="50dp"
