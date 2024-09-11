@@ -10,8 +10,10 @@
     <color name="colorAccentLight">#ffffff</color>
 
     <!--activity_profile-->
+    <color name="facebookButtonMainColor">#0766fe</color>
+    <color name="facebookButtonSubColor">#dfe4e7</color>
+    <color name="facebookTextColor">#3067be</color>
+    <color name="facebookBackgroundColor">#cecdd5</color>
     <color name="profileButtonBackground">#dfe4e7</color>
-    <color name="profileMainColor">#0766fe</color>
-    <!-- <color name="what">#06549e</color> -->
     <color name="profileTabIndicator">#e9f4fc</color>
 </resources>

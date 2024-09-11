@@ -10,6 +10,8 @@ import vn.edu.usth.facebookuiproject.profile.subs.posts.ProfileSubsPostsFragment
 import vn.edu.usth.facebookuiproject.profile.subs.reels.ProfileSubsReelsFragment;
 
 public class ProfileSubsAdapter extends FragmentStateAdapter {
+    private final int PAGE_COUNT = 3;
+    private final String[] titles = new String[] {"Posts", "Photos", "Reels"};
 
     public ProfileSubsAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
@@ -19,17 +21,19 @@ public class ProfileSubsAdapter extends FragmentStateAdapter {
     @Override
     public Fragment createFragment(int position) {
         switch (position) {
-            case 1:
-                return new ProfileSubsPhotosFragment();
-            case 2:
-                return new ProfileSubsReelsFragment();
-            default:
-                return new ProfileSubsPostsFragment();
+            case 0: return new ProfileSubsPostsFragment();
+            case 1: return new ProfileSubsPhotosFragment();
+            case 2: return new ProfileSubsReelsFragment();
+            default:return new Fragment();
         }
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        return PAGE_COUNT;
+    }
+
+    public CharSequence getPageTitle(int position) {
+        return titles[position];
     }
 }

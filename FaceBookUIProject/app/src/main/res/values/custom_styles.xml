@@ -3,4 +3,9 @@
     <style name="RoundedSquare">
         <item name="cornerSize">40%</item>
     </style>
+    <style name="ProfileSubsTabIndicatorColor">
+        <item name="tabIndicator">@drawable/profile_subs_tab_indicator_shape</item>
+        <item name="tabIndicatorColor">@android:color/transparent</item>
+        <item name="android:background">?attr/colorSurface</item>
+    </style>
 </resources>

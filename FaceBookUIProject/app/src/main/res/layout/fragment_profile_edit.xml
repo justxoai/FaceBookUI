@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="35dp"
+            android:paddingStart="30dp"
             android:layout_centerInParent="true"
             android:text="@string/profile_edit"
             android:textSize="17sp"/>

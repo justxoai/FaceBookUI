@@ -72,17 +72,18 @@ public class ProfileSubsFragment extends Fragment {
         tabLayout = view.findViewById(R.id.profile_subs_selection);
         viewPager2 = view.findViewById(R.id.profile_subs_viewer);
 
-        tabLayout.addTab(tabLayout.newTab().setText("Posts"));
-        tabLayout.addTab(tabLayout.newTab().setText("Photos"));
-        tabLayout.addTab(tabLayout.newTab().setText("Reels"));
+        tabLayout.addTab(tabLayout.newTab().setText("     Posts     "));
+        tabLayout.addTab(tabLayout.newTab().setText("     Photos     "));
+        tabLayout.addTab(tabLayout.newTab().setText("     Reels     "));
 
         profileSubsAdapter = new ProfileSubsAdapter(requireActivity());
+        viewPager2.setOffscreenPageLimit(3);
         viewPager2.setAdapter(profileSubsAdapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition());
+                viewPager2.setCurrentItem(tab.getPosition(), false);
             }
 
             @Override
