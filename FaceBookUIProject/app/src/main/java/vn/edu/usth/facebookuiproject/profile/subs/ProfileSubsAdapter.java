@@ -1,9 +1,13 @@
-package vn.edu.usth.facebookuiproject.profile.fragment.subs;
+package vn.edu.usth.facebookuiproject.profile.subs;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import vn.edu.usth.facebookuiproject.profile.subs.photos.ProfileSubsPhotosFragment;
+import vn.edu.usth.facebookuiproject.profile.subs.posts.ProfileSubsPostsFragment;
+import vn.edu.usth.facebookuiproject.profile.subs.reels.ProfileSubsReelsFragment;
 
 public class ProfileSubsAdapter extends FragmentStateAdapter {
 

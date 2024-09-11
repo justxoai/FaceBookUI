@@ -13,10 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import vn.edu.usth.facebookuiproject.R;
-import vn.edu.usth.facebookuiproject.profile.fragment.ProfileAvatarAndBackgroundFragment;
-import vn.edu.usth.facebookuiproject.profile.fragment.ProfileBioFragment;
-import vn.edu.usth.facebookuiproject.profile.fragment.ProfileEditFragment;
-import vn.edu.usth.facebookuiproject.profile.fragment.subs.ProfileSubsFragment;
+import vn.edu.usth.facebookuiproject.profile.subs.ProfileSubsFragment;
 
 public class ProfileActivity extends AppCompatActivity {
 

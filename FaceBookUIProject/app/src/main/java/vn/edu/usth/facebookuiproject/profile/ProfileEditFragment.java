@@ -1,4 +1,4 @@
-package vn.edu.usth.facebookuiproject.profile.fragment;
+package vn.edu.usth.facebookuiproject.profile;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import vn.edu.usth.facebookuiproject.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ProfileAvatarAndBackgroundFragment#newInstance} factory method to
+ * Use the {@link ProfileEditFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileAvatarAndBackgroundFragment extends Fragment {
+public class ProfileEditFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class ProfileAvatarAndBackgroundFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ProfileAvatarAndBackgroundFragment() {
+    public ProfileEditFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class ProfileAvatarAndBackgroundFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileAvatarAndBackgroundFragment.
+     * @return A new instance of fragment ProfileEditFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ProfileAvatarAndBackgroundFragment newInstance(String param1, String param2) {
-        ProfileAvatarAndBackgroundFragment fragment = new ProfileAvatarAndBackgroundFragment();
+    public static ProfileEditFragment newInstance(String param1, String param2) {
+        ProfileEditFragment fragment = new ProfileEditFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class ProfileAvatarAndBackgroundFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_avatar_and_background, container, false);
+        return inflater.inflate(R.layout.fragment_profile_edit, container, false);
     }
 }

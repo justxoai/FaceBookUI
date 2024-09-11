@@ -1,19 +1,15 @@
-package vn.edu.usth.facebookuiproject.profile.fragment.subs;
+package vn.edu.usth.facebookuiproject.profile.subs;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import com.google.android.material.tabs.TabLayout;
-
-import java.util.Objects;
 
 import vn.edu.usth.facebookuiproject.R;
 

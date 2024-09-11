@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".profile.fragment.ProfileAvatarAndBackgroundFragment">
+    tools:context=".profile.ProfileAvatarAndBackgroundFragment">
     <!--Background section-->
     <RelativeLayout
         android:layout_width="match_parent"

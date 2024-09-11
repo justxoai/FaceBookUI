@@ -1,4 +1,4 @@
-package vn.edu.usth.facebookuiproject.profile.fragment.subs;
+package vn.edu.usth.facebookuiproject.profile;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import vn.edu.usth.facebookuiproject.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ProfileSubsPhotosFragment#newInstance} factory method to
+ * Use the {@link ProfileBioFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ProfileSubsPhotosFragment extends Fragment {
+public class ProfileBioFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class ProfileSubsPhotosFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ProfileSubsPhotosFragment() {
+    public ProfileBioFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class ProfileSubsPhotosFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ProfileSubsPhotosFragment.
+     * @return A new instance of fragment ProfileBioFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ProfileSubsPhotosFragment newInstance(String param1, String param2) {
-        ProfileSubsPhotosFragment fragment = new ProfileSubsPhotosFragment();
+    public static ProfileBioFragment newInstance(String param1, String param2) {
+        ProfileBioFragment fragment = new ProfileBioFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class ProfileSubsPhotosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile_subs_photos, container, false);
+        return inflater.inflate(R.layout.fragment_profile_bio, container, false);
     }
 }

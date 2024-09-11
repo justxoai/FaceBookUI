@@ -6,7 +6,7 @@
     android:paddingHorizontal="20dp"
     android:layout_marginVertical="10dp"
     android:orientation="vertical"
-    tools:context=".profile.fragment.ProfileBioFragment">
+    tools:context=".profile.ProfileBioFragment">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

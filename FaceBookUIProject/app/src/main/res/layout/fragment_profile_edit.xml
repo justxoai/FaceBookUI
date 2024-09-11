@@ -6,7 +6,7 @@
     android:baselineAligned="false"
     android:orientation="horizontal"
     android:paddingHorizontal="10dp"
-    tools:context=".profile.fragment.ProfileEditFragment">
+    tools:context=".profile.ProfileEditFragment">
 
     <!--TODO: implement as Button-->
     <!--TODO: convert icon to white-->
