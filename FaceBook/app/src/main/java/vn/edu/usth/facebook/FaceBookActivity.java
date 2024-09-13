@@ -1,12 +1,25 @@
 package vn.edu.usth.facebook;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.view.MenuItem;
 
-import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.Lifecycle;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class FaceBookActivity extends AppCompatActivity {
+
+    private ViewPager2 mviewPager;
+
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,44 +27,79 @@ public class FaceBookActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_face_book);
 
-//        HeaderFragment headerFragment = new HeaderFragment();
-//        getSupportFragmentManager().beginTransaction().add(R.id.main, headerFragment).commit();
-//
-//        StatusFragment statusFragment = new StatusFragment();
-//        getSupportFragmentManager().beginTransaction().add(R.id.main, statusFragment).commit();
+        mviewPager = findViewById(R.id.view_pager);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
+        Fragment_Changing adapter = new Fragment_Changing(getSupportFragmentManager(), getLifecycle());
+        mviewPager.setAdapter(adapter);
 
+        mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
 
-        Log.i("FaceBook", "FaceBook Open");
-    }
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            }
 
-    @Override
-    public void onStart(){
-        super.onStart();
-        Log.i("FaceBook", "FaceBook Start");
-    }
+            @Override
+            public void onPageSelected(int position) {
+                switch (position)
+                {
+                    case 0:
+                        bottomNavigationView.getMenu().findItem(R.id.home_page).setChecked(true);
+                        break;
+                    case 1:
+                        bottomNavigationView.getMenu().findItem(R.id.video_page).setChecked(true);
+                        break;
+                    case 2:
+                        bottomNavigationView.getMenu().findItem(R.id.profile_page).setChecked(true);
+                        break;
+                    case 3:
+                        bottomNavigationView.getMenu().findItem(R.id.notification_page).setChecked(true);
+                        break;
+                    case 4:
+                        bottomNavigationView.getMenu().findItem(R.id.menu_page).setChecked(true);
+                        break;
+                }
+            }
 
-    @Override
-    public void onResume(){
-        super.onResume();
-        Log.i("FaceBook", "FaceBook Resume");
-    }
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                super.onPageScrollStateChanged(state);
+            }
+        });
 
-    @Override
-    public void onPause(){
-        super.onPause();
-        Log.i("FaceBook", "FaceBook Pause");
-    }
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.home_page) {
+                    mviewPager.setCurrentItem(0, true); // Switch to the first fragment
+                    return true;
+                }
+                if (item.getItemId() == R.id.video_page) {
+                    mviewPager.setCurrentItem(1, true); // Switch to the first fragment
+                    return true;
+                }
+                if (item.getItemId() == R.id.profile_page) {
+                    mviewPager.setCurrentItem(2, true); // Switch to the first fragment
+                    return true;
+                }
+                if (item.getItemId() == R.id.notification_page) {
+                    mviewPager.setCurrentItem(3, true); // Switch to the first fragment
+                    return true;
+                }
+                if (item.getItemId() == R.id.menu_page) {
+                    mviewPager.setCurrentItem(4, true); // Switch to the first fragment
+                    return true;
+                }
 
-    @Override
-    public void onStop(){
-        super.onStop();
-        Log.i("FaceBook", "FaceBook Stop");
-    }
+                return false;
+            }
+        });
 
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        Log.i("FaceBook", "FaceBook Destroy");
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 }

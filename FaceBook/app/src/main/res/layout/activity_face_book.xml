@@ -1,50 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FaceBookActivity"
-    android:orientation="vertical"
-    android:background="#ccc">
+    android:background="@color/grey">
 
-    <fragment
-        android:id="@+id/headerFragment"
-        android:name="vn.edu.usth.facebook.HeaderFragment"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_weight="0"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        />
 
-    <fragment
-        android:id="@+id/statusFragment"
-        android:name="vn.edu.usth.facebook.StatusFragment"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_weight="0"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        app:itemIconTint="@color/color_navigation"
+        app:itemTextColor="@color/color_navigation"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/menu_navigation" />
 
-    <fragment
-        android:id="@+id/storyFragment"
-        android:name="vn.edu.usth.facebook.StoryFragment"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        android:layout_weight="0"/>
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="515dp"
-        android:name="vn.edu.usth.facebook.ContentFragment"
-        android:id="@+id/contentFragment"
-        android:layout_marginBottom="0.5dp"
-        android:layout_weight="0" />
-
-    <fragment
-        android:id="@+id/footerFragment"
-        android:name="vn.edu.usth.facebook.FooterFragment"
-        android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:layout_weight="0"/>
-
-</LinearLayout>
+</RelativeLayout>

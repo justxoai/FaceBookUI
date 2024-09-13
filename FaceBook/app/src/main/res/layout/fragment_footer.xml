@@ -9,25 +9,26 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:orientation="horizontal"
-        android:background="#ffffff"
->
+        android:background="#ffffff">
         
         <LinearLayout
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginRight="3dp">
+            android:layout_marginRight="3dp"
+            android:clickable="true"
+            android:focusable="true">
             
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="4dp"
                 android:background="#0765ff"/>
 
-            <ImageView
+            <ImageButton
                 android:layout_width="29dp"
                 android:layout_height="30dp"
-                android:src="@drawable/home" />
+                android:background="@drawable/home" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -45,12 +46,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginRight="2dp">
+            android:layout_marginRight="2dp"
+            android:clickable="true"
+            android:focusable="true">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/video"/>
+                android:background="@drawable/video"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -68,12 +71,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginRight="3dp">
+            android:layout_marginRight="3dp"
+            android:clickable="true"
+            android:focusable="true">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/avatar"/>
+                android:background="@drawable/avatar"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -91,12 +96,14 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginRight="2dp">
+            android:layout_marginRight="2dp"
+            android:clickable="true"
+            android:focusable="true">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/bell"/>
+                android:background="@drawable/bell"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -113,12 +120,14 @@
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
 
-            <ImageView
+            <ImageButton
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/menu"/>
+                android:background="@drawable/menu"/>
 
             <TextView
                 android:layout_width="match_parent"
