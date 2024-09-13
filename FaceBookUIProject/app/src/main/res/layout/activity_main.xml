@@ -12,6 +12,6 @@
         android:name="vn.edu.usth.facebookuiproject.LoginFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="10"/>
+        android:layout_weight="1"/>
 
 </LinearLayout>
