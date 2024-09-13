@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home_Facebook_Activity"
+    android:orientation="vertical"
+    android:background="#ccc">
+
+    <!--- Header -->
+    <fragment
+        android:id="@+id/headerFragment"
+        android:name="vn.edu.usth.midtermui.HeaderFragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+
+    <!--- Status -->
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="vn.edu.usth.midtermui.StatusFragment"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <!--- Story -->
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="vn.edu.usth.midtermui.StoryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <!--- Content -->
+    <fragment
+        android:id="@+id/contentFragment"
+        android:name="vn.edu.usth.midtermui.ContentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"/>
+
+    <!--- Reels -->
+    <fragment
+        android:id="@+id/reelsFragment"
+        android:name="vn.edu.usth.midtermui.ReelsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <!--- Footer -->
+    <fragment
+        android:id="@+id/footerFragment"
+        android:name="vn.edu.usth.midtermui.FooterFragment"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"/>
+
+</LinearLayout>
