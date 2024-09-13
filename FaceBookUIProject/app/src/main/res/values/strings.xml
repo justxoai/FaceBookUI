@@ -13,9 +13,11 @@
     <!--activity_profile-->
     <!--TODO: string array-->
     <string name="profile_username">Mr. No Name</string>
-    <string name="profile_friend_num"><b>777</b> <font color="#7d7d7d">friends</font></string>
+    <string name="profile_friend_num1"><b>777</b> <font color="#7d7d7d">friends</font></string>
+    <string name="profile_friend_num2"><font color="#7d7d7d">777 friends</font></string>
     <string name="profile_bio">😎 USTH Gen 13 ICT\n🎓 Mastering Mobile Application Development</string>
     <string name="profile_edit"><font color="#FFFFFF">Edit profile</font></string>
     <string name="profile_more">…</string>
     <string name="profile_subs_details_edit"><font color="#3067be">Edit public details</font></string>
+    <string name="profile_subs_friends_see_all">See all friends</string>
 </resources>

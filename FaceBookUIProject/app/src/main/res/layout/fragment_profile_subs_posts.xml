@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".profile.subs.posts.ProfileSubsPostsFragment">
 
     <androidx.fragment.app.FragmentContainerView
@@ -11,5 +12,11 @@
         android:layout_height="wrap_content"
         android:name="vn.edu.usth.facebookuiproject.profile.subs.posts.ProfileSubsPostsDetailsFragment"
         tools:layout="@layout/fragment_profile_subs_posts_details"/>
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/profile_subs_posts_friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="vn.edu.usth.facebookuiproject.profile.subs.posts.ProfileSubsPostsFriendsFragment"
+        tools:layout="@layout/fragment_profile_subs_posts_friends"/>
 
-</FrameLayout>
+</LinearLayout>
