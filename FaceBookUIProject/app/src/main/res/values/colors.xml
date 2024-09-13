@@ -11,7 +11,8 @@
 
     <!--activity_profile-->
     <color name="facebookButtonMainColor">#0766fe</color>
-    <color name="facebookButtonSubColor">#dfe4e7</color>
+    <color name="facebookButtonSubColor1">#dfe4e7</color>
+    <color name="facebookButtonSubColor2">#edf2f5</color>
     <color name="facebookTextColor">#3067be</color>
     <color name="facebookBackgroundColor">#cecdd5</color>
     <color name="profileButtonBackground">#dfe4e7</color>

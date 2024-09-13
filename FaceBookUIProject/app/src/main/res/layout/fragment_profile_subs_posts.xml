@@ -5,10 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".profile.subs.posts.ProfileSubsPostsFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/profile_subs_posts_details"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:name="vn.edu.usth.facebookuiproject.profile.subs.posts.ProfileSubsPostsDetailsFragment"
+        tools:layout="@layout/fragment_profile_subs_posts_details"/>
 
 </FrameLayout>
