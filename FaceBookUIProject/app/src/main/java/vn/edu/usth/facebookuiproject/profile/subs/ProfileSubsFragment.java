@@ -78,6 +78,7 @@ public class ProfileSubsFragment extends Fragment {
 
         profileSubsAdapter = new ProfileSubsAdapter(requireActivity());
         viewPager2.setOffscreenPageLimit(3);
+        viewPager2.setUserInputEnabled(false);
         viewPager2.setAdapter(profileSubsAdapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
