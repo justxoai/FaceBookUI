@@ -17,7 +17,5 @@
     <string name="profile_bio">😎 USTH Gen 13 ICT\n🎓 Mastering Mobile Application Development</string>
     <string name="profile_edit"><font color="#FFFFFF">Edit profile</font></string>
     <string name="profile_more">…</string>
-    <!--    <string name="profile_subs_posts">Posts</string>-->
-    <!--    <string name="profile_subs_photos">Photos</string>-->
-    <!--    <string name="profile_subs_reels">Reels</string>-->
+    <string name="profile_subs_details_edit"><font color="#3067be">Edit public details</font></string>
 </resources>
