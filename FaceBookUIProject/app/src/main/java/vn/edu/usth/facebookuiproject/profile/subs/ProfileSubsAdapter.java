@@ -10,8 +10,12 @@ import vn.edu.usth.facebookuiproject.profile.subs.posts.ProfileSubsPostsFragment
 import vn.edu.usth.facebookuiproject.profile.subs.reels.ProfileSubsReelsFragment;
 
 public class ProfileSubsAdapter extends FragmentStateAdapter {
-    private final int PAGE_COUNT = 3;
-    private final String[] titles = new String[] {"Posts", "Photos", "Reels"};
+    private final String[] titles = new String[] {
+            "Posts",
+            "Photos",
+            "Reels"
+    };
+    private final int PAGE_COUNT = titles.length;
 
     public ProfileSubsAdapter(@NonNull FragmentActivity fragmentActivity) {
         super(fragmentActivity);
@@ -34,6 +38,7 @@ public class ProfileSubsAdapter extends FragmentStateAdapter {
     }
 
     public CharSequence getPageTitle(int position) {
-        return titles[position];
+        String someSpace = "     ";
+        return someSpace + titles[position] + someSpace;
     }
 }

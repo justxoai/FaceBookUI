@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import vn.edu.usth.facebookuiproject.R;
 
@@ -69,34 +70,16 @@ public class ProfileSubsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_profile_subs, container, false);
-        tabLayout = view.findViewById(R.id.profile_subs_selection);
-        viewPager2 = view.findViewById(R.id.profile_subs_viewer);
-
-        tabLayout.addTab(tabLayout.newTab().setText("     Posts     "));
-        tabLayout.addTab(tabLayout.newTab().setText("     Photos     "));
-        tabLayout.addTab(tabLayout.newTab().setText("     Reels     "));
-
         profileSubsAdapter = new ProfileSubsAdapter(requireActivity());
+
+        viewPager2 = view.findViewById(R.id.profile_subs_viewer);
         viewPager2.setOffscreenPageLimit(3);
         viewPager2.setUserInputEnabled(false);
         viewPager2.setAdapter(profileSubsAdapter);
 
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition(), false);
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
+        tabLayout = view.findViewById(R.id.profile_subs_selection);
+        new TabLayoutMediator(tabLayout, viewPager2,
+                (tab, position) -> tab.setText(profileSubsAdapter.getPageTitle(position))).attach();
         return view;
     }
 }
