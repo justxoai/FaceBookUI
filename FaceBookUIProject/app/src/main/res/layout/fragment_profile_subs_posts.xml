@@ -18,5 +18,10 @@
         android:layout_height="wrap_content"
         android:name="vn.edu.usth.facebookuiproject.profile.subs.posts.ProfileSubsPostsFriendsFragment"
         tools:layout="@layout/fragment_profile_subs_posts_friends"/>
-
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/profile_subs_posts_yourposts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:name="vn.edu.usth.facebookuiproject.profile.subs.posts.ProfileSubsPostsYourpostsFragment"
+        tools:layout="@layout/fragment_profile_subs_posts_yourposts"/>
 </LinearLayout>

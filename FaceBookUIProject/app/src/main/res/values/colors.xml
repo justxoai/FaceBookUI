@@ -15,6 +15,7 @@
     <color name="facebookButtonSubColor2">#edf2f5</color>
     <color name="facebookButtonSubColor3">#e9f4fc</color>
     <color name="facebookTextColor">#3067be</color>
-    <color name="facebookBackgroundColor">#cecdd5</color>
-    <color name="profileButtonBackground">#dfe4e7</color>
+    <color name="facebookBackgroundColor1">#cecdd5</color>
+    <color name="facebookBackgroundColor2">#dfe4e7</color>
+    <color name="facebookBackgroundColor3">#f4f9fc</color>
 </resources>
