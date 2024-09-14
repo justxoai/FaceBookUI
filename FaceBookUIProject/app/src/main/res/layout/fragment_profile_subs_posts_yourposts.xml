@@ -28,7 +28,7 @@
             android:layout_marginTop="3dp"
             android:text="Filters"
             android:textSize="17sp"
-            android:textColor="@color/facebookTextColor"/>
+            android:textColor="@color/facebookTextColor1"/>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
