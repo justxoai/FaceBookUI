@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:context=".profile.subs.photos.ProfileSubsPhotosFragment">
     <androidx.fragment.app.FragmentContainerView
         android:layout_width="match_parent"
@@ -16,4 +17,4 @@
         android:id="@+id/profile_subs_photos_yourphotos"
         android:name="vn.edu.usth.facebookuiproject.profile.subs.photos.ProfileSubsPhotosYourphotosFragment"
         tools:layout="@layout/fragment_profile_subs_photos_yourphotos"/>
-</FrameLayout>
+</LinearLayout>
