@@ -18,7 +18,8 @@
         app:tabIndicatorGravity="stretch"
         app:tabSelectedTextColor="@color/facebookTextColor1"
         app:tabIndicatorAnimationMode="fade"
-        app:tabIndicatorAnimationDuration="0"/>
+        app:tabIndicatorAnimationDuration="0"
+        app:tabRippleColor="@null"/>
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
