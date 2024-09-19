@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment"
     android:scrollbars="none"
-    android:background="#ccc">
+    android:background="#ccc"
+    android:id="@+id/fragment_home">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -190,7 +191,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/reel_17">
+                        android:background="@drawable/reel_34">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -202,7 +203,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_weight="1"
                                 android:paddingLeft="5dp"
-                                android:text="Capybara"
+                                android:text="Henry"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold" />
 
@@ -218,7 +219,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/capybara_usth"/>
+                                android:background="@drawable/man_bench"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -234,7 +235,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/reel_18">
+                        android:background="@drawable/mountains">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -245,7 +246,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Phuong"
+                                android:text="Julia"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -263,7 +264,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/pn"/>
+                                android:background="@drawable/girl_train"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -279,7 +280,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/reel_19">
+                        android:background="@drawable/reel_24">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -290,7 +291,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Duy"
+                                android:text="Adam"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -307,7 +308,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/vdd_avatar"/>
+                                android:background="@drawable/johnny"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -368,7 +369,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/reel_21">
+                        android:background="@drawable/lights">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -379,7 +380,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Thanh Nha"
+                                android:text="Laura"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -396,7 +397,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/carol"/>
+                                android:background="@drawable/avatar_g"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -412,7 +413,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/reel_32">
+                        android:background="@drawable/nature">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -423,7 +424,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Hoang Lan"
+                                android:text="Charlotte"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -441,7 +442,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/home_ava_2"/>
+                                android:background="@drawable/me2"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -457,7 +458,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/reel_23">
+                        android:background="@drawable/ocean">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -468,7 +469,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Netflix"
+                                android:text="Victoria"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -485,7 +486,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/home_ava_6"/>
+                                android:background="@drawable/closegirl"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -513,7 +514,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/vid_ava_6"
+                    android:background="@drawable/parallax1"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -526,7 +527,7 @@
                     <TextView
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
-                        android:text="VTV24h"
+                        android:text="Grace Morgan"
                         android:paddingLeft="5dp"
                         android:paddingTop="5dp"
                         android:textStyle="bold"
@@ -573,7 +574,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Đại tá Phạm Hải Châu, Phó Cục trưởng Cục cứu hộ ... more"
+                android:text="Mauris neque quam, fermentum ut nisl vitae ... more"
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
@@ -582,7 +583,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="@drawable/home_1"/>
+                android:background="@drawable/bridge"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1048,7 +1049,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/home_ava_3"
+                    android:background="@drawable/parallax2"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -1061,7 +1062,7 @@
                     <TextView
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
-                        android:text="500Bros VLR"
+                        android:text="Isabella Lewis"
                         android:paddingLeft="5dp"
                         android:paddingTop="5dp"
                         android:textStyle="bold"
@@ -1108,7 +1109,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Hy vọng Nà vi năm sau sẽ mạnh lên"
+                android:text="Mauris neque quam, fermentum ut nisl vitae ... more"
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
@@ -1117,7 +1118,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="@drawable/home_3"/>
+                android:background="@drawable/woods"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1323,7 +1324,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/home_ava_2"
+                    android:background="@drawable/girl_hat"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -1336,7 +1337,7 @@
                     <TextView
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
-                        android:text="Hoang Lan updated his profile picture"
+                        android:text="Evelyn updated his profile picture"
                         android:paddingLeft="5dp"
                         android:paddingTop="5dp"
                         android:textStyle="bold"
@@ -1391,7 +1392,7 @@
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/home_ava_2"/>
+                    android:background="@drawable/girl_hat"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -1599,7 +1600,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/home_ava_4"
+                    android:background="@drawable/jean_store"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -1612,7 +1613,7 @@
                     <TextView
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
-                        android:text="PKL Tech"
+                        android:text="Rag - Denim Store"
                         android:paddingLeft="5dp"
                         android:paddingTop="5dp"
                         android:textStyle="bold"
@@ -1659,7 +1660,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="We are hiring ...more"
+                android:text="New arrivals COLLECTION 2016"
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
@@ -1668,7 +1669,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="@drawable/home_4"/>
+                android:background="@drawable/jeans"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
