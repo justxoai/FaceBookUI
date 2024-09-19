@@ -114,7 +114,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="20dp"
-                            android:text="Content"
+                            android:text="Kieu Quoc Viet"
                             android:textStyle="bold"
                             android:textColor="#000000"/>
 
@@ -187,7 +187,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Content"
+                            android:text="Huynh Vinh Nam"
                             android:textStyle="bold"
                             android:textColor="#000000"
                             android:gravity="center_vertical"/>
@@ -232,7 +232,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="20dp"
-                            android:text="Content"
+                            android:text="Le Hiep"
                             android:textStyle="bold"
                             android:textColor="#000000"/>
 
@@ -305,7 +305,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="20dp"
-                            android:text="Content"
+                            android:text="USTH"
                             android:textStyle="bold"
                             android:textColor="#000000"/>
 
@@ -366,7 +366,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/tla"/>
+                            android:background="@drawable/home_ava_2"/>
 
                     </androidx.cardview.widget.CardView>
 
@@ -378,7 +378,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Content"
+                            android:text="Nguyen Hoang Lan"
                             android:textStyle="bold"
                             android:textColor="#000000"
                             android:gravity="center_vertical"/>
@@ -411,7 +411,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/vt"/>
+                            android:background="@drawable/capybara_usth"/>
 
                     </androidx.cardview.widget.CardView>
 
@@ -423,7 +423,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="20dp"
-                            android:text="Content"
+                            android:text="Minh Quang"
                             android:textStyle="bold"
                             android:textColor="#000000"/>
 
@@ -497,7 +497,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
-                                android:text="Name"
+                                android:text="Bui Hanh Thao"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:textColor="@color/black"/>
@@ -518,7 +518,7 @@
                                     <ImageButton
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="@drawable/avatar"/>
+                                        android:background="@drawable/hhp_avatar"/>
 
                                 </androidx.cardview.widget.CardView>
 
@@ -599,7 +599,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
-                                android:text="Name"
+                                android:text="My Nguyen"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:textColor="@color/black"/>
@@ -620,7 +620,7 @@
                                     <ImageButton
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="@drawable/avatar"/>
+                                        android:background="@drawable/vdd_avatar"/>
 
                                 </androidx.cardview.widget.CardView>
 
@@ -702,7 +702,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:paddingLeft="10dp"
-                                android:text="Name"
+                                android:text="Phuong Linh"
                                 android:textColor="@color/black"
                                 android:textStyle="bold" />
 
@@ -722,7 +722,7 @@
                                     <ImageButton
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="@drawable/avatar" />
+                                        android:background="@drawable/capybara_usth" />
 
                                 </androidx.cardview.widget.CardView>
 
@@ -803,7 +803,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
-                                android:text="Name"
+                                android:text="Thanh Nha"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:textColor="@color/black"/>
@@ -824,7 +824,7 @@
                                     <ImageButton
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="@drawable/avatar"/>
+                                        android:background="@drawable/circle_avatar"/>
 
                                 </androidx.cardview.widget.CardView>
 
@@ -905,7 +905,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
-                                android:text="Name"
+                                android:text="Phuong Nguyen"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:textColor="@color/black"/>
@@ -926,7 +926,7 @@
                                     <ImageButton
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="@drawable/avatar"/>
+                                        android:background="@drawable/usth_avatar"/>
 
                                 </androidx.cardview.widget.CardView>
 
@@ -1007,7 +1007,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
-                                android:text="Name"
+                                android:text="Minh Chau"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:textColor="@color/black"/>
@@ -1028,7 +1028,7 @@
                                     <ImageButton
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="@drawable/avatar"/>
+                                        android:background="@drawable/home_ava_2"/>
 
                                 </androidx.cardview.widget.CardView>
 

@@ -123,14 +123,30 @@
 
             </FrameLayout>
 
-            <TextView
-                android:layout_width="290dp"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="VALORANT shared a video"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="12h"/>
+
+            </LinearLayout>
 
             <ImageButton
                 android:layout_width="25dp"
@@ -196,7 +212,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="Name"
+                    android:text="Bui Hanh Thao"
                     android:textStyle="bold"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
@@ -307,7 +323,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="Name"
+                    android:text="My Nguyen"
                     android:textStyle="bold"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
@@ -418,7 +434,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="Name"
+                    android:text="Thanh Nha"
                     android:textStyle="bold"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
@@ -551,14 +567,30 @@
 
             </FrameLayout>
 
-            <TextView
-                android:layout_width="290dp"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="VTV24h was live"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="12h"/>
+
+            </LinearLayout>
 
             <ImageButton
                 android:layout_width="25dp"
@@ -610,14 +642,30 @@
 
             </FrameLayout>
 
-            <TextView
-                android:layout_width="290dp"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Netflix posted a new video"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="12h"/>
+
+            </LinearLayout>
 
             <ImageButton
                 android:layout_width="25dp"
@@ -668,14 +716,30 @@
 
             </FrameLayout>
 
-            <TextView
-                android:layout_width="290dp"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Vu Duc Duy invite you to like him"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="12h"/>
+
+            </LinearLayout>
 
             <ImageButton
                 android:layout_width="25dp"
@@ -727,14 +791,30 @@
 
             </FrameLayout>
 
-            <TextView
-                android:layout_width="290dp"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="VALORANT was live"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="12h"/>
+
+            </LinearLayout>
 
             <ImageButton
                 android:layout_width="25dp"
@@ -786,14 +866,30 @@
 
             </FrameLayout>
 
-            <TextView
-                android:layout_width="290dp"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="500Bros CS2 posted a new video"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="12h"/>
+
+            </LinearLayout>
 
             <ImageButton
                 android:layout_width="25dp"
@@ -844,190 +940,30 @@
 
             </FrameLayout>
 
-            <TextView
-                android:layout_width="290dp"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
+                android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/setting_dot"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="6dp"/>
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="USTH's Capybara invited you to like USTH"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="12h"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="#e6f2fe"
-            android:orientation="horizontal">
-
-            <FrameLayout
-                android:layout_width="80dp"
-                android:layout_height="match_parent">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    app:cardBackgroundColor="#e4e6eb"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/home_ava_3"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="right|bottom"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginRight="8dp"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/live"
-                        />
-                </androidx.cardview.widget.CardView>
-
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="290dp"
-                android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
-
-            <ImageButton
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/setting_dot"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="6dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="#ffffff"
-            android:orientation="horizontal">
-
-            <FrameLayout
-                android:layout_width="80dp"
-                android:layout_height="match_parent">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    app:cardBackgroundColor="#e4e6eb"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/vt"
-                        />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="right|bottom"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginRight="8dp"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/book"
-                        />
-                </androidx.cardview.widget.CardView>
-
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="290dp"
-                android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
-
-            <ImageButton
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@drawable/setting_dot"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="6dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="#ffffff"
-            android:orientation="horizontal">
-
-            <FrameLayout
-                android:layout_width="80dp"
-                android:layout_height="match_parent">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    app:cardBackgroundColor="#e4e6eb"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/tla"
-                        />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_gravity="right|bottom"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginRight="8dp"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/invite"/>
-                </androidx.cardview.widget.CardView>
-
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="290dp"
-                android:layout_height="match_parent"
-                android:text="Content"
-                android:textStyle="bold"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:textColor="#000000"/>
+            </LinearLayout>
 
             <ImageButton
                 android:layout_width="25dp"

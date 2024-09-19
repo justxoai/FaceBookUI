@@ -205,7 +205,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Name"
+                            android:text="Duy"
                             android:textColor="#000000"/>
 
                     </LinearLayout>
@@ -255,7 +255,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Name"
+                            android:text="Anh"
                             android:textColor="#000000"/>
 
                     </LinearLayout>
@@ -290,7 +290,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Name"
+                            android:text="At"
                             android:textColor="#000000"/>
 
                     </LinearLayout>
@@ -340,7 +340,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Name"
+                            android:text="Anh"
                             android:textColor="#000000"/>
 
                     </LinearLayout>
@@ -394,7 +394,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Name"
+                            android:text="Quang"
                             android:textColor="#000000"/>
 
                     </LinearLayout>
@@ -444,7 +444,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Name"
+                            android:text="Yen"
                             android:textColor="#000000"/>
 
                     </LinearLayout>
@@ -494,7 +494,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Name"
+                            android:text="Cuong"
                             android:textColor="#000000"/>
 
                     </LinearLayout>
@@ -595,7 +595,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Boxchat's Name"
+                                android:text="Vu Duc Duy"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
@@ -663,7 +663,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Boxchat's Name"
+                                android:text="Nguyen Viet Anh"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
@@ -716,7 +716,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Boxchat's Name"
+                                android:text="Nguyen At"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
@@ -784,7 +784,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Boxchat's Name"
+                                android:text="Pham Hoang Anh"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
@@ -856,7 +856,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Boxchat's Name"
+                                android:text="Minh Quang Do"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
@@ -924,7 +924,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Boxchat's Name"
+                                android:text="Nyny"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
@@ -992,7 +992,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Boxchat's Name"
+                                android:text="Lam Chi Cuong"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
@@ -1060,7 +1060,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Boxchat's Name"
+                                android:text="Nguyen Hoang Lan"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"

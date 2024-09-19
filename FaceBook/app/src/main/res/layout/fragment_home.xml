@@ -202,7 +202,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_weight="1"
                                 android:paddingLeft="5dp"
-                                android:text="Name"
+                                android:text="Capybara"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold" />
 
@@ -245,7 +245,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Name"
+                                android:text="Phuong"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -290,7 +290,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Name"
+                                android:text="Duy"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -334,7 +334,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Name"
+                                android:text="At"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -379,7 +379,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Name"
+                                android:text="Thanh Nha"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -412,7 +412,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/reel_22">
+                        android:background="@drawable/reel_32">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -423,7 +423,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Name"
+                                android:text="Hoang Lan"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -468,7 +468,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
-                                android:text="Name"
+                                android:text="Netflix"
                                 android:textColor="#ffffff"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
@@ -518,15 +518,42 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
-                    android:text="Name\nTime - icon"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="#000000"/>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="VTV24h"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="12h ."/>
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/global"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <ImageButton
                     android:layout_width="20dp"
@@ -546,7 +573,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Content"
+                android:text="Đại tá Phạm Hải Châu, Phó Cục trưởng Cục cứu hộ ... more"
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
@@ -1026,15 +1053,42 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
-                    android:text="Name\nTime - icon"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="#000000"/>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="500Bros VLR"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="2d ."/>
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/global"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <ImageButton
                     android:layout_width="20dp"
@@ -1054,7 +1108,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Content"
+                android:text="Hy vọng Nà vi năm sau sẽ mạnh lên"
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
@@ -1274,15 +1328,42 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
-                    android:text="Name\nTime - icon"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="#000000"/>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="Hoang Lan updated his profile picture"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="3h ."/>
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/global"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <ImageButton
                     android:layout_width="20dp"
@@ -1523,15 +1604,42 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
-                    android:text="Name\nTime - icon"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="#000000"/>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="PKL Tech"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="5h ."/>
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/global"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <ImageButton
                     android:layout_width="20dp"
@@ -1551,7 +1659,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Content"
+                android:text="We are hiring ...more"
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
@@ -1771,15 +1879,42 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
-                    android:text="Name\nSponsored"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="5dp"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:textColor="#000000"/>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:text="Spotify"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="5dp"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="Sponsored ."/>
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/global"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <ImageButton
                     android:layout_width="20dp"
@@ -1799,7 +1934,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:text="Content"
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
