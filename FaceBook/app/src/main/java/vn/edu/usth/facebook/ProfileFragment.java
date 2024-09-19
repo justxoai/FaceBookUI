@@ -84,6 +84,15 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        ImageButton image_profilebutton = v.findViewById(R.id.image_profile_button);
+        image_profilebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), Picture_Home_Activity.class );
+                startActivity(i);
+            }
+        });
+
         // Inflate the layout for this fragment
         return v;
     }
