@@ -184,7 +184,7 @@
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/avatar"/>
+                    android:background="@drawable/bht"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -218,7 +218,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/avatar"/>
+                            android:background="@drawable/hhp_avatar"/>
 
                     </androidx.cardview.widget.CardView>
 
@@ -295,7 +295,7 @@
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/avatar"/>
+                    android:background="@drawable/mn"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -329,7 +329,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/avatar"/>
+                            android:background="@drawable/vdd_avatar"/>
 
                     </androidx.cardview.widget.CardView>
 
@@ -406,7 +406,7 @@
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/avatar"/>
+                    android:background="@drawable/carol"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -440,7 +440,7 @@
                         <ImageButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/avatar"/>
+                            android:background="@drawable/circle_avatar"/>
 
                     </androidx.cardview.widget.CardView>
 
@@ -589,7 +589,7 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/avatar"
+                        android:background="@drawable/home_ava_6"
                         />
                 </androidx.cardview.widget.CardView>
 
@@ -648,7 +648,7 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/avatar"
+                        android:background="@drawable/vdd_avatar"
                         />
                 </androidx.cardview.widget.CardView>
 
@@ -706,7 +706,7 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/avatar"/>
+                        android:background="@drawable/vid_ava_3"/>
 
                 </androidx.cardview.widget.CardView>
 
@@ -765,7 +765,7 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/avatar"
+                        android:background="@drawable/vid_ava_4"
                         />
                 </androidx.cardview.widget.CardView>
 
@@ -824,7 +824,7 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/avatar"
+                        android:background="@drawable/capybara_usth"
                         />
                 </androidx.cardview.widget.CardView>
 
@@ -882,7 +882,7 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/avatar"/>
+                        android:background="@drawable/home_ava_3"/>
 
                 </androidx.cardview.widget.CardView>
 
@@ -941,7 +941,7 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/avatar"
+                        android:background="@drawable/vt"
                         />
                 </androidx.cardview.widget.CardView>
 
@@ -1000,7 +1000,7 @@
                     <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/avatar"
+                        android:background="@drawable/tla"
                         />
                 </androidx.cardview.widget.CardView>
 

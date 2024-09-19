@@ -1030,7 +1030,7 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/avatar"
+                                    android:background="@drawable/home_ava_2"
                                     />
                             </androidx.cardview.widget.CardView>
 
