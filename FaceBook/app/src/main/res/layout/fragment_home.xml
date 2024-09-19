@@ -149,7 +149,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="80dp"
                                 android:layout_weight="1"
-                                android:background="#ccc"/>
+                                android:background="@drawable/avatar_profile"/>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -190,21 +190,21 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#ccc">
+                        android:background="@drawable/reel_17">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <TextView
-                                android:layout_alignParentBottom="true"
                                 android:layout_width="match_parent"
                                 android:layout_height="20dp"
+                                android:layout_alignParentBottom="true"
                                 android:layout_weight="1"
+                                android:paddingLeft="5dp"
                                 android:text="Name"
                                 android:textColor="#ffffff"
-                                android:textStyle="bold"
-                                android:paddingLeft="5dp"/>
+                                android:textStyle="bold" />
 
                         </RelativeLayout>
 
@@ -218,7 +218,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/avatar"/>
+                                android:background="@drawable/capybara_usth"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -234,7 +234,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#ccc">
+                        android:background="@drawable/reel_18">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -263,7 +263,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/avatar"/>
+                                android:background="@drawable/pn"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -279,7 +279,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#ccc">
+                        android:background="@drawable/reel_19">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -307,7 +307,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/avatar"/>
+                                android:background="@drawable/vdd_avatar"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -323,7 +323,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#ccc">
+                        android:background="@drawable/reel_20">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -352,7 +352,7 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/avatar"/>
+                                android:background="@drawable/at_avata"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -368,7 +368,7 @@
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#ccc">
+                        android:background="@drawable/reel_21">
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -396,7 +396,96 @@
                             <ImageButton
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
-                                android:background="@drawable/avatar"/>
+                                android:background="@drawable/carol"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/reel_22">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_weight="1"
+                                android:text="Name"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"/>
+
+                        </RelativeLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:cardCornerRadius="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/home_ava_2"/>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/reel_23">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:layout_weight="1"
+                                android:text="Name"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:paddingLeft="5dp"/>
+
+                        </RelativeLayout>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            app:cardCornerRadius="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/home_ava_6"/>
 
                         </androidx.cardview.widget.CardView>
 
@@ -424,7 +513,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/avatar"
+                    android:background="@drawable/vid_ava_6"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -466,7 +555,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="#ccc"/>
+                android:background="@drawable/home_1"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -701,7 +790,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_22">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -728,7 +817,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_23">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -755,7 +844,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_24">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -782,7 +871,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_25">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -809,7 +898,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_26">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -837,7 +926,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_27">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -864,7 +953,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_28">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -891,7 +980,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_29">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -932,7 +1021,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/avatar"
+                    android:background="@drawable/home_ava_3"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -974,7 +1063,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="#ccc"/>
+                android:background="@drawable/home_3"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1180,7 +1269,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/avatar"
+                    android:background="@drawable/home_ava_2"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -1221,7 +1310,7 @@
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/avatar"/>
+                    android:background="@drawable/home_ava_2"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -1429,7 +1518,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/avatar"
+                    android:background="@drawable/home_ava_4"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -1471,7 +1560,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="#ccc"/>
+                android:background="@drawable/home_4"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1677,7 +1766,7 @@
                 <ImageButton
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:background="@drawable/avatar"
+                    android:background="@drawable/home_ava_5"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:layout_marginLeft="5dp"/>
@@ -1719,7 +1808,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
-                android:background="#ccc"/>
+                android:background="@drawable/home_5"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1954,7 +2043,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_30">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -1981,7 +2070,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_31">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -2008,7 +2097,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_32">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -2035,7 +2124,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_33">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -2062,7 +2151,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_34">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -2090,7 +2179,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_35">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -2117,7 +2206,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_36">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -2144,7 +2233,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ccc">
+                            android:background="@drawable/reel_37">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
