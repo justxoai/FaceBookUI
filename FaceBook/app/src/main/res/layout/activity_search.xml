@@ -1029,7 +1029,7 @@
                                     <ImageButton
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:background="@drawable/home_ava_2"/>
+                                        android:background="@drawable/boy"/>
 
                                 </androidx.cardview.widget.CardView>
 
@@ -1153,7 +1153,7 @@
                             <FrameLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/reel_15">
+                                android:background="@drawable/reel_3">
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
@@ -1261,7 +1261,7 @@
                             <FrameLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/reel_23">
+                                android:background="@drawable/reel_8">
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"
@@ -1289,7 +1289,7 @@
                             <FrameLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/reel_36">
+                                android:background="@drawable/reel_22">
 
                                 <RelativeLayout
                                     android:layout_width="match_parent"

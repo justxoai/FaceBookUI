@@ -845,7 +845,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/reel_23">
+                            android:background="@drawable/reel_33">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -1337,7 +1337,7 @@
                     <TextView
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
-                        android:text="Evelyn updated his profile picture"
+                        android:text="Evelyn updated her profile picture"
                         android:paddingLeft="5dp"
                         android:paddingTop="5dp"
                         android:textStyle="bold"
@@ -2232,7 +2232,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/reel_32">
+                            android:background="@drawable/reel_12">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -2341,7 +2341,7 @@
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/reel_36">
+                            android:background="@drawable/reel_20">
 
                             <RelativeLayout
                                 android:layout_width="match_parent"

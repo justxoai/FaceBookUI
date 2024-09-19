@@ -200,7 +200,7 @@
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/bht"/>
+                    android:background="@drawable/bandmember"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -212,7 +212,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="Bui Hanh Thao"
+                    android:text="Richard Caldwell"
                     android:textStyle="bold"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
@@ -311,7 +311,7 @@
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/mn"/>
+                    android:background="@drawable/natureboy"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -323,7 +323,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="My Nguyen"
+                    android:text="Edward Sinclair"
                     android:textStyle="bold"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"
@@ -422,7 +422,7 @@
                 <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/carol"/>
+                    android:background="@drawable/chef"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -434,7 +434,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:text="Thanh Nha"
+                    android:text="Charles Whitaker"
                     android:textStyle="bold"
                     android:paddingLeft="10dp"
                     android:paddingTop="10dp"

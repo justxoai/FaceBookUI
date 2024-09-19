@@ -418,7 +418,7 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/nyny"
+                                    android:background="@drawable/man_bench"
                                     />
                             </androidx.cardview.widget.CardView>
 
@@ -444,7 +444,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Yen"
+                            android:text="Jonathan"
                             android:textColor="#000000"/>
 
                     </LinearLayout>
@@ -894,7 +894,7 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/nyny"
+                                    android:background="@drawable/man_bench"
                                     />
                             </androidx.cardview.widget.CardView>
 
@@ -924,7 +924,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Nyny"
+                                android:text="Jonathan Blake"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
@@ -1030,7 +1030,7 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/home_ava_2"
+                                    android:background="@drawable/wedding_couple2"
                                     />
                             </androidx.cardview.widget.CardView>
 
@@ -1060,7 +1060,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:text="Nguyen Hoang Lan"
+                                android:text="Charles Whitaker"
                                 android:textStyle="bold"
                                 android:textSize="15sp"
                                 android:gravity="bottom"
