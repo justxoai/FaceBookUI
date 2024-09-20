@@ -1,1177 +1,1673 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Messenger_Activity"
-    android:background="#ffffff"
-    android:orientation="vertical">
+    tools:context=".Messenger_Activity">
 
-    <!--- Back Button -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="5dp"
-        android:paddingTop="3dp"
-        android:id="@+id/back_button">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_gravity="center"
-            android:src="@drawable/back_mess"/>
-        <TextView
+        <!--- Back Button -->
+        <LinearLayout
+            android:id="@+id/back_button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Facebook"
-            android:textStyle="bold"
-            android:textSize="10sp"/>
+            android:layout_height="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:layout_marginBottom="5dp">
 
-    </LinearLayout>
-
-    <!--- Header -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:paddingLeft="10dp">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            app:cardBackgroundColor="#e4e6eb"
-            app:cardCornerRadius="20dp">
-
-            <ImageButton
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/back_mess"/>
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/menu"
-                android:layout_margin="5dp"/>
+                android:layout_height="wrap_content"
+                android:text="Facebook"
+                android:textStyle="bold"
+                android:textSize="10sp"/>
 
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:layout_width="310dp"
-            android:layout_height="match_parent"
-            android:text="Chats"
-            android:textColor="#000000"
-            android:gravity="center"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:paddingTop="3dp"/>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            app:cardBackgroundColor="#e4e6eb"
-            app:cardCornerRadius="20dp">
-
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/social_media"
-                android:layout_margin="5dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-    <!--- Body -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="770dp"
-        android:scrollbars="none">
+        </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <!--- Search -->
+            <!--- Header -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:paddingTop="10dp">
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingLeft="10dp">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    app:cardBackgroundColor="#e2e5ea"
-                    app:cardCornerRadius="5dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp">
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="#e4e6eb"
+                    app:cardCornerRadius="20dp">
 
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/menu"
+                        android:layout_margin="5dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="310dp"
+                    android:layout_height="match_parent"
+                    android:text="Chats"
+                    android:textColor="#000000"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:paddingTop="3dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="#e4e6eb"
+                    app:cardCornerRadius="20dp">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/social_media"
+                        android:layout_margin="5dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!--- Body -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="770dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--- Search -->
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="45dp"
+                        android:paddingTop="10dp">
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="30dp"
+                            android:layout_width="match_parent"
                             android:layout_height="30dp"
-                            app:cardBackgroundColor="#e2e5ea">
+                            app:cardBackgroundColor="#e2e5ea"
+                            app:cardCornerRadius="5dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp">
 
-                            <ImageButton
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    app:cardBackgroundColor="#e2e5ea">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/social_media"
+                                        android:layout_margin="5dp"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Search"
+                                    android:paddingTop="5dp"/>
+
+                            </LinearLayout>
+
+                            />
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <!--- Active Status -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="#e4e6eb"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/avatar_profile"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Me"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="#e4e6eb"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/vdd_avatar"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:layout_gravity="right|bottom"
+                                        android:layout_marginBottom="11dp"
+                                        android:layout_marginRight="15dp"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#46c146"/>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Duy"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="#e4e6eb"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/circle_avatar"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:layout_gravity="right|bottom"
+                                        android:layout_marginBottom="11dp"
+                                        android:layout_marginRight="15dp"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#46c146"/>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Anh"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="#e4e6eb"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/at_avata"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="At"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="#e4e6eb"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/hhp_avatar"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:layout_gravity="right|bottom"
+                                        android:layout_marginBottom="11dp"
+                                        android:layout_marginRight="15dp"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#46c146"/>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Anh"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="#e4e6eb"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/capybara_usth"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:layout_gravity="right|bottom"
+                                        android:layout_marginBottom="11dp"
+                                        android:layout_marginRight="10dp"
+                                        app:cardBackgroundColor="#e6fae9"
+                                        app:cardCornerRadius="50dp">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="xm"
+                                            android:gravity="center"
+                                            android:textSize="9dp"
+                                            android:textColor="#91c180"/>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Quang"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="#e4e6eb"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/man_bench"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:layout_gravity="right|bottom"
+                                        android:layout_marginBottom="11dp"
+                                        android:layout_marginRight="15dp"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#46c146"/>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Jonathan"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        app:cardBackgroundColor="#e4e6eb"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/capybara_usth"
+                                            />
+                                    </androidx.cardview.widget.CardView>
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="12dp"
+                                        android:layout_height="12dp"
+                                        android:layout_gravity="right|bottom"
+                                        android:layout_marginBottom="11dp"
+                                        android:layout_marginRight="15dp"
+                                        app:cardCornerRadius="50dp">
+
+                                        <ImageButton
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#46c146"/>
+
+                                    </androidx.cardview.widget.CardView>
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Cuong"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                    <!--- Switch -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:background="#ffffff"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="170dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="20dp"
+                            app:cardBackgroundColor="#e2e5ea"
+                            app:cardCornerRadius="15dp">
+
+                            <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/social_media"
-                                android:layout_margin="5dp"/>
+                                android:text="Home"
+                                android:gravity="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold"/>
 
                         </androidx.cardview.widget.CardView>
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Search"
-                            android:paddingTop="5dp"/>
-
-                    </LinearLayout>
-
-                    />
-
-                </androidx.cardview.widget.CardView>
-            </LinearLayout>
-
-            <!--- Active Status -->
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="70dp">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/avatar_profile"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:text="Channels"
                             android:gravity="center"
-                            android:text="Me"
-                            android:textColor="#000000"/>
+                            android:textColor="#8a8a8a"
+                            android:textStyle="bold"
+                            />
 
                     </LinearLayout>
 
+                    <!--- Box Chat -->
                     <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="622dp"
                         android:orientation="vertical">
 
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="70dp">
+                        <!--- Box Chat0 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
 
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/vdd_avatar"
-                                    />
-                            </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="15dp"
-                                app:cardCornerRadius="50dp">
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/vdd_avatar"
+                                        />
+                                </androidx.cardview.widget.CardView>
 
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
 
-                            </androidx.cardview.widget.CardView>
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
 
-                        </FrameLayout>
+                                </androidx.cardview.widget.CardView>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Duy"
-                            android:textColor="#000000"/>
+                            </FrameLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="70dp">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/circle_avatar"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="15dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Anh"
-                            android:textColor="#000000"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="70dp">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/at_avata"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="At"
-                            android:textColor="#000000"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="70dp">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/hhp_avatar"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="15dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Anh"
-                            android:textColor="#000000"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="70dp">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/capybara_usth"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="10dp"
-                                app:cardBackgroundColor="#e6fae9"
-                                app:cardCornerRadius="50dp">
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="xm"
-                                    android:gravity="center"
-                                    android:textSize="9dp"
-                                    android:textColor="#91c180"/>
+                                    android:layout_height="40dp"
+                                    android:text="Vu Duc Duy"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
 
-                            </androidx.cardview.widget.CardView>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
 
-                        </FrameLayout>
+                            </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Quang"
-                            android:textColor="#000000"/>
+                        </LinearLayout>
+
+                        <!--- Box Chat1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/circle_avatar"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Nguyen Viet Anh"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/at_avata"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Nguyen At"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat3 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/hhp_avatar"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Pham Hoang Anh"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat4 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/capybara_usth"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardBackgroundColor="#e6fae9"
+                                    app:cardCornerRadius="50dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="xm"
+                                        android:gravity="center"
+                                        android:textSize="9dp"
+                                        android:textColor="#91c180"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Minh Quang Do"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat5 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/man_bench"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Jonathan Blake"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat6 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/capybara_usth"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Lam Chi Cuong"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat7 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/wedding_couple2"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Charles Whitaker"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="622dp"
                         android:orientation="vertical">
 
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="70dp">
+                        <!--- Box Chat0 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
 
-                                <ImageButton
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/vdd_avatar"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/man_bench"
-                                    />
-                            </androidx.cardview.widget.CardView>
+                                    android:layout_height="40dp"
+                                    android:text="Vu Duc Duy"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="15dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
 
-                            </androidx.cardview.widget.CardView>
+                            </LinearLayout>
 
-                        </FrameLayout>
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Jonathan"
-                            android:textColor="#000000"/>
+                        <!--- Box Chat1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
 
-                    </LinearLayout>
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
 
-                    <LinearLayout
-                        android:layout_width="70dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
 
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="70dp">
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/circle_avatar"
+                                        />
+                                </androidx.cardview.widget.CardView>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
 
-                                <ImageButton
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/capybara_usth"
-                                    />
-                            </androidx.cardview.widget.CardView>
+                                    android:layout_height="40dp"
+                                    android:text="Nguyen Viet Anh"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="15dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
 
-                            </androidx.cardview.widget.CardView>
+                            </LinearLayout>
 
-                        </FrameLayout>
+                        </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Cuong"
-                            android:textColor="#000000"/>
+                        <!--- Box Chat2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/at_avata"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Nguyen At"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat3 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/hhp_avatar"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Pham Hoang Anh"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat4 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/capybara_usth"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardBackgroundColor="#e6fae9"
+                                    app:cardCornerRadius="50dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:text="xm"
+                                        android:gravity="center"
+                                        android:textSize="9dp"
+                                        android:textColor="#91c180"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Minh Quang Do"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat5 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/man_bench"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Jonathan Blake"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat6 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/capybara_usth"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Lam Chi Cuong"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--- Box Chat7 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:background="#ffffff"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="70dp"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/wedding_couple2"
+                                        />
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="right|bottom"
+                                    android:layout_marginBottom="11dp"
+                                    android:layout_marginRight="10dp"
+                                    app:cardCornerRadius="50dp">
+
+                                    <ImageButton
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="#46c146"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="320dp"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="8dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Charles Whitaker"
+                                    android:textStyle="bold"
+                                    android:textSize="15sp"
+                                    android:gravity="bottom"
+                                    android:textColor="#000000"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:text="Chat"
+                                    android:textSize="12sp"
+                                    android:textColor="#000000"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                 </LinearLayout>
 
-            </HorizontalScrollView>
-
-            <!--- Switch -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:background="#ffffff"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="170dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="20dp"
-                    app:cardBackgroundColor="#e2e5ea"
-                    app:cardCornerRadius="15dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="Home"
-                        android:gravity="center"
-                        android:textColor="#000000"
-                        android:textStyle="bold"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Channels"
-                    android:gravity="center"
-                    android:textColor="#8a8a8a"
-                    android:textStyle="bold"
-                    />
-
-            </LinearLayout>
-
-            <!--- Box Chat -->
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="622dp"
-                    android:orientation="vertical">
-
-                    <!--- Box Chat0 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="#ffffff"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/vdd_avatar"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="10dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="320dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="8dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Vu Duc Duy"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:gravity="bottom"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Chat"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <!--- Box Chat1 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="#ffffff"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/circle_avatar"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="10dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="320dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="8dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Nguyen Viet Anh"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:gravity="bottom"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Chat"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <!--- Box Chat2 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="#ffffff"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/at_avata"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="320dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="8dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Nguyen At"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:gravity="bottom"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Chat"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <!--- Box Chat3 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="#ffffff"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/hhp_avatar"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="10dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="320dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="8dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Pham Hoang Anh"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:gravity="bottom"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Chat"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <!--- Box Chat4 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="#ffffff"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/capybara_usth"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="10dp"
-                                app:cardBackgroundColor="#e6fae9"
-                                app:cardCornerRadius="50dp">
-
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:text="xm"
-                                    android:gravity="center"
-                                    android:textSize="9dp"
-                                    android:textColor="#91c180"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="320dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="8dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Minh Quang Do"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:gravity="bottom"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Chat"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <!--- Box Chat5 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="#ffffff"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/man_bench"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="10dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="320dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="8dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Jonathan Blake"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:gravity="bottom"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Chat"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <!--- Box Chat6 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="#ffffff"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/capybara_usth"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="10dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="320dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="8dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Lam Chi Cuong"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:gravity="bottom"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Chat"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <!--- Box Chat7 -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="#ffffff"
-                        android:orientation="horizontal">
-
-                        <FrameLayout
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="60dp"
-                                android:layout_height="60dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="#e4e6eb"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/wedding_couple2"
-                                    />
-                            </androidx.cardview.widget.CardView>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="right|bottom"
-                                android:layout_marginBottom="11dp"
-                                android:layout_marginRight="10dp"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageButton
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="#46c146"/>
-
-                            </androidx.cardview.widget.CardView>
-
-                        </FrameLayout>
-
-                        <LinearLayout
-                            android:layout_width="320dp"
-                            android:layout_height="match_parent"
-                            android:orientation="vertical"
-                            android:layout_marginLeft="8dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Charles Whitaker"
-                                android:textStyle="bold"
-                                android:textSize="15sp"
-                                android:gravity="bottom"
-                                android:textColor="#000000"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="40dp"
-                                android:text="Chat"
-                                android:textSize="12sp"
-                                android:textColor="#000000"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-               </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
-
-    <!--- Footer -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#ffffff"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="210dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageButton
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/mess_messenger" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="11dp"
-                android:text="Chats"
-                android:textSize="10sp"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="210dp"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="25dp"
-                android:layout_height="25dp">
-
-                <ImageButton
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:background="@drawable/stories"/>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="8dp"
-                    android:layout_height="8dp"
-                    android:layout_gravity="right"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#ff0000"/>
-
-                </androidx.cardview.widget.CardView>
-
-            </FrameLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="11dp"
-                android:text="Stories"
-                android:textSize="10sp"
-                android:gravity="center"/>
-
+            </ScrollView>
         </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mess_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="@color/white"
+        app:itemIconTint="@color/color_navigation"
+        app:itemTextColor="@color/color_navigation"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/mess_navigation" />
+
+</RelativeLayout>

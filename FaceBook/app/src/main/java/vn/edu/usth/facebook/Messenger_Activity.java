@@ -5,11 +5,17 @@ import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
+import androidx.viewpager2.widget.ViewPager2;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class Messenger_Activity extends AppCompatActivity {
+
+    private ViewPager2 mviewPager;
+
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +23,11 @@ public class Messenger_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_messenger);
 
+
+
+
         LinearLayout back = findViewById(R.id.back_button);
+
         back.setOnClickListener(view -> {
             onBackPressed();
         });
