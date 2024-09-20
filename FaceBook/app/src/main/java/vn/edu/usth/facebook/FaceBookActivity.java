@@ -43,6 +43,7 @@ public class FaceBookActivity extends AppCompatActivity {
 
         Fragment_Changing adapter = new Fragment_Changing(getSupportFragmentManager(), getLifecycle());
         mviewPager.setAdapter(adapter);
+        mviewPager.setUserInputEnabled(false);
 
         mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
 
