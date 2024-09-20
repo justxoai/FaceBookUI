@@ -24,10 +24,6 @@ public class FaceBookActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
 
-    public void BackToHomePage() {
-        mviewPager.setCurrentItem(0, true);  // Navigate to the third fragment (index 2)
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

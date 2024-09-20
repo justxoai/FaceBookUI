@@ -9,6 +9,29 @@
     android:background="#ffffff"
     android:orientation="vertical">
 
+    <!--- Back Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:id="@+id/back_button">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:src="@drawable/back_mess"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Facebook"
+            android:textStyle="bold"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+
     <!--- Header -->
     <LinearLayout
         android:layout_width="match_parent"

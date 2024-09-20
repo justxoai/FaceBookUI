@@ -1,6 +1,7 @@
 package vn.edu.usth.facebook;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,16 +15,15 @@ public class Messenger_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        EdgeToEdge.enable(this);
-
         setContentView(R.layout.activity_messenger);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-
-            return insets;
+        LinearLayout back = findViewById(R.id.back_button);
+        back.setOnClickListener(view -> {
+            onBackPressed();
         });
+    }
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
     }
 }

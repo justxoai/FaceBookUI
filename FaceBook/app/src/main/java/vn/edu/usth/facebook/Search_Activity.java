@@ -24,16 +24,16 @@ public class Search_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_search);
 
-        back_button = findViewById(R.id.back_button);
-        back_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        ImageButton backButton = findViewById(R.id.back_button);
 
-            }
-
-            });
+        backButton.setOnClickListener(view -> {
+            onBackPressed();
+        });
 
     }
 
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+    }
 }
-
