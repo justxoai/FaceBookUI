@@ -29,7 +29,7 @@ public class FaceBookActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Kiểm tra trạng thái đăng nhập
-        SharedPreferences sharedPreferences = getSharedPreferences("Login", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("to_login", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
 
         if (!isLoggedIn) {
@@ -86,23 +86,23 @@ public class FaceBookActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.home_page) {
-                    mviewPager.setCurrentItem(0, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(0, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.video_page) {
-                    mviewPager.setCurrentItem(1, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(1, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.profile_page) {
-                    mviewPager.setCurrentItem(2, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(2, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.notification_page) {
-                    mviewPager.setCurrentItem(3, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(3, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.menu_page) {
-                    mviewPager.setCurrentItem(4, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(4, true);
                     return true;
                 }
 
@@ -118,10 +118,10 @@ public class FaceBookActivity extends AppCompatActivity {
     }
 
     private void navigateToLoginFragment() {
-        // Chuyển hướng đến LoginFragment
         Fragment loginFragment = new LoginFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(android.R.id.content, loginFragment);
         transaction.commit();
     }
+
 }
