@@ -30,11 +30,12 @@
         <activity
             android:name=".Messenger_Activity"
             android:exported="false" />
+
         <activity
             android:name=".FaceBookActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>

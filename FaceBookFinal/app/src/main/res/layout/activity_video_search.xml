@@ -19,6 +19,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/back_button"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:background="@drawable/back_arrow"
@@ -101,7 +102,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="#ffffff">
 

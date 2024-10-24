@@ -1,6 +1,7 @@
 package vn.edu.usth.facebook;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,16 +15,18 @@ public class Picture_Home_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        EdgeToEdge.enable(this);
-
         setContentView(R.layout.activity_picture_home);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+        ImageButton backButton = findViewById(R.id.close_button);
 
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-
-            return insets;
+        backButton.setOnClickListener(view -> {
+            onBackPressed();
         });
+
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
     }
 }
