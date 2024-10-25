@@ -34,7 +34,7 @@ public class LoginFragment extends Fragment {
 
             if (validateLogin(email, password)) {
 
-                SharedPreferences sharedPreferences = getActivity().getSharedPreferences("toLogin", getContext().MODE_PRIVATE);
+                SharedPreferences sharedPreferences = getActivity().getSharedPreferences("TOLogin", getContext().MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putBoolean("isLoggedIn", true);
                 editor.apply();
@@ -57,7 +57,14 @@ public class LoginFragment extends Fragment {
             }
         });
 
-
+        LinearLayout forgot_password = view.findViewById(R.id.forgot_password);
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), ForgotPassword_Activity.class );
+                startActivity(i);
+            }
+        });
 
         return view;
     }

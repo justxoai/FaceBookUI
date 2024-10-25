@@ -15,6 +15,8 @@ public class Mess_Fragment extends Fragment {
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_mess_, container, false);
+        View v = inflater.inflate(R.layout.fragment_mess_, container, false);
+
+        return v;
     }
 }

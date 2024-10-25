@@ -23,11 +23,55 @@ public class Messenger_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_messenger);
 
+        mviewPager = findViewById(R.id.mess_view_pager);
+        bottomNavigationView = findViewById(R.id.mess_bottom_navigation);
 
+        Mess_Fragment_Changing adapter = new Mess_Fragment_Changing(getSupportFragmentManager(), getLifecycle());
+        mviewPager.setAdapter(adapter);
+        mviewPager.setUserInputEnabled(false);
+
+        mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                        bottomNavigationView.getMenu().findItem(R.id.mess_page).setChecked(true);
+                        break;
+                    case 1:
+                        bottomNavigationView.getMenu().findItem(R.id.story_page).setChecked(true);
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+                super.onPageScrollStateChanged(state);
+            }
+        });
+
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.mess_page) {
+                    mviewPager.setCurrentItem(0, true); // Switch to the first fragment
+                    return true;
+                }
+                if (item.getItemId() == R.id.story_page) {
+                    mviewPager.setCurrentItem(1, true); // Switch to the first fragment
+                    return true;
+                }
+                return false;
+            }
+        });
 
 
         LinearLayout back = findViewById(R.id.back_button);
-
         back.setOnClickListener(view -> {
             onBackPressed();
         });
