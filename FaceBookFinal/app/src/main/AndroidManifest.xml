@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FaceBook"
         tools:targetApi="31">
         <activity
+            android:name=".ResetPassword_Activity"
+            android:exported="false" />
+        <activity
             android:name=".ForgetPassword_Activity"
             android:exported="false" />
         <activity
