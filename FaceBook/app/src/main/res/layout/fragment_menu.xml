@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MenuFragment"
     android:scrollbars="none"
-    android:background="#f3f4f8">
+    android:background="#f3f4f8"
+    android:id="@+id/menu_page_fragment">
 
     <LinearLayout
         android:layout_width="match_parent"

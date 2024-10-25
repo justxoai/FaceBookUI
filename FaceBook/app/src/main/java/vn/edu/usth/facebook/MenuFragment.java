@@ -34,6 +34,10 @@ public class MenuFragment extends Fragment {
         logout_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Fragment loginFragment = new LoginFragment();
+                FragmentTransaction fragmentTransaction = requireActivity().getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(android.R.id.content, loginFragment);
+                fragmentTransaction.commit();
 
             }
         });
