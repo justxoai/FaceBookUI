@@ -75,7 +75,6 @@ public class ProfileFragment extends Fragment {
         });
 
         ImageButton editprofilebutton = v.findViewById(R.id.edit_profile_button);
-
         editprofilebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
