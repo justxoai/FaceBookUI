@@ -44,7 +44,7 @@ public class LoginFragment extends Fragment {
                 getActivity().finish();
             } else {
 
-                Toast.makeText(getActivity(), "Error, Please try again!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Enter email or phone number to log in", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -1376,6 +1376,7 @@
 
         <!--- Log out -->
         <LinearLayout
+            android:id="@+id/logout_button"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:paddingTop="10dp"
