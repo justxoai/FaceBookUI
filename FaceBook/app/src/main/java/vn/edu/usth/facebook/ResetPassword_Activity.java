@@ -42,7 +42,7 @@ public class ResetPassword_Activity extends AppCompatActivity {
                 editor.putBoolean("isChange", true);
                 editor.apply();
 
-                if(newPassword == confirmPassword){
+                if(newPassword.equals(confirmPassword)){
                     Fragment loginFragment = new LoginFragment();
                     FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                     transaction.replace(android.R.id.content, loginFragment);
