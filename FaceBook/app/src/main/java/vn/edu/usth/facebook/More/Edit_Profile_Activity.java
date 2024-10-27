@@ -1,13 +1,10 @@
-package vn.edu.usth.facebook;
+package vn.edu.usth.facebook.More;
 
 import android.os.Bundle;
 import android.widget.ImageButton;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import vn.edu.usth.facebook.R;
 
 public class Edit_Profile_Activity extends AppCompatActivity {
 

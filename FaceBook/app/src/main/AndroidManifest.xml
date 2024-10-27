@@ -13,31 +13,31 @@
         android:theme="@style/Theme.FaceBook"
         tools:targetApi="31">
         <activity
-            android:name=".ResetPassword_Activity"
+            android:name=".Login.ResetPassword_Activity"
             android:exported="false" />
         <activity
-            android:name=".ForgotPassword_Activity"
+            android:name=".Login.ForgotPassword_Activity"
             android:exported="false" />
         <activity
-            android:name=".Register_Activity"
+            android:name=".Login.Register_Activity"
             android:exported="false" />
         <activity
-            android:name=".Edit_Profile_Activity"
+            android:name=".More.Edit_Profile_Activity"
             android:exported="false" />
         <activity
-            android:name=".Video_Save_Activity"
+            android:name=".More.Video_Save_Activity"
             android:exported="false" />
         <activity
-            android:name=".Video_Search_Activity"
+            android:name=".More.Video_Search_Activity"
             android:exported="false" />
         <activity
-            android:name=".Picture_Home_Activity"
+            android:name=".More.Picture_Home_Activity"
             android:exported="false" />
         <activity
-            android:name=".Search_Activity"
+            android:name=".More.Search_Activity"
             android:exported="false" />
         <activity
-            android:name=".Messenger_Activity"
+            android:name=".Messenger.Messenger_Activity"
             android:exported="false" />
         <activity
             android:name=".FaceBookActivity"

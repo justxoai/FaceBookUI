@@ -1,7 +1,7 @@
-package vn.edu.usth.facebook;
+package vn.edu.usth.facebook.Home;
 
 import android.content.Intent;
-import android.media.Image;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import vn.edu.usth.facebook.R;
 
 public class HomeFragment extends Fragment {
 
@@ -23,7 +25,7 @@ public class HomeFragment extends Fragment {
         chatbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), Messenger_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Messenger.Messenger_Activity.class );
                 startActivity(i);
             }
         });
@@ -32,7 +34,7 @@ public class HomeFragment extends Fragment {
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), Search_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Search_Activity.class );
                 startActivity(i);
             }
         });
@@ -41,7 +43,7 @@ public class HomeFragment extends Fragment {
         image_homebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), Picture_Home_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Picture_Home_Activity.class );
                 startActivity(i);
             }
         });

@@ -1,15 +1,16 @@
-package vn.edu.usth.facebook;
+package vn.edu.usth.facebook.Messenger;
 
 import android.os.Bundle;
 import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import vn.edu.usth.facebook.R;
 
 public class Messenger_Activity extends AppCompatActivity {
 

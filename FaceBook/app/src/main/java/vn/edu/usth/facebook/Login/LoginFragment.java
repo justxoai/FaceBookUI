@@ -1,4 +1,4 @@
-package vn.edu.usth.facebook;
+package vn.edu.usth.facebook.Login;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import vn.edu.usth.facebook.R;
 
 public class LoginFragment extends Fragment {
 
@@ -39,7 +41,7 @@ public class LoginFragment extends Fragment {
                 editor.putBoolean("isLoggedIn", true);
                 editor.apply();
 
-                Intent intent = new Intent(getActivity(), FaceBookActivity.class);
+                Intent intent = new Intent(getActivity(), vn.edu.usth.facebook.FaceBookActivity.class);
                 startActivity(intent);
                 getActivity().finish();
             } else {

@@ -6,9 +6,6 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
@@ -39,7 +36,7 @@ public class FaceBookActivity extends AppCompatActivity {
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        Fragment_Changing adapter = new Fragment_Changing(getSupportFragmentManager(), getLifecycle());
+        vn.edu.usth.facebook.Home.Fragment_Changing adapter = new vn.edu.usth.facebook.Home.Fragment_Changing(getSupportFragmentManager(), getLifecycle());
         mviewPager.setAdapter(adapter);
         mviewPager.setUserInputEnabled(false);
 
@@ -109,7 +106,7 @@ public class FaceBookActivity extends AppCompatActivity {
     }
 
     private void navigateToLoginFragment() {
-        Fragment loginFragment = new LoginFragment();
+        Fragment loginFragment = new vn.edu.usth.facebook.Login.LoginFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(android.R.id.content, loginFragment);
         transaction.commit();

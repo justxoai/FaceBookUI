@@ -1,4 +1,4 @@
-package vn.edu.usth.facebook;
+package vn.edu.usth.facebook.Home;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

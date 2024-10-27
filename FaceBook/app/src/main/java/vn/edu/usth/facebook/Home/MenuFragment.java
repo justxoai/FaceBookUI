@@ -1,10 +1,9 @@
-package vn.edu.usth.facebook;
+package vn.edu.usth.facebook.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
@@ -12,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
+import vn.edu.usth.facebook.R;
 
 public class MenuFragment extends Fragment {
 
@@ -25,7 +26,7 @@ public class MenuFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), Search_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Search_Activity.class );
                 startActivity(i);
             }
         });
@@ -34,7 +35,7 @@ public class MenuFragment extends Fragment {
         logout_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment loginFragment = new LoginFragment();
+                Fragment loginFragment = new vn.edu.usth.facebook.Login.LoginFragment();
                 FragmentTransaction fragmentTransaction = requireActivity().getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(android.R.id.content, loginFragment);
                 fragmentTransaction.commit();
