@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VideoFragment"
     android:scrollbars="none"
-    android:background="#ccc">
+    android:background="@color/dark_grey"
+    tools:context=".Home.VideoFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="horizontal"
             android:paddingTop="5dp"
             android:paddingLeft="10dp">
@@ -26,7 +26,7 @@
                 android:layout_width="310dp"
                 android:layout_height="35dp"
                 android:text="Video"
-                android:textColor="#000000"
+                android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"/>
 
@@ -40,7 +40,7 @@
                     android:layout_height="35dp"
                     android:layout_margin="5dp"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="#e4e6eb"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="20dp">
 
                     <ImageButton
@@ -56,7 +56,7 @@
                     android:layout_height="35dp"
                     android:layout_margin="5dp"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="#e4e6eb"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="20dp">
 
                     <ImageButton
@@ -75,7 +75,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="horizontal"
             android:paddingTop="3dp"
             android:paddingBottom="3dp">
@@ -83,7 +83,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="75dp"
                 android:layout_height="30dp"
-                app:cardBackgroundColor="#e8f4ff"
+                app:cardBackgroundColor="@color/light_cyan"
                 app:cardCornerRadius="20dp"
                 android:layout_marginLeft="10dp">
 
@@ -94,7 +94,7 @@
                     android:textSize="16.5sp"
                     android:gravity="center"
                     android:textStyle="bold"
-                    android:textColor="#527596"/>
+                    android:textColor="@color/dark_cyan"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -128,7 +128,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -158,7 +158,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -204,7 +204,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -274,7 +274,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -283,7 +283,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -408,7 +408,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:background="#ffffff"
+                android:background="@color/white"
                 android:orientation="vertical"
                 android:padding="10dp"
                 android:layout_marginTop="3dp">
@@ -428,7 +428,7 @@
                         android:text="Reels"
                         android:layout_marginLeft="5dp"
                         android:textStyle="bold"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -663,7 +663,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -693,7 +693,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -739,7 +739,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -809,7 +809,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -818,7 +818,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -938,7 +938,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -968,7 +968,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1014,7 +1014,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -1084,7 +1084,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -1093,7 +1093,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -1213,7 +1213,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -1243,7 +1243,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1289,7 +1289,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -1359,7 +1359,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -1368,7 +1368,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -1493,7 +1493,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:background="#ffffff"
+                android:background="@color/white"
                 android:orientation="vertical"
                 android:padding="10dp"
                 android:layout_marginTop="3dp">
@@ -1513,7 +1513,7 @@
                         android:text="Reels"
                         android:layout_marginLeft="5dp"
                         android:textStyle="bold"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -1748,7 +1748,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -1778,7 +1778,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1823,7 +1823,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -1893,7 +1893,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -1902,7 +1902,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 

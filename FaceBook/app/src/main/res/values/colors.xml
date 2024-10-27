@@ -5,23 +5,21 @@
     <color name="blue">#0866ff</color>
     <color name="grey">#f0f2f5</color>
 
-    <color name="colorPrimary">#3b5998</color>
-    <color name="colorPrimaryLight">#8b9dc3</color>
     <color name="colorAccentDark">#dfe3ee</color>
-    <color name="colorAccent">#f7f7f7</color>
 
     <color name="dark_grey">#CCC</color>
+    <color name="light_grey">#e4e6eb</color>
     <color name="better_grey">#e2e5ea</color>
-    <color name="blue_dot">#294fd1</color>
     <color name="very_dark_grey">#181818</color>
+    <color name="menu_grey">#f3f4f8</color>
 
-    <color name="bottom_navigator_before">#9BA6AB</color>
-    <color name="bottom_navigator_after">#85FAF0</color>
+    <color name="online_dot">#46c146</color>
+    <color name="offline_dot">#e6fae9</color>
+    <color name="offline_text">#91c180</color>
 
-    <color name="colorLightBlue">#6098eb</color>
-    <color name="colorNeonBlue">#4dc0e3</color>
+    <color name="light_cyan">#e6f2fe</color>
+    <color name="dark_cyan">#527596</color>
 
-    <color name="DarkBlue">#4a67d9</color>
-    <color name="LightBlue">#c4d5ff</color>
+    <color name="blue_dot">#294fd1</color>
 
 </resources>

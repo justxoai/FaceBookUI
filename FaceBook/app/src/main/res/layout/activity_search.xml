@@ -5,17 +5,17 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Search_Activity"
-    android:background="@color/white"
-    android:orientation="vertical">
+    android:background="@color/dark_grey"
+    android:orientation="vertical"
+    tools:context=".More.Search_Activity">
 
     <!--- Search FaceBook -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_marginBottom="2dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/white">
 
         <ImageButton
             android:id="@+id/back_button"
@@ -47,7 +47,9 @@
     <!--- Body -->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,7 +60,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="@color/white">
 
                 <TextView
                     android:layout_width="300dp"
@@ -66,7 +69,7 @@
                     android:text="Recent"
                     android:textStyle="bold"
                     android:paddingLeft="15dp"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="100dp"
@@ -82,13 +85,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
-                android:layout_marginTop="5dp"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#ffffff"
+                    android:background="@color/white"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
@@ -97,7 +99,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="17dp"
                         android:layout_marginRight="8dp"
-                        app:cardBackgroundColor="#e4e6eb"
+                        app:cardBackgroundColor="@color/light_grey"
                         app:cardCornerRadius="50dp">
 
                         <ImageButton
@@ -117,7 +119,7 @@
                             android:layout_height="20dp"
                             android:text="Kieu Quoc Viet"
                             android:textStyle="bold"
-                            android:textColor="#000000"/>
+                            android:textColor="@color/black"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -144,7 +146,7 @@
                                 android:gravity="center|left"
                                 android:paddingLeft="3dp"
                                 android:textSize="10sp"
-                                android:textColor="#646668"/>
+                                android:textColor="@color/very_dark_grey"/>
 
                         </LinearLayout>
 
@@ -161,7 +163,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#ffffff"
+                    android:background="@color/white"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
@@ -170,7 +172,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="17dp"
                         android:layout_marginRight="8dp"
-                        app:cardBackgroundColor="#e4e6eb"
+                        app:cardBackgroundColor="@color/light_grey"
                         app:cardCornerRadius="50dp">
 
                         <ImageButton
@@ -190,7 +192,7 @@
                             android:layout_height="match_parent"
                             android:text="Huynh Vinh Nam"
                             android:textStyle="bold"
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:gravity="center_vertical"/>
 
                     </LinearLayout>
@@ -206,7 +208,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#ffffff"
+                    android:background="@color/white"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
@@ -215,7 +217,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="17dp"
                         android:layout_marginRight="8dp"
-                        app:cardBackgroundColor="#e4e6eb"
+                        app:cardBackgroundColor="@color/light_grey"
                         app:cardCornerRadius="50dp">
 
                         <ImageButton
@@ -235,7 +237,7 @@
                             android:layout_height="20dp"
                             android:text="Le Hiep"
                             android:textStyle="bold"
-                            android:textColor="#000000"/>
+                            android:textColor="@color/black"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -262,7 +264,7 @@
                                 android:gravity="center|left"
                                 android:paddingLeft="3dp"
                                 android:textSize="10sp"
-                                android:textColor="#646668"/>
+                                android:textColor="@color/very_dark_grey"/>
 
                         </LinearLayout>
 
@@ -279,7 +281,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#ffffff"
+                    android:background="@color/white"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
@@ -288,7 +290,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="17dp"
                         android:layout_marginRight="8dp"
-                        app:cardBackgroundColor="#e4e6eb"
+                        app:cardBackgroundColor="@color/light_grey"
                         app:cardCornerRadius="50dp">
 
                         <ImageButton
@@ -308,7 +310,7 @@
                             android:layout_height="20dp"
                             android:text="USTH"
                             android:textStyle="bold"
-                            android:textColor="#000000"/>
+                            android:textColor="@color/black"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -335,7 +337,7 @@
                                 android:gravity="center|left"
                                 android:paddingLeft="3dp"
                                 android:textSize="10sp"
-                                android:textColor="#646668"/>
+                                android:textColor="@color/very_dark_grey"/>
 
                         </LinearLayout>
 
@@ -352,7 +354,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#ffffff"
+                    android:background="@color/white"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
@@ -361,7 +363,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="17dp"
                         android:layout_marginRight="8dp"
-                        app:cardBackgroundColor="#e4e6eb"
+                        app:cardBackgroundColor="@color/light_grey"
                         app:cardCornerRadius="50dp">
 
                         <ImageButton
@@ -381,7 +383,7 @@
                             android:layout_height="match_parent"
                             android:text="Leo Thomas"
                             android:textStyle="bold"
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:gravity="center_vertical"/>
 
                     </LinearLayout>
@@ -397,7 +399,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:background="#ffffff"
+                    android:background="@color/white"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
@@ -406,7 +408,7 @@
                         android:layout_gravity="center"
                         android:layout_marginLeft="17dp"
                         android:layout_marginRight="8dp"
-                        app:cardBackgroundColor="#e4e6eb"
+                        app:cardBackgroundColor="@color/light_grey"
                         app:cardCornerRadius="50dp">
 
                         <ImageButton
@@ -425,7 +427,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="20dp"
                             android:text="Finn Carter"
-                            android:textColor="#000000"
+                            android:textColor="@color/black"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -440,7 +442,7 @@
                                 android:gravity="center|left"
                                 android:paddingLeft="3dp"
                                 android:textSize="10sp"
-                                android:textColor="#646668"/>
+                                android:textColor="@color/very_dark_grey"/>
 
                         </LinearLayout>
 
@@ -465,7 +467,7 @@
                 android:paddingLeft="15dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="5dp"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -1136,7 +1138,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="210dp"
-                    android:background="#ffffff"
+                    android:background="@color/white"
                     android:orientation="vertical"
                     android:padding="10dp"
                     android:layout_marginTop="3dp">
@@ -1763,7 +1765,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="2dp"
                             android:layout_marginRight="20dp"
-                            app:cardBackgroundColor="#fff"
+                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="5dp">
 
                             <LinearLayout
@@ -1776,7 +1778,7 @@
                                     android:layout_height="25dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="10dp"
-                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardBackgroundColor="@color/light_grey"
                                     app:cardCornerRadius="50dp">
 
                                     <ImageButton
@@ -1792,7 +1794,7 @@
                                     android:text="Marketplace"
                                     android:paddingLeft="8dp"
                                     android:textStyle="bold"
-                                    android:textColor="#000000"/>
+                                    android:textColor="@color/black"/>
 
                             </LinearLayout>
 
@@ -1817,7 +1819,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="2.5dp"
-                            app:cardBackgroundColor="#fff"
+                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="5dp">
 
                             <LinearLayout
@@ -1830,7 +1832,7 @@
                                     android:layout_height="25dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="10dp"
-                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardBackgroundColor="@color/light_grey"
                                     app:cardCornerRadius="50dp">
 
                                     <ImageButton
@@ -1846,7 +1848,7 @@
                                     android:text="Reels"
                                     android:paddingLeft="8dp"
                                     android:textStyle="bold"
-                                    android:textColor="#000000"/>
+                                    android:textColor="@color/black"/>
 
                             </LinearLayout>
 
@@ -1863,7 +1865,7 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="2dp"
                             android:layout_marginRight="20dp"
-                            app:cardBackgroundColor="#fff"
+                            app:cardBackgroundColor="@color/white"
                             app:cardCornerRadius="5dp">
 
                             <LinearLayout
@@ -1876,7 +1878,7 @@
                                     android:layout_height="25dp"
                                     android:layout_marginLeft="8dp"
                                     android:layout_marginTop="10dp"
-                                    app:cardBackgroundColor="#e4e6eb"
+                                    app:cardBackgroundColor="@color/light_grey"
                                     app:cardCornerRadius="50dp">
 
                                     <ImageButton
@@ -1892,7 +1894,7 @@
                                     android:text="Groups"
                                     android:paddingLeft="8dp"
                                     android:textStyle="bold"
-                                    android:textColor="#000000"/>
+                                    android:textColor="@color/black"/>
 
                             </LinearLayout>
 

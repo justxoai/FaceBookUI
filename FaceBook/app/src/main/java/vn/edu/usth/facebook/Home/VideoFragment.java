@@ -17,11 +17,9 @@ public class VideoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View v = inflater.inflate(R.layout.fragment_video, container, false);
 
         ImageButton searchbutton = v.findViewById(R.id.search_video_button);
-
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,7 +29,6 @@ public class VideoFragment extends Fragment {
         });
 
         ImageButton savebutton = v.findViewById(R.id.save_video_button);
-
         savebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,7 +37,6 @@ public class VideoFragment extends Fragment {
             }
         });
 
-        // Inflate the layout for this fragment
         return v;
     }
 }

@@ -14,12 +14,9 @@ public class Video_Save_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        EdgeToEdge.enable(this);
-
         setContentView(R.layout.activity_video_save);
 
         ImageButton backButton = findViewById(R.id.back_button);
-
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });

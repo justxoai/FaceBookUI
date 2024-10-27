@@ -16,7 +16,6 @@ public class Picture_Home_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_picture_home);
 
         ImageButton backButton = findViewById(R.id.close_button);
-
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });

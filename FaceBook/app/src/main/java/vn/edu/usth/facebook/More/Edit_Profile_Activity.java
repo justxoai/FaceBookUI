@@ -15,7 +15,6 @@ public class Edit_Profile_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
 
         ImageButton backButton = findViewById(R.id.back_button);
-
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });

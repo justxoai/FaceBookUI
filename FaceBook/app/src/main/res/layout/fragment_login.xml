@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/white"
     android:id="@+id/fragment_login"
-    tools:context=".LoginFragment">
+    tools:context=".Login.LoginFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView"
@@ -62,7 +62,7 @@
         android:backgroundTint="@color/blue"
         android:padding="10dp"
         android:text="@string/log_in"
-        android:textColor="@color/colorAccentDark"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

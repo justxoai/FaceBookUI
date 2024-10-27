@@ -17,11 +17,9 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
         ImageButton searchbutton = v.findViewById(R.id.home_search_button);
-
         searchbutton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -32,7 +30,6 @@ public class ProfileFragment extends Fragment {
         });
 
         ImageButton editprofilebutton = v.findViewById(R.id.edit_profile_button);
-
         editprofilebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

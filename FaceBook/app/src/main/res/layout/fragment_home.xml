@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment"
     android:scrollbars="none"
-    android:background="#ccc"
-    android:id="@+id/fragment_home">
+    android:background="@color/dark_grey"
+    android:id="@+id/fragment_home"
+    tools:context=".Home.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="horizontal"
             android:paddingTop="5dp"
             android:paddingLeft="10dp">
@@ -27,7 +27,7 @@
                 android:layout_width="260dp"
                 android:layout_height="35dp"
                 android:text="facebook"
-                android:textColor="#0866ff"
+                android:textColor="@color/blue"
                 android:textSize="28sp"
                 android:textStyle="bold"/>
 
@@ -41,7 +41,7 @@
                     android:layout_height="35dp"
                     android:layout_margin="5dp"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="#e4e6eb"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="20dp">
 
                     <ImageButton
@@ -57,7 +57,7 @@
                     android:layout_height="35dp"
                     android:layout_margin="5dp"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="#e4e6eb"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="20dp">
 
                     <ImageButton
@@ -73,7 +73,7 @@
                     android:layout_height="35dp"
                     android:layout_margin="5dp"
                     android:layout_gravity="center"
-                    app:cardBackgroundColor="#e4e6eb"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="20dp">
 
                     <ImageButton
@@ -93,7 +93,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="horizontal"
             android:paddingTop="2.5dp">
 
@@ -128,7 +128,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:background="#ffffff"
+                android:background="@color/white"
                 android:orientation="horizontal"
                 android:padding="10dp"
                 android:layout_marginTop="2dp">
@@ -168,7 +168,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             android:layout_gravity="center"
-                            app:cardBackgroundColor="#0866ff"
+                            app:cardBackgroundColor="@color/blue"
                             app:cardCornerRadius="20dp">
 
                             <ImageButton
@@ -204,7 +204,7 @@
                                 android:layout_weight="1"
                                 android:paddingLeft="5dp"
                                 android:text="Henry"
-                                android:textColor="#ffffff"
+                                android:textColor="@color/white"
                                 android:textStyle="bold" />
 
                         </RelativeLayout>
@@ -247,7 +247,7 @@
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
                                 android:text="Julia"
-                                android:textColor="#ffffff"
+                                android:textColor="@color/white"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
 
@@ -292,7 +292,7 @@
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
                                 android:text="Adam"
-                                android:textColor="#ffffff"
+                                android:textColor="@color/white"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
 
@@ -336,7 +336,7 @@
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
                                 android:text="At"
-                                android:textColor="#ffffff"
+                                android:textColor="@color/white"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
 
@@ -381,7 +381,7 @@
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
                                 android:text="Laura"
-                                android:textColor="#ffffff"
+                                android:textColor="@color/white"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
 
@@ -425,7 +425,7 @@
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
                                 android:text="Charlotte"
-                                android:textColor="#ffffff"
+                                android:textColor="@color/white"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
 
@@ -470,7 +470,7 @@
                                 android:layout_height="20dp"
                                 android:layout_weight="1"
                                 android:text="Victoria"
-                                android:textColor="#ffffff"
+                                android:textColor="@color/white"
                                 android:textStyle="bold"
                                 android:paddingLeft="5dp"/>
 
@@ -502,7 +502,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -532,7 +532,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -578,7 +578,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -648,7 +648,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -657,7 +657,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -782,7 +782,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:background="#ffffff"
+                android:background="@color/white"
                 android:orientation="vertical"
                 android:padding="10dp"
                 android:layout_marginTop="3dp">
@@ -802,7 +802,7 @@
                         android:text="Reels"
                         android:layout_marginLeft="5dp"
                         android:textStyle="bold"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -1037,7 +1037,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -1067,7 +1067,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1113,7 +1113,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -1183,7 +1183,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -1192,7 +1192,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -1312,7 +1312,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -1342,7 +1342,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1386,7 +1386,7 @@
                 android:layout_width="220dp"
                 android:layout_height="220dp"
                 android:layout_gravity="center"
-                app:cardBackgroundColor="#ccc"
+                app:cardBackgroundColor="@color/dark_grey"
                 app:cardCornerRadius="100dp">
 
                 <ImageButton
@@ -1459,7 +1459,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -1468,7 +1468,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -1588,7 +1588,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -1618,7 +1618,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1664,7 +1664,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -1734,7 +1734,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -1743,7 +1743,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -1863,7 +1863,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="vertical"
             android:layout_marginTop="2dp">
 
@@ -1893,7 +1893,7 @@
                         android:paddingTop="5dp"
                         android:textStyle="bold"
                         android:textSize="15sp"
-                        android:textColor="#000000"/>
+                        android:textColor="@color/black"/>
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -1938,7 +1938,7 @@
                 android:paddingLeft="8dp"
                 android:paddingTop="3dp"
                 android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:textColor="@color/black"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -2008,7 +2008,7 @@
                     android:paddingTop="3dp"
                     android:gravity="center_vertical"
                     android:text="1.2k"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="196dp"
@@ -2017,7 +2017,7 @@
                     android:gravity="right"
                     android:paddingRight="5dp"
                     android:text="1k comments  900 shares"
-                    android:textColor="#000000"/>
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
 
@@ -2142,7 +2142,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="210dp"
-                android:background="#ffffff"
+                android:background="@color/white"
                 android:orientation="vertical"
                 android:padding="10dp"
                 android:layout_marginTop="3dp">
@@ -2162,7 +2162,7 @@
                         android:text="Reels"
                         android:layout_marginLeft="5dp"
                         android:textStyle="bold"
-                        android:textColor="#000000" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 

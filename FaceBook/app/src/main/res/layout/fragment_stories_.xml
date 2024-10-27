@@ -7,7 +7,7 @@
     android:id="@+id/story_page"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".Stories_Fragment">
+    tools:context=".Messenger.Stories_Fragment">
 
     <!--- Back to facebook -->
     <LinearLayout
@@ -35,16 +35,17 @@
     <!--- Header -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="5dp"
-        android:paddingLeft="10dp">
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_gravity="center"
-            app:cardBackgroundColor="#e4e6eb"
+            app:cardBackgroundColor="@color/light_grey"
             app:cardCornerRadius="20dp">
 
             <ImageButton
@@ -59,7 +60,7 @@
             android:layout_width="310dp"
             android:layout_height="match_parent"
             android:text="Stories"
-            android:textColor="#000000"
+            android:textColor="@color/black"
             android:gravity="center"
             android:textSize="28sp"
             android:textStyle="bold"
@@ -76,7 +77,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
+            android:background="@color/white"
             android:orientation="horizontal"
             android:padding="8dp">
 
@@ -114,7 +115,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageButton
@@ -159,7 +160,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -203,7 +204,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -247,7 +248,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -291,7 +292,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -335,7 +336,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -379,7 +380,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -431,7 +432,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -475,7 +476,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -519,7 +520,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -563,7 +564,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -607,7 +608,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -651,7 +652,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
@@ -695,7 +696,7 @@
                             android:layout_height="35dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
-                            app:cardBackgroundColor="#e4e6eb"
+                            app:cardBackgroundColor="@color/light_grey"
                             app:cardCornerRadius="20dp">
 
                             <ImageView
