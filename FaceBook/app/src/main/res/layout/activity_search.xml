@@ -33,12 +33,14 @@
             app:cardBackgroundColor="@color/better_grey"
             app:cardCornerRadius="15dp">
 
-            <TextView
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Search Facebook"
+                android:hint="Search facebook"
+                android:textSize="15sp"
+                android:inputType="text"
                 android:paddingLeft="10dp"
-                android:paddingTop="5dp"/>
+                android:background="@color/better_grey"/>
 
         </androidx.cardview.widget.CardView>
 

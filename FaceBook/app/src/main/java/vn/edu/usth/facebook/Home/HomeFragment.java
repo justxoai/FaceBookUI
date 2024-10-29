@@ -6,15 +6,17 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import vn.edu.usth.facebook.R;
 
 public class HomeFragment extends Fragment {
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,6 +46,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Picture_Home_Activity.class );
+                startActivity(i);
+            }
+        });
+
+        LinearLayout createpost = v.findViewById(R.id.createPost);
+        createpost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Create_Post_Activity.class );
                 startActivity(i);
             }
         });

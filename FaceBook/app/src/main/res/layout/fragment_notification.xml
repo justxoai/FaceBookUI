@@ -184,6 +184,7 @@
 
         <!--- Friend1 -->
         <LinearLayout
+            android:id="@+id/friend1"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@color/white"
@@ -205,7 +206,7 @@
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
-                android:layout_width="300dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -295,6 +296,7 @@
 
         <!--- Friend2 -->
         <LinearLayout
+            android:id="@+id/friend2"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@color/white"
@@ -316,7 +318,7 @@
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
-                android:layout_width="300dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -406,6 +408,7 @@
 
         <!--- Friend3 -->
         <LinearLayout
+            android:id="@+id/friend3"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@color/white"
@@ -427,7 +430,7 @@
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
-                android:layout_width="300dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -513,6 +516,30 @@
 
             </androidx.cardview.widget.CardView>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/more_friend"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:cardBackgroundColor="@color/dark_grey"
+                app:cardCornerRadius="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="See more friend"
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
         <!--- Today -->
