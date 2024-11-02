@@ -37,5 +37,4 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
-    implementation 'com.google.android.youtube:youtube-android-player-api:1.2.2'
 }
