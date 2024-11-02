@@ -24,16 +24,17 @@ public class HomeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         // Initialize RecyclerView
-        RecyclerView recyclerView = v.findViewById(R.id.recyclerview1);
+        RecyclerView recyclerView = v.findViewById(R.id.recyclerview01);
 
-        // Create list of items ( Thứ tự sắp xếp các biến dựa vào file MyAdapter )
+        // Create list of items ( Thứ tự sắp xếp các biến dựa vào file HomeAdapter )
         List<HomeItem> items = new ArrayList<HomeItem>();
-        items.add(new HomeItem("VietAnh", "13h50", R.drawable.vid_1, R.drawable.circle_avatar));
-        items.add(new HomeItem("HoaiAnh", "12h36", R.drawable.vid_2, R.drawable.johnny));
+        items.add(new HomeItem("Viet Anh", "13h50", R.drawable.vid_1, R.drawable.circle_avatar));
+        items.add(new HomeItem("Hoai Anh", "12h36", R.drawable.vid_2, R.drawable.johnny));
+        items.add(new HomeItem("Duc Duy", "15h40", R.drawable.vid_3, R.drawable.vdd_avatar));
 
         // Set up the RecyclerView with a layout manager and adapter
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
-        recyclerView.setAdapter(new MyAdapter(requireContext(), items));
+        recyclerView.setAdapter(new HomeAdapter(requireContext(), items));
 
         // Set up the other buttons and their click listeners
         ImageButton chatbutton = v.findViewById(R.id.chat_button);

@@ -11,13 +11,13 @@ import java.util.List;
 
 import vn.edu.usth.facebook.R;
 
-public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
+public class HomeAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
 
     Context context;
     List<HomeItem> items;
 
-    public MyAdapter(Context context, List<HomeItem> items) {
+    public HomeAdapter(Context context, List<HomeItem> items) {
         this.context = context;
         this.items = items;
     }

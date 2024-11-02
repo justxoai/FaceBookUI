@@ -1,7 +1,5 @@
 package vn.edu.usth.facebook;
 
-import android.annotation.SuppressLint;
-import android.content.ClipData;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,18 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import vn.edu.usth.facebook.Home.HomeItem;
-import vn.edu.usth.facebook.Home.MyAdapter;
 
 public class FaceBookActivity extends AppCompatActivity {
 

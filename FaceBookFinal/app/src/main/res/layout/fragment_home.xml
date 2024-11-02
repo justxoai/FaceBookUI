@@ -499,11 +499,19 @@
 
         </HorizontalScrollView>
 
-        <!--- RecyclerView -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerview1"
+
+<!--Khi kéo content trong recycle view xuống thì phần header cũng sẽ kéo xuống theo-->
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </androidx.core.widget.NestedScrollView>
 
 
     </LinearLayout>
