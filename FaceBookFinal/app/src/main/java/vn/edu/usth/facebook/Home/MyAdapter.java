@@ -33,6 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         holder.nameView.setText(items.get(position).getName());
         holder.timeView.setText(items.get(position).getTime());
         holder.imageView.setImageResource(items.get(position).getImage());
+        holder.secondimageView.setImageResource(items.get(position).getSecondImage());
 
     }
 

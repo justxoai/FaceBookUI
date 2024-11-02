@@ -26,10 +26,10 @@ public class HomeFragment extends Fragment {
         // Initialize RecyclerView
         RecyclerView recyclerView = v.findViewById(R.id.recyclerview1);
 
-        // Create and populate the list of items
+        // Create list of items ( Thứ tự sắp xếp các biến dựa vào file MyAdapter )
         List<HomeItem> items = new ArrayList<HomeItem>();
-        items.add(new HomeItem("VietAnh", "13h50", R.drawable.vid_1));
-        items.add(new HomeItem("XoaiLol", "12h36", R.drawable.vid_2));
+        items.add(new HomeItem("VietAnh", "13h50", R.drawable.vid_1, R.drawable.circle_avatar));
+        items.add(new HomeItem("HoaiAnh", "12h36", R.drawable.vid_2, R.drawable.johnny));
 
         // Set up the RecyclerView with a layout manager and adapter
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));

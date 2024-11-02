@@ -12,12 +12,12 @@ import vn.edu.usth.facebook.R;
 
 public class MyViewHolder extends RecyclerView.ViewHolder {
 
-    ImageView imageView;
-    ImageButton imageButton;
+    ImageView imageView, secondimageView;
     TextView nameView,timeView;
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
         imageView = itemView.findViewById(R.id.content_imageview);
+        secondimageView = itemView.findViewById(R.id.image_avatar);
         nameView = itemView.findViewById(R.id.user_name);
         timeView = itemView.findViewById(R.id.time);
     }

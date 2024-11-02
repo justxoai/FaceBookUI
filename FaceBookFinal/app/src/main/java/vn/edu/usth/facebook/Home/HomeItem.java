@@ -5,11 +5,13 @@ public class HomeItem {
     String name;
     String time;
     int image;
+    int secondimage;
 
-    public HomeItem(String name, String time, int image) {
+    public HomeItem(String name, String time, int image, int secondimage) {
         this.name = name;
         this.time = time;
         this.image = image;
+        this.secondimage = secondimage;
     }
 
     public String getName() {
@@ -34,5 +36,12 @@ public class HomeItem {
 
     public void setImage(int image) {
         this.image = image;
+    }
+
+    public int getSecondImage() {
+        return secondimage;
+    }
+    public void setSecondImage(int secondimage) {
+        this.secondimage = secondimage;
     }
 }
