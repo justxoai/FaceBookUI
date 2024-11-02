@@ -2,7 +2,9 @@ package vn.edu.usth.facebook.Home;
 
 import android.content.Intent;
 import android.os.Bundle;
-
+import android.net.Uri;
+import android.widget.MediaController;
+import android.widget.VideoView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -10,9 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+
 import vn.edu.usth.facebook.R;
 
 public class VideoFragment extends Fragment {
+    String videoUrl = "https://media.geeksforgeeks.org/wp-content/uploads/20201217192146/Screenrecorder-2020-12-17-19-17-36-828.mp4?_=1";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,6 +41,7 @@ public class VideoFragment extends Fragment {
                 startActivity(i);
             }
         });
+
 
         return v;
     }

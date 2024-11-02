@@ -206,10 +206,11 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-            <ImageView
+            <VideoView
+                android:id="@+id/videoView"
                 android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:background="@drawable/vid_1"/>
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
 
             <LinearLayout
                 android:layout_width="match_parent"
