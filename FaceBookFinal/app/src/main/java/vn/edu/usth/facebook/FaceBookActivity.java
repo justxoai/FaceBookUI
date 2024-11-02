@@ -1,22 +1,27 @@
 package vn.edu.usth.facebook;
 
+import android.annotation.SuppressLint;
+import android.content.ClipData;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.lifecycle.Lifecycle;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import vn.edu.usth.facebook.Home.HomeItem;
+import vn.edu.usth.facebook.Home.MyAdapter;
 
 public class FaceBookActivity extends AppCompatActivity {
 
@@ -28,24 +33,24 @@ public class FaceBookActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Kiểm tra trạng thái đăng nhập
-        SharedPreferences sharedPreferences = getSharedPreferences("to_login", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
 
         if (!isLoggedIn) {
-            // Nếu chưa đăng nhập
             navigateToLoginFragment();
             return;
         }
 
-        // Nếu đã đăng nhập, tiếp tục khởi tạo FaceBookActivity
         setContentView(R.layout.activity_face_book);
+
+
 
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        Fragment_Changing adapter = new Fragment_Changing(getSupportFragmentManager(), getLifecycle());
+        vn.edu.usth.facebook.Home.Fragment_Changing adapter = new vn.edu.usth.facebook.Home.Fragment_Changing(getSupportFragmentManager(), getLifecycle());
         mviewPager.setAdapter(adapter);
+        mviewPager.setUserInputEnabled(false);
 
         mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
 
@@ -86,23 +91,23 @@ public class FaceBookActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.home_page) {
-                    mviewPager.setCurrentItem(0, true);
+                    mviewPager.setCurrentItem(0, true); // Switch to the first fragment
                     return true;
                 }
                 if (item.getItemId() == R.id.video_page) {
-                    mviewPager.setCurrentItem(1, true);
+                    mviewPager.setCurrentItem(1, true); // Switch to the first fragment
                     return true;
                 }
                 if (item.getItemId() == R.id.profile_page) {
-                    mviewPager.setCurrentItem(2, true);
+                    mviewPager.setCurrentItem(2, true); // Switch to the first fragment
                     return true;
                 }
                 if (item.getItemId() == R.id.notification_page) {
-                    mviewPager.setCurrentItem(3, true);
+                    mviewPager.setCurrentItem(3, true); // Switch to the first fragment
                     return true;
                 }
                 if (item.getItemId() == R.id.menu_page) {
-                    mviewPager.setCurrentItem(4, true);
+                    mviewPager.setCurrentItem(4, true); // Switch to the first fragment
                     return true;
                 }
 
@@ -110,18 +115,12 @@ public class FaceBookActivity extends AppCompatActivity {
             }
         });
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
     }
 
     private void navigateToLoginFragment() {
-        Fragment loginFragment = new LoginFragment();
+        Fragment loginFragment = new vn.edu.usth.facebook.Login.LoginFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(android.R.id.content, loginFragment);
         transaction.commit();
     }
-
 }
