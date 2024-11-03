@@ -13,12 +13,13 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+
 public class FaceBookActivity extends AppCompatActivity {
 
     private ViewPager2 mviewPager;
 
     private BottomNavigationView bottomNavigationView;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +33,6 @@ public class FaceBookActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_face_book);
-
-
 
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.bottom_navigation);

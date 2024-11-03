@@ -1,4 +1,4 @@
-package vn.edu.usth.facebook.Home;
+package vn.edu.usth.facebook.Menu;
 
 import android.content.Intent;
 import android.os.Bundle;

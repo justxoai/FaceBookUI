@@ -1,4 +1,4 @@
-package vn.edu.usth.facebook.Home;
+package vn.edu.usth.facebook.Video;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,24 +11,24 @@ import java.util.List;
 
 import vn.edu.usth.facebook.R;
 
-public class HomeAdapter extends RecyclerView.Adapter<HomeViewHolder> {
+public class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
 
     Context context;
-    List<HomeItem> items;
+    List<VideoItem> items;
 
-    public HomeAdapter(Context context, List<HomeItem> items) {
+    public VideoAdapter(Context context, List<VideoItem> items) {
         this.context = context;
         this.items = items;
     }
 
     @NonNull
     @Override
-    public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new HomeViewHolder(LayoutInflater.from(context).inflate(R.layout.post_frame,parent, false));
+    public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new VideoViewHolder(LayoutInflater.from(context).inflate(R.layout.post_frame,parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HomeViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull VideoViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
         holder.timeView.setText(items.get(position).getTime());
         holder.contentView.setText(items.get(position).getContent());

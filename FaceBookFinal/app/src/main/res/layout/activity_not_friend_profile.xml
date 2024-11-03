@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context=".More.Not_Friend_Profile_Activity">
+    tools:context=".User.Not_Friend_Profile_Activity">
 
     <!--- Header -->
     <LinearLayout

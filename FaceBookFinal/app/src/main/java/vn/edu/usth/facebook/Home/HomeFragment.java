@@ -1,47 +1,53 @@
 package vn.edu.usth.facebook.Home;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
+
+import android.graphics.Bitmap;
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
 import android.widget.LinearLayout;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import vn.edu.usth.facebook.R;
 
 public class HomeFragment extends Fragment {
 
-    @SuppressLint({"MissingInflatedId", "LocalSuppress"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
-        // Initialize RecyclerView
-        RecyclerView recyclerView = v.findViewById(R.id.recyclerview01);
+        RecyclerView recyclerView = v.findViewById(R.id.recyclerviewhome);
 
-        // Create list of items ( Thứ tự sắp xếp các biến dựa vào file HomeAdapter )
+        // Create list of items
         List<HomeItem> items = new ArrayList<HomeItem>();
-        items.add(new HomeItem("Viet Anh", "13h50", R.drawable.vid_1, R.drawable.circle_avatar));
-        items.add(new HomeItem("Hoai Anh", "12h36", R.drawable.vid_2, R.drawable.johnny));
-        items.add(new HomeItem("Duc Duy", "15h40", R.drawable.vid_3, R.drawable.vdd_avatar));
+        items.add(new HomeItem("Grace Morgan", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.girl, R.drawable.bridge));
+        items.add(new HomeItem("Isabella Lewis", "16h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.girl_mountain, R.drawable.woods));
+        items.add(new HomeItem("Evelyn", "2d", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.closegirl, R.drawable.girl_hat));
+        items.add(new HomeItem("Rag - Demi Store", "5h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.jean_store, R.drawable.jeans));
 
         // Set up the RecyclerView with a layout manager and adapter
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerView.setAdapter(new HomeAdapter(requireContext(), items));
 
-        // Set up the other buttons and their click listeners
+
         ImageButton chatbutton = v.findViewById(R.id.chat_button);
         chatbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Messenger.Messenger_Activity.class);
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Messenger.Messenger_Activity.class );
                 startActivity(i);
             }
         });
@@ -50,7 +56,7 @@ public class HomeFragment extends Fragment {
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Search_Activity.class);
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Search_Activity.class );
                 startActivity(i);
             }
         });
@@ -59,7 +65,7 @@ public class HomeFragment extends Fragment {
         image_homebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Picture_Home_Activity.class);
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Picture_Home_Activity.class );
                 startActivity(i);
             }
         });
@@ -68,11 +74,29 @@ public class HomeFragment extends Fragment {
         createpost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Create_Post_Activity.class);
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Create_Post_Activity.class );
                 startActivity(i);
             }
         });
 
+
+
         return v;
+    }
+
+    class FetchImage extends Thread{
+
+        String URL;
+
+        Bitmap bitmap;
+
+        FetchImage(String URL){
+            this.URL = URL;
+        }
+
+        @Override
+        public void run() {
+
+        }
     }
 }

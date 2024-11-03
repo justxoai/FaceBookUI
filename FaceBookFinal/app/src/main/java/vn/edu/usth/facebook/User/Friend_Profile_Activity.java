@@ -1,4 +1,4 @@
-package vn.edu.usth.facebook.More;
+package vn.edu.usth.facebook.User;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,12 +6,15 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import vn.edu.usth.facebook.Profile.ProfileAdapter;
 import vn.edu.usth.facebook.R;
 
 public class Friend_Profile_Activity extends AppCompatActivity {
@@ -22,6 +25,18 @@ public class Friend_Profile_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_friend_profile);
 
+        RecyclerView recyclerView = findViewById(R.id.recyclerviewuserpost);
+
+        List<UserPostItem> items = new ArrayList<UserPostItem>();
+
+        items.add(new UserPostItem("User", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.user, R.color.light_grey));
+        items.add(new UserPostItem("User", "16h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.user, R.color.light_grey));
+        items.add(new UserPostItem("User", "2d", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.user, R.color.light_grey));
+        items.add(new UserPostItem("User", "5h", "Lorem ipsum text praesent tincidunt ipsum lipsum.",R.drawable.user, R.color.light_grey));
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new UserPostAdapter(this, items));
+
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
@@ -31,7 +46,7 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Friend_Profile_Activity.this, Search_Activity.class);
+                Intent i = new Intent(Friend_Profile_Activity.this, vn.edu.usth.facebook.More.Search_Activity.class);
                 startActivity(i);
             }
         });
@@ -40,7 +55,7 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         friends.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Friend_Profile_Activity.this, vn.edu.usth.facebook.More.List_Friend_Activity.class );
+                Intent i = new Intent(Friend_Profile_Activity.this, List_Friend_Activity.class );
                 startActivity(i);
             }
         });
@@ -50,7 +65,7 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         my_friend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Friend_Profile_Activity.this, vn.edu.usth.facebook.More.Friend_Profile_Activity.class );
+                Intent i = new Intent(Friend_Profile_Activity.this, Friend_Profile_Activity.class );
                 startActivity(i);
             }
         });
@@ -59,7 +74,7 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         my_friend1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Friend_Profile_Activity.this, vn.edu.usth.facebook.More.Friend_Profile_Activity.class );
+                Intent i = new Intent(Friend_Profile_Activity.this, Friend_Profile_Activity.class );
                 startActivity(i);
             }
         });
@@ -68,7 +83,7 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         my_friend2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Friend_Profile_Activity.this, vn.edu.usth.facebook.More.Friend_Profile_Activity.class );
+                Intent i = new Intent(Friend_Profile_Activity.this, Friend_Profile_Activity.class );
                 startActivity(i);
             }
         });
@@ -77,7 +92,7 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         my_friend3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Friend_Profile_Activity.this, vn.edu.usth.facebook.More.Friend_Profile_Activity.class );
+                Intent i = new Intent(Friend_Profile_Activity.this, Friend_Profile_Activity.class );
                 startActivity(i);
             }
         });
@@ -86,7 +101,7 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         my_friend4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Friend_Profile_Activity.this, vn.edu.usth.facebook.More.Friend_Profile_Activity.class );
+                Intent i = new Intent(Friend_Profile_Activity.this, Friend_Profile_Activity.class );
                 startActivity(i);
             }
         });
@@ -95,7 +110,7 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         my_friend5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Friend_Profile_Activity.this, vn.edu.usth.facebook.More.Friend_Profile_Activity.class );
+                Intent i = new Intent(Friend_Profile_Activity.this, Friend_Profile_Activity.class );
                 startActivity(i);
             }
         });

@@ -1,6 +1,6 @@
-package vn.edu.usth.facebook.Home;
+package vn.edu.usth.facebook.Video;
 
-public class HomeItem {
+public class VideoItem {
 
     String name;
     String time;
@@ -8,7 +8,7 @@ public class HomeItem {
     int avatar;
     int postimage;
 
-    public HomeItem(String name, String time, String content, int avatar, int postimage) {
+    public VideoItem(String name, String time, String content, int avatar, int postimage) {
         this.name = name;
         this.time = time;
         this.content = content;

@@ -1,6 +1,6 @@
-package vn.edu.usth.facebook.Home;
+package vn.edu.usth.facebook.User;
 
-public class HomeItem {
+public class UserPostItem {
 
     String name;
     String time;
@@ -8,7 +8,7 @@ public class HomeItem {
     int avatar;
     int postimage;
 
-    public HomeItem(String name, String time, String content, int avatar, int postimage) {
+    public UserPostItem(String name, String time, String content, int avatar, int postimage) {
         this.name = name;
         this.time = time;
         this.content = content;
@@ -55,5 +55,4 @@ public class HomeItem {
     public void setPostimage(int postimage) {
         this.postimage = postimage;
     }
-
 }

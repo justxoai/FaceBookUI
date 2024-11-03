@@ -10,15 +10,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import vn.edu.usth.facebook.R;
 
-public class MyViewHolder extends RecyclerView.ViewHolder {
+public class HomeViewHolder extends RecyclerView.ViewHolder {
 
-    ImageView imageView, secondimageView;
-    TextView nameView,timeView;
-    public MyViewHolder(@NonNull View itemView) {
+    ImageView avatarView, postView;
+    TextView nameView,timeView, contentView;
+
+    public HomeViewHolder(@NonNull View itemView) {
         super(itemView);
-        imageView = itemView.findViewById(R.id.content_imageview);
-        secondimageView = itemView.findViewById(R.id.image_avatar);
+        avatarView = itemView.findViewById(R.id.image_avatar);
+        postView = itemView.findViewById(R.id.content_imageview);
         nameView = itemView.findViewById(R.id.user_name);
         timeView = itemView.findViewById(R.id.time);
+        contentView = itemView.findViewById(R.id.post_content);
     }
 }

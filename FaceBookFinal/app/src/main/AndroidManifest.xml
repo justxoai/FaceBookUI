@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,16 +16,16 @@
         android:theme="@style/Theme.FaceBook"
         tools:targetApi="31">
         <activity
-            android:name=".More.Not_Friend_Profile_Activity"
+            android:name=".User.Not_Friend_Profile_Activity"
             android:exported="false" />
         <activity
-            android:name=".More.Friend_Profile_Activity"
+            android:name=".User.Friend_Profile_Activity"
             android:exported="false" />
         <activity
-            android:name=".More.List_Add_Friend_Activity"
+            android:name=".User.List_Add_Friend_Activity"
             android:exported="false" />
         <activity
-            android:name=".More.List_Friend_Activity"
+            android:name=".User.List_Friend_Activity"
             android:exported="false" />
         <activity
             android:name=".More.Create_Post_Activity"

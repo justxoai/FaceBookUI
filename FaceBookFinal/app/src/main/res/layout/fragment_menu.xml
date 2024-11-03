@@ -7,7 +7,7 @@
     android:background="@color/menu_grey"
     android:id="@+id/menu_page_fragment"
     android:orientation="vertical"
-    tools:context=".Home.MenuFragment">
+    tools:context=".Menu.MenuFragment">
 
     <!--- Header -->
     <LinearLayout

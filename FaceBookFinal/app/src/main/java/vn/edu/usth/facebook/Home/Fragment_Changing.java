@@ -19,13 +19,13 @@ public class Fragment_Changing extends FragmentStateAdapter {
             case 0:
                 return new HomeFragment();
             case 1:
-                return new VideoFragment();
+                return new vn.edu.usth.facebook.Video.VideoFragment();
             case 2:
-                return new ProfileFragment();
+                return new vn.edu.usth.facebook.Profile.ProfileFragment();
             case 3:
-                return new NotificationFragment();
+                return new vn.edu.usth.facebook.Notification.NotificationFragment();
             case 4:
-                return new MenuFragment();
+                return new vn.edu.usth.facebook.Menu.MenuFragment();
             default:
                 return new HomeFragment();
         }
