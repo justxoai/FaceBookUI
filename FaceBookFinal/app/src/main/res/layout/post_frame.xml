@@ -30,7 +30,9 @@
                 <ImageView
                     android:id="@+id/image_avatar"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:adjustViewBounds="true"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -82,11 +84,15 @@
             android:textColor="#000000"
             tools:text="Content"/>
 
+
+<!--CenterCrop giúp cho ảnh lấp đầy khung dù vẫn giữ nguyên tỉ lệ của ảnh gốc-->
+<!-- ImageView sẽ điều chỉnh để phù hợp vs size ảnh       -->
         <ImageView
             android:id="@+id/content_imageview"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_margin="4dp"/>
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true" />
 
         <LinearLayout
             android:layout_width="match_parent"
