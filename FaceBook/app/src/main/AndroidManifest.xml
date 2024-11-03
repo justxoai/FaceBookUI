@@ -58,6 +58,12 @@
             android:name=".Messenger.Messenger_Activity"
             android:exported="false" />
         <activity
+            android:name=".Video.VideoPlayerActivity"
+            android:label="Video Player"
+            android:exported="true"> <!-- Add this line if you want to make the activity accessible to other apps -->
+        </activity>
+
+        <activity
             android:name=".FaceBookActivity"
             android:exported="true">
             <intent-filter>
