@@ -1,4 +1,8 @@
-"FaceBook Client UI/UX" 
+"FaceBook Client UI" 
 
-- I've done Recycle View for HomePage: Add HomeItem, MyAdapter, MyViewHolder to Java source code; home_content to layout
-- The others are in process
+- Todo1: RecyclerView in BoxChat
+- Todo2: Draw UI of BoxChat in Messenger
+- Todo3: Draw UI for AccountSetting in Gear-button in Menu_Fragment: Inside AccountSetting have: FirstName, LastName, Email, Phone, DateofBirth, Gender, Adress (tham khảo ở Register vs Detail trong EditProfile)
+- Todo4: Change image to url => must change in Item and frame
+
+- Continue tasks from my teammates
