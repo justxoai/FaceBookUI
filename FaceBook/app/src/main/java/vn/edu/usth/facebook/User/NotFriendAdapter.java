@@ -30,10 +30,7 @@ public class NotFriendAdapter extends RecyclerView.Adapter<NotFriendViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull NotFriendViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
-        holder.mutal_friendView.setText(items.get(position).getMutal_friend());
         holder.avatarView.setImageResource(items.get(position).getAvatar());
-        holder.friend_avatarView.setImageResource(items.get(position).getFriend_avatar());
-
     }
 
     @Override

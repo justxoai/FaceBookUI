@@ -80,7 +80,7 @@ public class ProfileFragment extends Fragment {
         image_profilebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Picture_Home_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Picture.Picture_Home_Activity.class );
                 startActivity(i);
             }
         });

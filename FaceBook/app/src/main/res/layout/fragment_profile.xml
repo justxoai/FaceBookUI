@@ -396,8 +396,9 @@
             <!--- Edit -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/white">
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/edit_public_details"
@@ -494,12 +495,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/usth_avatar"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="USTH"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -524,12 +525,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/vdd_avatar"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Duy"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -554,12 +555,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/hhp_avatar"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Hoang Anh"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -591,12 +592,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/at_avata"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Nguyen At"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -621,12 +622,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/circle_avatar"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Viet Anh"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -651,12 +652,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/capybara_usth"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Cuong"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -673,14 +674,14 @@
             <LinearLayout
                 android:id="@+id/friends"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:background="@color/white"
-                android:paddingTop="5dp">
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    app:cardBackgroundColor="@color/dark_grey"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="5dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="15dp">
@@ -758,14 +759,14 @@
             <!--- Posts -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:background="@color/white"
-                android:paddingTop="5dp">
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    app:cardBackgroundColor="@color/dark_grey"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="5dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="15dp">

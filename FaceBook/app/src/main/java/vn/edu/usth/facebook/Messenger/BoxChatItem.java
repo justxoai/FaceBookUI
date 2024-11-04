@@ -1,13 +1,15 @@
-package vn.edu.usth.facebook.User;
+package vn.edu.usth.facebook.Messenger;
 
-public class FriendItem {
+public class BoxChatItem {
 
     String name;
-
+    String content;
     int avatar;
 
-    public FriendItem(String name, int avatar) {
+
+    public BoxChatItem(String name,  String content, int avatar) {
         this.name = name;
+        this.content = content;
         this.avatar = avatar;
     }
 
@@ -19,6 +21,14 @@ public class FriendItem {
         this.name = name;
     }
 
+    public String getContent(){
+        return content;
+    }
+
+    public void setContent(String content){
+        this.content = content;
+    }
+
     public int getAvatar() {
         return avatar;
     }
@@ -26,6 +36,5 @@ public class FriendItem {
     public void setAvatar(int avatar) {
         this.avatar = avatar;
     }
-
 
 }

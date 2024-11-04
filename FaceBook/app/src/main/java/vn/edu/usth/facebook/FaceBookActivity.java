@@ -112,4 +112,8 @@ public class FaceBookActivity extends AppCompatActivity {
         transaction.replace(android.R.id.content, loginFragment);
         transaction.commit();
     }
+
+    public void to_video_page() {
+        mviewPager.setCurrentItem(1, true);
+    }
 }

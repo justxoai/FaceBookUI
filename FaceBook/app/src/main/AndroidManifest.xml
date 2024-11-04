@@ -49,7 +49,7 @@
             android:name=".More.Video_Search_Activity"
             android:exported="false" />
         <activity
-            android:name=".More.Picture_Home_Activity"
+            android:name=".Picture.Picture_Home_Activity"
             android:exported="false" />
         <activity
             android:name=".More.Search_Activity"

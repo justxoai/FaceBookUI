@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
+import vn.edu.usth.facebook.FaceBookActivity;
 import vn.edu.usth.facebook.R;
 
 public class MenuFragment extends Fragment {
@@ -40,6 +41,25 @@ public class MenuFragment extends Fragment {
                 fragmentTransaction.replace(android.R.id.content, loginFragment);
                 fragmentTransaction.commit();
 
+            }
+        });
+
+        LinearLayout to_video_page = v.findViewById(R.id.menu_to_video_page);
+        to_video_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(getActivity() instanceof FaceBookActivity){
+                    ((FaceBookActivity) getActivity()).to_video_page();
+                }
+            }
+        });
+
+        LinearLayout to_list_add_friend = v.findViewById(R.id.menu_to_friend_page);
+        to_list_add_friend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.User.List_Add_Friend_Activity.class );
+                startActivity(i);
             }
         });
 

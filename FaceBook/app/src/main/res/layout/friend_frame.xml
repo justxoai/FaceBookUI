@@ -41,37 +41,10 @@
                 android:layout_height="30dp"
                 tools:text="name"
                 android:gravity="center_vertical"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageView
-                        android:id="@+id/user_mutal_friend"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/mutal_friend"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:text="x_mutal_friend"
-                    android:paddingLeft="5dp"
-                    android:gravity="center_vertical"
-                    android:textSize="12sp"/>
-
-            </LinearLayout>
 
         </LinearLayout>
 
