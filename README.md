@@ -22,4 +22,6 @@
 
 - Todo11: RecyclerView in Photo
 
+- Todo12: UI Fanpage
+
 - Done Task nào thì ghi vào :) Complete :) 
