@@ -6,14 +6,14 @@ public class VideoItem {
     String time;
     String content;
     int avatar;
-    int postimage;
+    String url;
 
-    public VideoItem(String name, String time, String content, int avatar, int postimage) {
+    public VideoItem(String name, String time, String content, int avatar, String url) {
         this.name = name;
         this.time = time;
         this.content = content;
         this.avatar = avatar;
-        this.postimage = postimage;
+        this.url = url;
     }
 
     public String getName() {
@@ -48,12 +48,12 @@ public class VideoItem {
         this.avatar = avatar;
     }
 
-    public int getPostimage() {
-        return postimage;
+    public String getUrl() {
+        return url;
     }
 
-    public void setPostimage(int postimage) {
-        this.postimage = postimage;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 }

@@ -27,8 +27,8 @@ public class VideoFragment extends Fragment {
         RecyclerView recyclerview1 = v.findViewById(R.id.recyclerviewvideo1);
 
         List<VideoItem> item1s = new ArrayList<VideoItem>();
-        item1s.add(new VideoItem("Review Phim", "7h", "Review phim hot nhất 2019: Nghề siêu khó", R.drawable.vid_ava_1, R.drawable.vid_1));
-        item1s.add(new VideoItem("Review Netflix", "8h","Bộ phim gây chấn động 2018: Ảo ảnh", R.drawable.vid_ava_2, R.drawable.vid_2));
+        item1s.add(new VideoItem("Review Phim", "7h", "Review phim hot nhất 2019: Nghề siêu khó", R.drawable.vid_ava_1,"https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/video.php?v=1531448284152067"));
+        item1s.add(new VideoItem("Review Netflix", "8h","Bộ phim gây chấn động 2018: Ảo ảnh", R.drawable.vid_ava_2, "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/video.php?v=1531448284152067"));
 
         recyclerview1.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerview1.setAdapter(new VideoAdapter(requireContext(), item1s));
@@ -38,8 +38,8 @@ public class VideoFragment extends Fragment {
         RecyclerView recyclerview2 = v.findViewById(R.id.recyclerviewvideo2);
 
         List<VideoItem> item2s = new ArrayList<VideoItem>();
-        item2s.add(new VideoItem("Javalorant", "15h", "Valorant hightlight #6", R.drawable.vid_ava_3, R.drawable.vid_3));
-        item2s.add(new VideoItem("CSSGO", "19h", "Quan Trọng Là Tốc Độ Nhưng Là CS2", R.drawable.vid_ava_4, R.drawable.vid_4));
+        item2s.add(new VideoItem("Javalorant", "15h", "Valorant hightlight #6", R.drawable.vid_ava_3, "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/video.php?v=1531448284152067"));
+        item2s.add(new VideoItem("CSSGO", "19h", "Quan Trọng Là Tốc Độ Nhưng Là CS2", R.drawable.vid_ava_4, "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/video.php?v=1531448284152067"));
 
         recyclerview2.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerview2.setAdapter(new VideoAdapter(requireContext(), item2s));
@@ -50,7 +50,7 @@ public class VideoFragment extends Fragment {
         RecyclerView recyclerview3 = v.findViewById(R.id.recyclerviewvideo3);
 
         List<VideoItem> item3s = new ArrayList<VideoItem>();
-        item3s.add(new VideoItem("500Bros CS2", "1h", "",R.drawable.vid_ava_4, R.drawable.vid_5));
+        item3s.add(new VideoItem("500Bros CS2", "1h", "",R.drawable.vid_ava_4, "https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/video.php?v=1531448284152067"));
 
         recyclerview3.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerview3.setAdapter(new VideoAdapter(requireContext(), item3s));

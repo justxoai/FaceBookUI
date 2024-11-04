@@ -24,16 +24,22 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
     @NonNull
     @Override
     public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new VideoViewHolder(LayoutInflater.from(context).inflate(R.layout.post_frame,parent, false));
+        return new VideoViewHolder(LayoutInflater.from(context).inflate(R.layout.video_frame,parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull VideoViewHolder holder, int position) {
+        VideoItem link = items.get(position);
+
         holder.nameView.setText(items.get(position).getName());
+
         holder.timeView.setText(items.get(position).getTime());
+
         holder.contentView.setText(items.get(position).getContent());
+
         holder.avatarView.setImageResource(items.get(position).getAvatar());
-        holder.postView.setImageResource(items.get(position).getPostimage());
+
+        holder.bind(link);
 
     }
 
