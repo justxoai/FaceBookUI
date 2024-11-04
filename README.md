@@ -1,8 +1,25 @@
-"FaceBook Client UI" 
+"FaceBook Client" 
 
-- Todo1: RecyclerView in BoxChat
-- Todo2: Draw UI of BoxChat in Messenger
+- Todo1: RecyclerView in Messenger
 
-- Todo3: Draw UI for AccountSetting in Gear-button in Menu_Fragment: Inside AccountSetting have: FirstName, LastName, Email, Phone, DateofBirth, Gender, Adress (tham khảo ở Register vs Detail trong EditProfile)
+- Todo2: Delete Horizontal in Messenger and Home&Channel
 
-- Done: Video can play
+- Todo3: UI for Group in Menu (List Group: RecyclerView and Create Group and Group UI: same User Profile) (Tròn)
+
+- Todo4: Create Video Post in Video Menu_Fragment
+
+- Todo5: Change Cover Photo in EditProfile Fragment to url, not image (Đức Duy)
+
+- Todo6: Delete Friend image to #ccc 
+
+- Todo7: Delete Not_Friend_Profile
+
+- Todo8: Delete Online, Suggest, People You May Know in List Add Friend
+
+- Todo9: Delete People You May Know in Notification
+
+- Todo10: Add Function: Click Video and Friend in Menu direct to Video Fragment and List Friend
+
+- Todo11: RecyclerView in Photo
+
+- Done Task nào thì ghi vào :) Complete :) 
