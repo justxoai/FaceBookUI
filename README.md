@@ -2,7 +2,7 @@
 
 "FaceBook Client" 
 
-- Todo3: UI for Group in Menu (List Group: RecyclerView and Create Group and Group UI: same User Profile)- 90% done - There is an error when clicking invite button in GroupProfile (it redirects back to CreateGroup) (VietAnh)
+- Todo3: UI for Group in Menu (List Group: RecyclerView and Create Group and Group UI: same User Profile)- Done (VietAnh)
 
 - Todo4: Create Video Post in Video Menu_Fragment
 
