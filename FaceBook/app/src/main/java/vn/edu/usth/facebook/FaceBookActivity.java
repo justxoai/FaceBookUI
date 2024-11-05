@@ -25,14 +25,21 @@ public class FaceBookActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+        long expirationTime = sharedPreferences.getLong("expirationTime", 0);
 
-        if (!isLoggedIn) {
+        // Kiểm tra trạng thái đăng nhập và thời gian hết hạn
+        if (!isLoggedIn || System.currentTimeMillis() > expirationTime) {
+            // Xóa SharedPreferences và điều hướng đến LoginFragment
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.apply();
+
             navigateToLoginFragment();
             return;
         }
 
+        // Tiếp tục thiết lập giao diện nếu người dùng vẫn còn đăng nhập hợp lệ
         setContentView(R.layout.activity_face_book);
-
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -41,7 +48,6 @@ public class FaceBookActivity extends AppCompatActivity {
         mviewPager.setUserInputEnabled(false);
 
         mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
@@ -49,8 +55,7 @@ public class FaceBookActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                switch (position)
-                {
+                switch (position) {
                     case 0:
                         bottomNavigationView.getMenu().findItem(R.id.home_page).setChecked(true);
                         break;
