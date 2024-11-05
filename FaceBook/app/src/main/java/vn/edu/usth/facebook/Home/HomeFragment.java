@@ -79,24 +79,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
-
         return v;
     }
 
-    class FetchImage extends Thread{
-
-        String URL;
-
-        Bitmap bitmap;
-
-        FetchImage(String URL){
-            this.URL = URL;
-        }
-
-        @Override
-        public void run() {
-
-        }
-    }
 }

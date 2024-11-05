@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,6 +71,15 @@ public class VideoFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Video_Save_Activity.class );
+                startActivity(i);
+            }
+        });
+
+        LinearLayout createvideo = v.findViewById(R.id.createVideo);
+        createvideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Create_Post_Activity.class );
                 startActivity(i);
             }
         });

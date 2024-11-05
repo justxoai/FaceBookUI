@@ -72,54 +72,29 @@
 
         </LinearLayout>
 
+        <!--- Status -->
         <LinearLayout
+            android:id="@+id/createVideo"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:background="@color/white"
             android:orientation="horizontal"
-            android:paddingTop="3dp"
-            android:paddingBottom="3dp">
+            android:gravity="center_vertical"
+            android:layout_marginBottom="1dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="75dp"
-                android:layout_height="30dp"
-                app:cardBackgroundColor="@color/light_cyan"
-                app:cardCornerRadius="20dp"
-                android:layout_marginLeft="10dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="For You"
-                    android:textSize="16.5sp"
-                    android:gravity="center"
-                    android:textStyle="bold"
-                    android:textColor="@color/dark_cyan"/>
-
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/avatar_profile"
+                android:paddingLeft="10dp"/>
 
             <TextView
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:text="Live"
+                android:text="Add new Video?"
                 android:textSize="16.5sp"
-                android:gravity="center"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="35dp"
-                android:text="Reels"
-                android:textSize="16.5sp"
-                android:gravity="center"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="35dp"
-                android:text="Following"
-                android:textSize="16.5sp"
-                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingTop="8dp"
                 android:textStyle="bold"/>
 
         </LinearLayout>

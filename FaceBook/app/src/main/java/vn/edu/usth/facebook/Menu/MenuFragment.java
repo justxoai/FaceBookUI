@@ -63,6 +63,15 @@ public class MenuFragment extends Fragment {
             }
         });
 
+        LinearLayout to_pages_list = v.findViewById(R.id.menu_to_listpage);
+        to_pages_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Page.List_Page_Activity.class);
+                startActivity(i);
+            }
+        });
+
         return v;
     }
 }
