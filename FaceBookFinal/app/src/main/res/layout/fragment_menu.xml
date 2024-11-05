@@ -803,6 +803,7 @@
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
+                            android:id="@+id/menu_box"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -864,6 +865,7 @@
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
+                            android:id="@+id/menu_to_video_page"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -994,6 +996,7 @@
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
+                            android:id="@+id/menu_to_friend_page"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">

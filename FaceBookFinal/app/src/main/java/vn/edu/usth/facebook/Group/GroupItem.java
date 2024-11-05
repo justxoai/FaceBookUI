@@ -1,14 +1,22 @@
-package vn.edu.usth.facebook.User;
+package vn.edu.usth.facebook.Group;
 
-public class FriendItem {
-
+public class GroupItem {
     String name;
-
+    String time;
     int avatar;
 
-    public FriendItem(String name, int avatar) {
+    public GroupItem(String name, String time, int avatar) {
         this.name = name;
+        this.time = time;
         this.avatar = avatar;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getName() {
@@ -26,6 +34,4 @@ public class FriendItem {
     public void setAvatar(int avatar) {
         this.avatar = avatar;
     }
-
-
 }

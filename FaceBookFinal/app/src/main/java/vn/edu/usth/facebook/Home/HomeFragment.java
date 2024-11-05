@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment {
         image_homebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Picture_Home_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Picture.Picture_Home_Activity.class );
                 startActivity(i);
             }
         });

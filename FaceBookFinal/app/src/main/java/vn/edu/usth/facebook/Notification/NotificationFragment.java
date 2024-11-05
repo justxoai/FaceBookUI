@@ -49,42 +49,6 @@ public class NotificationFragment extends Fragment {
             }
         });
 
-        LinearLayout morefriend = v.findViewById(R.id.more_friend);
-        morefriend.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.User.List_Add_Friend_Activity.class );
-                startActivity(i);
-            }
-        });
-
-        LinearLayout my_friend1 = v.findViewById(R.id.friend1);
-        my_friend1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.User.Not_Friend_Profile_Activity.class );
-                startActivity(i);
-            }
-        });
-
-        LinearLayout my_friend2 = v.findViewById(R.id.friend2);
-        my_friend2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.User.Not_Friend_Profile_Activity.class );
-                startActivity(i);
-            }
-        });
-
-        LinearLayout my_friend3 = v.findViewById(R.id.friend3);
-        my_friend3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.User.Not_Friend_Profile_Activity.class );
-                startActivity(i);
-            }
-        });
-
         return v;
     }
 }

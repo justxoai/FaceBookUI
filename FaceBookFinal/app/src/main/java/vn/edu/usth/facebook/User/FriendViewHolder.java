@@ -11,15 +11,13 @@ import vn.edu.usth.facebook.R;
 
 public class FriendViewHolder extends RecyclerView.ViewHolder{
 
-    ImageView avatarView, friend_avatarView;
-    TextView nameView, mutal_friendView;
+    ImageView avatarView;
+    TextView nameView;
 
     public FriendViewHolder(@NonNull View itemView) {
         super(itemView);
         avatarView = itemView.findViewById(R.id.user_image);
-        friend_avatarView = itemView.findViewById(R.id.user_mutal_friend);
         nameView = itemView.findViewById(R.id.user_name);
-        mutal_friendView = itemView.findViewById(R.id.mutal_friend);
     }
 
 }

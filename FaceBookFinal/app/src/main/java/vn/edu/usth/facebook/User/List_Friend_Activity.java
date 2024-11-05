@@ -26,10 +26,10 @@ public class List_Friend_Activity extends AppCompatActivity {
 
         List<FriendItem> items = new ArrayList<FriendItem>();
 
-        items.add(new FriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        items.add(new FriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        items.add(new FriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        items.add(new FriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
+        items.add(new FriendItem("User",  R.drawable.user));
+        items.add(new FriendItem("User",  R.drawable.user));
+        items.add(new FriendItem("User",  R.drawable.user));
+        items.add(new FriendItem("User",  R.drawable.user));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new FriendAdapter(this, items));

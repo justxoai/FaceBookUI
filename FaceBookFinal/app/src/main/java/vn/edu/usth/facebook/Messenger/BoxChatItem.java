@@ -1,19 +1,16 @@
-package vn.edu.usth.facebook.Video;
+package vn.edu.usth.facebook.Messenger;
 
-public class VideoItem {
+public class BoxChatItem {
 
     String name;
-    String time;
     String content;
     int avatar;
-    String url;
 
-    public VideoItem(String name, String time, String content, int avatar, String url) {
+
+    public BoxChatItem(String name,  String content, int avatar) {
         this.name = name;
-        this.time = time;
         this.content = content;
         this.avatar = avatar;
-        this.url = url;
     }
 
     public String getName() {
@@ -22,14 +19,6 @@ public class VideoItem {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
     }
 
     public String getContent(){
@@ -46,14 +35,6 @@ public class VideoItem {
 
     public void setAvatar(int avatar) {
         this.avatar = avatar;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
     }
 
 }

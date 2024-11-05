@@ -42,36 +42,8 @@
                 tools:text="name"
                 android:gravity="center_vertical"
                 android:textStyle="bold"
-                android:textColor="@color/black"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    app:cardCornerRadius="50dp">
-
-                    <ImageView
-                        android:id="@+id/user_mutal_friend"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/mutal_friend"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:text="x_mutal_friend"
-                    android:paddingLeft="5dp"
-                    android:gravity="center_vertical"
-                    android:textSize="12sp"/>
-
-            </LinearLayout>
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
 
         </LinearLayout>
 
@@ -84,43 +56,29 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:paddingLeft="60dp">
+        android:gravity="center_horizontal">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="110dp"
-            android:layout_height="30dp"
-            app:cardBackgroundColor="@color/light_cyan"
-            app:cardCornerRadius="5dp">
-
-            <TextView
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:text="Add friend"
-                android:gravity="center"
-                android:textColor="@color/dark_cyan"
-                android:textStyle="bold"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <Button
+            android:id="@+id/add_friend_button"
             android:layout_width="100dp"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_cyan"
+            android:text="Add Friend"
+            android:textColor="@color/dark_cyan"
+            android:textSize="10sp"/>
+
+        <Button
+            android:id="@+id/remove_button"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_grey"
             android:layout_marginLeft="10dp"
-            app:cardBackgroundColor="@color/light_grey"
-            app:cardCornerRadius="5dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Remove"
-                android:gravity="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-        </androidx.cardview.widget.CardView>
+            android:text="Remove"
+            android:textColor="@color/black"
+            android:textSize="10sp"/>
 
     </LinearLayout>
 

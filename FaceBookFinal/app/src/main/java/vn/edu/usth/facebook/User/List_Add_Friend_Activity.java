@@ -26,40 +26,18 @@ public class List_Add_Friend_Activity extends AppCompatActivity {
 
         List<NotFriendItem> items = new ArrayList<NotFriendItem>();
 
-        items.add(new NotFriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        items.add(new NotFriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        items.add(new NotFriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        items.add(new NotFriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
+        items.add(new NotFriendItem("User",  R.drawable.user));
+        items.add(new NotFriendItem("User",  R.drawable.user));
+        items.add(new NotFriendItem("User",  R.drawable.user));
+        items.add(new NotFriendItem("User",  R.drawable.user));
+
+        items.add(new NotFriendItem("User",  R.drawable.user));
+        items.add(new NotFriendItem("User",  R.drawable.user));
+        items.add(new NotFriendItem("User",  R.drawable.user));
+        items.add(new NotFriendItem("User",  R.drawable.user));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new NotFriendAdapter(this, items));
-
-
-
-        RecyclerView recyclerView2 = findViewById(R.id.recyclerviewaddfriend2);
-
-        List<NotFriendItem> item2s = new ArrayList<NotFriendItem>();
-
-        item2s.add(new NotFriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        item2s.add(new NotFriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        item2s.add(new NotFriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-        item2s.add(new NotFriendItem("User", "x_mutal_friend", R.drawable.user, R.drawable.user));
-
-        recyclerView2.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView2.setAdapter(new NotFriendAdapter(this, item2s));
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {

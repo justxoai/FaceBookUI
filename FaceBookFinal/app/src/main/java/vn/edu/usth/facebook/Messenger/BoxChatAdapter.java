@@ -1,8 +1,11 @@
-package vn.edu.usth.facebook.Video;
+package vn.edu.usth.facebook.Messenger;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -11,35 +14,27 @@ import java.util.List;
 
 import vn.edu.usth.facebook.R;
 
-public class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
-
+public class BoxChatAdapter  extends RecyclerView.Adapter<BoxChatViewHolder> {
+    
     Context context;
-    List<VideoItem> items;
+    List<BoxChatItem> items;
 
-    public VideoAdapter(Context context, List<VideoItem> items) {
+    public BoxChatAdapter(Context context, List<BoxChatItem> items) {
         this.context = context;
         this.items = items;
     }
 
     @NonNull
     @Override
-    public VideoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new VideoViewHolder(LayoutInflater.from(context).inflate(R.layout.video_frame,parent, false));
+    public BoxChatViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new BoxChatViewHolder(LayoutInflater.from(context).inflate(R.layout.boxchat_frame,parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VideoViewHolder holder, int position) {
-        VideoItem link = items.get(position);
-
+    public void onBindViewHolder(@NonNull BoxChatViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
-
-        holder.timeView.setText(items.get(position).getTime());
-
         holder.contentView.setText(items.get(position).getContent());
-
         holder.avatarView.setImageResource(items.get(position).getAvatar());
-
-        holder.bind(link);
 
     }
 
@@ -47,4 +42,5 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
     public int getItemCount() {
         return items.size();
     }
+    
 }

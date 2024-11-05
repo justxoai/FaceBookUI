@@ -1,8 +1,13 @@
 "FaceBook Client UI" 
 
-- Todo1: RecyclerView in BoxChat
-- Todo2: Draw UI of BoxChat in Messenger
-- Todo3: Draw UI for AccountSetting in Gear-button in Menu_Fragment: Inside AccountSetting have: FirstName, LastName, Email, Phone, DateofBirth, Gender, Adress (tham khảo ở Register vs Detail trong EditProfile)
-- Todo4: Change image to url => must change in Item and frame
+"FaceBook Client" 
+
+- Todo3: UI for Group in Menu (List Group: RecyclerView and Create Group and Group UI: same User Profile)- Add List Group and Draw Group frame (In progress) (VietAnh)
+
+- Todo4: Create Video Post in Video Menu_Fragment
+
+- Todo5: Change Cover Photo in EditProfile Fragment to url, not image (Đức Duy)
+
+- Todo12: UI Fanpage
 
 - Continue tasks from my teammates
