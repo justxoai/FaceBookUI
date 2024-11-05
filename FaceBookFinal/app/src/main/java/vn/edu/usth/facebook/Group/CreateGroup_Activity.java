@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -32,6 +33,11 @@ public class CreateGroup_Activity extends AppCompatActivity {
             startActivity(i);
         });
 
+        ImageButton backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(view -> {
+            onBackPressed();
+        });
+
         privacySpinner = findViewById(R.id.privacy);
 
         // Log to verify spinner initialization
@@ -56,5 +62,10 @@ public class CreateGroup_Activity extends AppCompatActivity {
                 Log.d("CreateGroup_Activity", "Nothing selected in spinner");
             }
         });
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
     }
 }

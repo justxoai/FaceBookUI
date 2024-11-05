@@ -41,6 +41,13 @@
                             android:layout_height="200dp"
                             android:background="@drawable/background_profile" />
 
+                        <ImageButton
+                            android:id="@+id/close_button"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/close"/>
+
                         <androidx.cardview.widget.CardView
                             android:layout_width="25dp"
                             android:layout_height="25dp"

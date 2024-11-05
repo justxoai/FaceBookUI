@@ -16,7 +16,7 @@ public class InvitePeopleViewHolder extends RecyclerView.ViewHolder {
 
     public InvitePeopleViewHolder(@NonNull View itemView) {
         super(itemView);
-        avatarView = itemView.findViewById(R.id.group_avatar);
-        nameView = itemView.findViewById(R.id.group_name);
+        avatarView = itemView.findViewById(R.id.user_image);
+        nameView = itemView.findViewById(R.id.person_name);
     }
 }

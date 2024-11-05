@@ -18,12 +18,12 @@
         android:gravity="center">
 
         <ImageButton
-            android:id="@+id/close_button"
+            android:id="@+id/back_button"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginRight="40dp"
             android:layout_marginLeft="15dp"
-            android:background="@drawable/close" />
+            android:background="@drawable/back_arrow" />
 
         <TextView
             android:layout_width="match_parent"

@@ -17,7 +17,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            app:cardCornerRadius="50dp">
+            app:cardCornerRadius="50dp"
+            android:layout_marginLeft="10dp">
 
             <ImageView
                 android:id="@+id/user_image"
@@ -36,19 +37,18 @@
             android:padding="8dp">
 
             <TextView
-                android:id="@+id/user_name"
+                android:id="@+id/person_name"
                 android:layout_width="250dp"
                 android:layout_height="30dp"
                 tools:text="name"
                 android:gravity="center_vertical"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:paddingLeft="8dp"/>
 
         </LinearLayout>
 
-        <!-- Button added here -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

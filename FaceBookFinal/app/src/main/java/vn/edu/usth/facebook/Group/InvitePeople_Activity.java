@@ -28,7 +28,6 @@ public class InvitePeople_Activity extends AppCompatActivity {
 
         List<InvitePeopleItem> items = new ArrayList<InvitePeopleItem>();
 
-
         items.add(new InvitePeopleItem("USTH", R.drawable.usth_avatar));
         items.add(new InvitePeopleItem("Group", R.drawable.usth_avatar));
         items.add(new InvitePeopleItem("USTH", R.drawable.usth_avatar));
