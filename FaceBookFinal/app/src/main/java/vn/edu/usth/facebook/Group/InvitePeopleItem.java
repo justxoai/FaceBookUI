@@ -1,22 +1,12 @@
 package vn.edu.usth.facebook.Group;
 
-public class GroupItem {
+public class InvitePeopleItem {
     String name;
-    String post;
     int avatar;
 
-    public GroupItem(String name, String post, int avatar) {
+    public InvitePeopleItem(String name, int avatar) {
         this.name = name;
-        this.post = post;
         this.avatar = avatar;
-    }
-
-    public String getPost() {
-        return post;
-    }
-
-    public void setPost(String post) {
-        this.post = post;
     }
 
     public String getName() {

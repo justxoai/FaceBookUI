@@ -25,4 +25,9 @@
 
     <string name="login_underlined"><u>Login</u></string>
     <string name="forgotpassword_underlined"><u>Forgot password</u></string>
+
+    <string-array name="type_array">
+        <item>Private</item>
+        <item>Public</item>
+    </string-array>
 </resources>

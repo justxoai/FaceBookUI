@@ -803,7 +803,7 @@
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
-                            android:id="@+id/menu_box"
+                            android:id="@+id/menu_to_group_page"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">

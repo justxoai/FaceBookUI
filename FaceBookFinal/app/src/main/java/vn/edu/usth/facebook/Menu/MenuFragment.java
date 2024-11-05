@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import vn.edu.usth.facebook.FaceBookActivity;
+import vn.edu.usth.facebook.Login.ForgotPassword_Activity;
 import vn.edu.usth.facebook.R;
 
 public class MenuFragment extends Fragment {
@@ -59,6 +60,15 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(requireContext(), vn.edu.usth.facebook.User.List_Add_Friend_Activity.class );
+                startActivity(i);
+            }
+        });
+
+        LinearLayout to_group_list = v.findViewById(R.id.menu_to_group_page);
+        to_group_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Group.ListGroup_Activity.class );
                 startActivity(i);
             }
         });

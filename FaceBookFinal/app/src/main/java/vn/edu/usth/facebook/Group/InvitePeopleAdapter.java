@@ -11,28 +11,26 @@ import java.util.List;
 
 import vn.edu.usth.facebook.R;
 
-public class GroupAdapter extends RecyclerView.Adapter<GroupViewHolder> {
+public class InvitePeopleAdapter extends RecyclerView.Adapter<InvitePeopleViewHolder> {
 
     Context context;
-    List<GroupItem> items;
+    List<InvitePeopleItem> items;
 
-    public GroupAdapter(Context context, List<GroupItem> items) {
+    public InvitePeopleAdapter(Context context, List<InvitePeopleItem> items) {
         this.context = context;
         this.items = items;
     }
 
     @NonNull
     @Override
-    public GroupViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new GroupViewHolder(LayoutInflater.from(context).inflate(R.layout.group_frame,parent,false));
+    public InvitePeopleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new InvitePeopleViewHolder(LayoutInflater.from(context).inflate(R.layout.invitepeople_frame,parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull GroupViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull InvitePeopleViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
-        holder.postView.setText(items.get(position).getPost());
         holder.avatarView.setImageResource(items.get(position).getAvatar());
-
     }
 
     @Override

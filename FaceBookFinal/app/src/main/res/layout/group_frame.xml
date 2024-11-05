@@ -48,13 +48,13 @@
                 tools:text="Name"/>
 
             <TextView
-                android:id="@+id/time"
+                android:id="@+id/num_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:textSize="13sp"
                 android:textColor="#666666"
-                tools:text="Time"/>
+                tools:text="x_post"/>
         </LinearLayout>
 
     </LinearLayout>

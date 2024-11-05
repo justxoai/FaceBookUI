@@ -9,15 +9,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import vn.edu.usth.facebook.R;
 
-public class GroupViewHolder extends RecyclerView.ViewHolder {
-
+public class InvitePeopleViewHolder extends RecyclerView.ViewHolder {
     ImageView avatarView;
-    TextView nameView,postView;
+    TextView nameView;
 
-    public GroupViewHolder(@NonNull View itemView) {
+
+    public InvitePeopleViewHolder(@NonNull View itemView) {
         super(itemView);
         avatarView = itemView.findViewById(R.id.group_avatar);
         nameView = itemView.findViewById(R.id.group_name);
-        postView = itemView.findViewById(R.id.num_post);
     }
 }
