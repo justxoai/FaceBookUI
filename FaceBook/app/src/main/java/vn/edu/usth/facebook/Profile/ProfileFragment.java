@@ -24,6 +24,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.edu.usth.facebook.More.Upload_Activity;
 import vn.edu.usth.facebook.R;
 
 public class ProfileFragment extends Fragment {
@@ -90,7 +91,7 @@ public class ProfileFragment extends Fragment {
 
         ImageButton imageProfileButton = v.findViewById(R.id.image_profile_button);
         imageProfileButton.setOnClickListener(view -> {
-            Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Picture.Picture_Home_Activity.class);
+            Intent i = new Intent(requireContext(), Upload_Activity.class);
             startActivity(i);
         });
 

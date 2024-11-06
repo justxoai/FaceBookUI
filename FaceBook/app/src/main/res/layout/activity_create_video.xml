@@ -7,12 +7,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/dark_grey"
-    tools:context=".More.Create_Post_Activity">
+    tools:context=".More.Create_Video_Activity">
 
     <!--- header -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:orientation="horizontal"
         android:layout_marginBottom="1dp"
@@ -34,16 +34,17 @@
         </LinearLayout>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
-            android:text="Create Post/Video"
+            android:text="Create Video"
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginStart="125dp"/>
 
     </LinearLayout>
-    
+
     <!-- Body -->
     <LinearLayout
         android:layout_width="match_parent"

@@ -9,13 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import vn.edu.usth.facebook.R;
 
-public class Create_Post_Activity extends AppCompatActivity {
+public class Create_Video_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_create_post);
+        setContentView(R.layout.activity_create_video);
+
 
         ImageButton closeButton = findViewById(R.id.close_button);
         closeButton.setOnClickListener(view -> {
@@ -28,5 +29,4 @@ public class Create_Post_Activity extends AppCompatActivity {
     public void onBackPressed(){
         super.onBackPressed();
     }
-
 }

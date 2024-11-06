@@ -47,7 +47,6 @@ public class VideoFragment extends Fragment {
 
 
 
-
         RecyclerView recyclerview3 = v.findViewById(R.id.recyclerviewvideo3);
 
         List<VideoItem> item3s = new ArrayList<VideoItem>();
@@ -79,7 +78,7 @@ public class VideoFragment extends Fragment {
         createvideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Create_Post_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Create_Video_Activity.class );
                 startActivity(i);
             }
         });
