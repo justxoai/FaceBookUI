@@ -8,7 +8,6 @@
     android:background="@color/dark_grey"
     android:orientation="vertical"
     tools:context=".More.Edit_Profile_Activity">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,16 +21,16 @@
             <!--- Header -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="2dp"
                 android:orientation="horizontal"
-                android:background="@color/white"
-                android:gravity="center_horizontal">
+                android:background="@color/white">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Edit Profile"
+                    android:paddingTop="5dp"
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="@color/black"
@@ -167,17 +166,52 @@
 
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                <!-- res/layout/activity_edit_profile.xml -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardCornerRadius="10dp">
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <EditText
+                        android:id="@+id/etURL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:hint="Enter image URL"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Button
+                        android:id="@+id/fetchbtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/blue"
+                        android:padding="10dp"
+                        android:text="Show Background Image"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"/>
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/background_profile"/>
+                        android:id="@+id/cover_image"
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:contentDescription="Avatar"
+                        android:scaleType="centerCrop" />
 
-                </androidx.cardview.widget.CardView>
+                    <Button
+                        android:id="@+id/savebutton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/blue"
+                        android:padding="10dp"
+                        android:text="Save Background Image"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 

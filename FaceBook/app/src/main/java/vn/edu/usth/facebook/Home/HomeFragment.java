@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment {
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Search_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Search.Search_Activity.class );
                 startActivity(i);
             }
         });
@@ -78,6 +78,7 @@ public class HomeFragment extends Fragment {
                 startActivity(i);
             }
         });
+
 
         return v;
     }

@@ -1,4 +1,4 @@
-package vn.edu.usth.facebook.Home;
+package vn.edu.usth.facebook.Group;
 
 import android.view.View;
 import android.widget.ImageView;
@@ -9,12 +9,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import vn.edu.usth.facebook.R;
 
-public class HomeViewHolder extends RecyclerView.ViewHolder {
-
+public class GroupProfileViewHolder extends RecyclerView.ViewHolder {
     ImageView avatarView, postView;
     TextView nameView,timeView, contentView;
 
-    public HomeViewHolder(@NonNull View itemView) {
+    public GroupProfileViewHolder(@NonNull View itemView) {
         super(itemView);
         avatarView = itemView.findViewById(R.id.image_avatar);
         postView = itemView.findViewById(R.id.content_imageview);

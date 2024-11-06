@@ -48,7 +48,7 @@ public class List_Add_Friend_Activity extends AppCompatActivity {
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(List_Add_Friend_Activity.this, vn.edu.usth.facebook.More.Search_Activity.class);
+                Intent i = new Intent(List_Add_Friend_Activity.this, vn.edu.usth.facebook.Search.Search_Activity.class);
                 startActivity(i);
             }
         });

@@ -27,7 +27,7 @@ public class MenuFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Search_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Search.Search_Activity.class );
                 startActivity(i);
             }
         });
@@ -71,6 +71,16 @@ public class MenuFragment extends Fragment {
                 startActivity(i);
             }
         });
+
+        LinearLayout to_group_list = v.findViewById(R.id.menu_to_group_page);
+        to_group_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Group.ListGroup_Activity.class );
+                startActivity(i);
+            }
+        });
+
 
         return v;
     }

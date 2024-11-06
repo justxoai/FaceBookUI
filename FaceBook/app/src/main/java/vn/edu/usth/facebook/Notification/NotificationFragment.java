@@ -44,7 +44,7 @@ public class NotificationFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Search_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Search.Search_Activity.class );
                 startActivity(i);
             }
         });
