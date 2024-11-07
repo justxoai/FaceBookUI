@@ -4,4 +4,4 @@
 
 - Todo20: Click item in RecyclerView 
 
-Note: Cái phần upload ảnh vid vẫn có 1 vài trục trặc vd như chưa vào đc phần video fragment, ms chỉ vào đc homefragment = facebook activity
+Note: ảnh bị trùng nhau ? dù id khác nhau
