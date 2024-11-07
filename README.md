@@ -6,6 +6,6 @@
 
 - Todo15: Search RecyclerView: Search User, Group, Page, ... (Hoàng Anh)
 
--  Add Searchview to ListGroup_Activity and InvitePeople_Activity 
+-  Add Searchview to ListGroup_Activity, InvitePeople_Activity, List_Friend_Activity 
 
 - Continue tasks from my teammates
