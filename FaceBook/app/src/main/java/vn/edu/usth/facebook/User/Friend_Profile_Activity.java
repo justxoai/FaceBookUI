@@ -37,6 +37,11 @@ public class Friend_Profile_Activity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new UserPostAdapter(this, items));
 
+       setUpButton();
+
+    }
+
+    private void setUpButton(){
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
@@ -115,6 +120,14 @@ public class Friend_Profile_Activity extends AppCompatActivity {
             }
         });
 
+        LinearLayout user_about = findViewById(R.id.user_about);
+        user_about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Friend_Profile_Activity.this, About_User_Activity.class );
+                startActivity(i);
+            }
+        });
     }
 
     @Override

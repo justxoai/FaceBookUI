@@ -1,6 +1,7 @@
 package vn.edu.usth.facebook.More;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,9 +34,9 @@ public class Edit_Profile_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
 
         etURL = findViewById(R.id.etURL);
-        avatarImage = findViewById(R.id.cover_image);
+        avatarImage = findViewById(R.id.cover_image_profile);
         fetchButton = findViewById(R.id.fetchbtn);
-        saveButton = findViewById(R.id.savebutton);
+        saveButton = findViewById(R.id.save_button);
 
         fetchButton.setOnClickListener(view -> {
             String url = etURL.getText().toString();
@@ -55,16 +56,15 @@ public class Edit_Profile_Activity extends AppCompatActivity {
                 editor.putString("imageUrl", imageUrl);
                 editor.apply();
 
-                onBackPressed();
+                Intent intent = new Intent(Edit_Profile_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                startActivity(intent);
+                finish();
+
             } else {
-                Toast.makeText(this, "Please enter a URL", Toast.LENGTH_SHORT).show();
+                onBackPressed();
             }
         });
 
-        Button backbutton = findViewById(R.id.save_button);
-        backbutton.setOnClickListener(view -> {
-            onBackPressed();
-        });
     }
 
     class FetchImage extends Thread {

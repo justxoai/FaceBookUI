@@ -53,10 +53,18 @@ public class Page_Profile_Activity extends AppCompatActivity {
 
         ImageButton searchbutton = findViewById(R.id.page_search_button);
         searchbutton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Page_Profile_Activity.this, vn.edu.usth.facebook.Search.Search_Activity.class );
+                startActivity(i);
+            }
+        });
+
+        LinearLayout page_about = findViewById(R.id.page_about);
+        page_about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Page_Profile_Activity.this, About_Page_Activity.class );
                 startActivity(i);
             }
         });

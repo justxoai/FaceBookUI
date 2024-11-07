@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -41,7 +42,7 @@ public class Upload_Activity extends AppCompatActivity {
 
         // Image URL
         image_etURL = findViewById(R.id.image_etURL);
-        post_image = findViewById(R.id.cover_image);
+        post_image = findViewById(R.id.cover_image_post);
         show_image = findViewById(R.id.image_show_button);
 
         // Video URL
@@ -49,7 +50,7 @@ public class Upload_Activity extends AppCompatActivity {
         post_video = findViewById(R.id.cover_web);
         show_video = findViewById(R.id.video_show_button);
 
-        upload = findViewById(R.id.upload_button);
+        upload = findViewById(R.id.save_button);
 
         post_video.getSettings().setJavaScriptEnabled(true);
         post_video.setWebViewClient(new WebViewClient() {
@@ -113,7 +114,7 @@ public class Upload_Activity extends AppCompatActivity {
                 Toast.makeText(this, "Image and Video URL saved", Toast.LENGTH_SHORT).show();
 
                 // Navigate back to HomeFragment
-                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -126,7 +127,7 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Image URL saved", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -139,13 +140,13 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Video URL saved", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Video_Activity.class);
                 startActivity(intent);
                 finish();
             }
 
             else {
-                Toast.makeText(this, "Please enter a URL", Toast.LENGTH_SHORT).show();
+                onBackPressed();
             }
         });
 
