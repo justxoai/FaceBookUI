@@ -3,7 +3,6 @@ package vn.edu.usth.facebook.More;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import vn.edu.usth.facebook.R;

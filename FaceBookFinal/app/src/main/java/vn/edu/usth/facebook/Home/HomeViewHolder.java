@@ -1,7 +1,6 @@
 package vn.edu.usth.facebook.Home;
 
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 

@@ -1,17 +1,13 @@
 package vn.edu.usth.facebook.Page;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,8 +15,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.User.NotFriendAdapter;
+import vn.edu.usth.facebook.User.NotFriendItem;
 
 public class List_Page_Activity extends AppCompatActivity {
+
+    private SearchView searchView;
+    private RecyclerView recyclerView;
+    private ListPageAdapter adapter;
+    private List<ListPageItem> items;
+    private List<ListPageItem> filteredItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +32,13 @@ public class List_Page_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_list_page);
 
-        RecyclerView recyclerView = findViewById(R.id.recyclerviewlistpage);
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
 
-        List<ListPageItem> items = new ArrayList<ListPageItem>();
+        recyclerView = findViewById(R.id.recyclerviewlistpage);
+        items = new ArrayList<>();
+        filteredItems = new ArrayList<>();
+
         items.add(new ListPageItem("Nature Exploring",  R.drawable.bridge));
         items.add(new ListPageItem("Love from Nature",  R.drawable.woods));
         items.add(new ListPageItem("Beauty of the Sea",  R.drawable.girl_hat));
@@ -39,22 +47,45 @@ public class List_Page_Activity extends AppCompatActivity {
         items.add(new ListPageItem("USTH",  R.drawable.usth_avatar));
         items.add(new ListPageItem("12A1.1",  R.drawable.a1_1));
 
+        filteredItems.addAll(items);
+
+        adapter = new ListPageAdapter(this, filteredItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new ListPageAdapter(this, items));
+        recyclerView.setAdapter(adapter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
 
         ImageButton back_button = findViewById(R.id.page_back_button);
         back_button.setOnClickListener(view -> {
             onBackPressed();
         });
 
-        LinearLayout page_profile = findViewById(R.id.page_profile);
-        page_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(vn.edu.usth.facebook.Page.List_Page_Activity.this, vn.edu.usth.facebook.Page.Page_Profile_Activity.class);
-                startActivity(i);
+    }
+
+    private void filterList(String text) {
+        filteredItems.clear();
+        for (ListPageItem item : items) {
+            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredItems.add(item);
             }
-        });
+        }
+
+        if (filteredItems.isEmpty()) {
+            Toast.makeText(this, "No results found", Toast.LENGTH_SHORT).show();
+        }
+
+        adapter.notifyDataSetChanged();
     }
 
     @Override

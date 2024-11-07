@@ -47,7 +47,7 @@ public class Register_Activity extends AppCompatActivity {
             String TextConfirmPassword = editTextConfirmPassword.getText().toString();
 
             if (validateRegister(firstname) && validateRegister(LastName) && validateRegister(Phone) && validateRegister(DateOfBirth)
-                && validateRegister(Adress) && validateRegister(TextEmail) && validateRegister(TextPassword) && validateRegister(TextConfirmPassword)){
+                    && validateRegister(Adress) && validateRegister(TextEmail) && validateRegister(TextPassword) && validateRegister(TextConfirmPassword)){
 
                 SharedPreferences sharedPreferences = getSharedPreferences("toRegister", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();

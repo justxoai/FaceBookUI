@@ -8,19 +8,14 @@ import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-import vn.edu.usth.facebook.Home.HomeAdapter;
 import vn.edu.usth.facebook.R;
 
 public class ListGroup_Activity extends AppCompatActivity {
@@ -29,7 +24,7 @@ public class ListGroup_Activity extends AppCompatActivity {
     private GroupAdapter adapter;
     private List<GroupItem> items;
     private List<GroupItem> filteredItems;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +33,6 @@ public class ListGroup_Activity extends AppCompatActivity {
         searchView = findViewById(R.id.searchView);
         searchView.clearFocus();
 
-        // Initialize RecyclerView and data list
         recyclerView = findViewById(R.id.recyclerviewgroup_01);
         items = new ArrayList<>();
         filteredItems = new ArrayList<>();
@@ -47,7 +41,7 @@ public class ListGroup_Activity extends AppCompatActivity {
         items.add(new GroupItem("Group",  "10 posts recently", R.drawable.usth_avatar));
 
         filteredItems.addAll(items);
-        
+
         adapter = new GroupAdapter(this, filteredItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
@@ -78,7 +72,6 @@ public class ListGroup_Activity extends AppCompatActivity {
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
 
     }
 

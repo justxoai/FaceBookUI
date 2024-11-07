@@ -46,7 +46,6 @@ public class Edit_Profile_Activity extends AppCompatActivity {
             }
         });
 
-
         saveButton.setOnClickListener(view -> {
             String imageUrl = etURL.getText().toString();
             if (!imageUrl.isEmpty()) {
@@ -62,19 +61,11 @@ public class Edit_Profile_Activity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
         Button backbutton = findViewById(R.id.save_button);
         backbutton.setOnClickListener(view -> {
             onBackPressed();
         });
     }
-
 
     class FetchImage extends Thread {
         private String url;

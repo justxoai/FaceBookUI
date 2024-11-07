@@ -15,7 +15,7 @@ import java.util.List;
 import vn.edu.usth.facebook.R;
 
 public class UserSearchAdapter extends RecyclerView.Adapter<UserSearchViewHolder>{
-    
+
     Context context;
     List<UserSearchItem> items;
 

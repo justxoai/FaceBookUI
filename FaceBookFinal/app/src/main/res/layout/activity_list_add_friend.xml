@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/dark_grey"
     tools:context=".User.List_Add_Friend_Activity">
 
     <!--- Header -->
@@ -52,6 +52,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <!--- Search -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:queryHint="Search for people"
+                    android:iconifiedByDefault="false"
+                    android:background="@drawable/edit_group_box"
+                    app:searchIcon="@drawable/social_media"
+                    android:layout_margin="8dp"/>
+            </LinearLayout>
 
             <!--- Request -->
             <LinearLayout

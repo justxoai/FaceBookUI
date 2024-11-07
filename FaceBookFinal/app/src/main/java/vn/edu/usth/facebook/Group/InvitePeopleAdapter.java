@@ -24,7 +24,7 @@ public class InvitePeopleAdapter extends RecyclerView.Adapter<InvitePeopleViewHo
     @NonNull
     @Override
     public InvitePeopleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new InvitePeopleViewHolder(LayoutInflater.from(context).inflate(R.layout.invitepeople_frame,parent, false));
+        return new InvitePeopleViewHolder(LayoutInflater.from(context).inflate(R.layout.invite_people_frame,parent, false));
     }
 
     @Override

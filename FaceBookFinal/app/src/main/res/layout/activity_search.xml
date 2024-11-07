@@ -26,22 +26,15 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"/>
 
-        <androidx.cardview.widget.CardView
+        <SearchView
+            android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_gravity="center"
-            app:cardBackgroundColor="@color/better_grey"
-            app:cardCornerRadius="15dp">
-
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/search_view_search"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/better_grey"
-                app:queryHint="Search facebook"
-                app:iconifiedByDefault="false"/>
-
-        </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content"
+            android:queryHint="Search facebook"
+            android:iconifiedByDefault="false"
+            android:background="@drawable/edit_group_box"
+            app:searchIcon="@drawable/social_media"
+            android:layout_margin="8dp"/>
 
     </LinearLayout>
 

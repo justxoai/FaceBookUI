@@ -39,9 +39,6 @@ public class ProfileFragment extends Fragment {
         RecyclerView recyclerview = v.findViewById(R.id.recyclerviewprofile);
         avatarImageView = v.findViewById(R.id.cover_image);
 
-
-
-
         List<ProfileItem> items = new ArrayList<>();
         items.add(new ProfileItem("JustXoai updated his profile picture", "12h", "", R.drawable.avatar_profile, R.drawable.avatar_profile));
         items.add(new ProfileItem("JustXoai updated his cover picture", "16h", "", R.drawable.avatar_profile, R.drawable.background_profile));
@@ -51,19 +48,11 @@ public class ProfileFragment extends Fragment {
         recyclerview.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerview.setAdapter(new ProfileAdapter(requireContext(), items));
 
-
-
-
-
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
         String imageUrl = sharedPreferences.getString("imageUrl", null);
         if (imageUrl != null) {
             new FetchImage(imageUrl).start();
         }
-
-
-
-
 
         ImageButton searchButton = v.findViewById(R.id.home_search_button);
         searchButton.setOnClickListener(view -> {

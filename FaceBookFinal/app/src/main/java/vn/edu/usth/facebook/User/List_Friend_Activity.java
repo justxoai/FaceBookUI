@@ -14,8 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import vn.edu.usth.facebook.Group.InvitePeopleAdapter;
-import vn.edu.usth.facebook.Group.InvitePeopleItem;
 import vn.edu.usth.facebook.R;
 
 public class List_Friend_Activity extends AppCompatActivity {
@@ -40,9 +38,13 @@ public class List_Friend_Activity extends AppCompatActivity {
         filteredItems = new ArrayList<>();
 
         items.add(new FriendItem("User",  R.drawable.user));
-        items.add(new FriendItem("User",  R.drawable.user));
-        items.add(new FriendItem("User",  R.drawable.user));
-        items.add(new FriendItem("User",  R.drawable.user));
+        items.add(new FriendItem("User1",  R.drawable.user));
+        items.add(new FriendItem("User2",  R.drawable.user));
+        items.add(new FriendItem("User3",  R.drawable.user));
+        items.add(new FriendItem("User4",  R.drawable.user));
+        items.add(new FriendItem("User5",  R.drawable.user));
+        items.add(new FriendItem("User6",  R.drawable.user));
+        items.add(new FriendItem("User7",  R.drawable.user));
 
         // Initially, the filtered list should contain all items
         filteredItems.addAll(items);

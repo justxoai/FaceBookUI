@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="#ffffff"
         android:orientation="vertical"
-        android:layout_marginTop="2dp">
+        android:layout_marginBottom="1dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -105,50 +105,20 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="3dp"
-                app:cardBackgroundColor="#197bff"
-                app:cardCornerRadius="50dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/like_fb"/>
 
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/like_fb"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/heart"/>
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="3dp"
-                app:cardBackgroundColor="#fd444c"
-                app:cardCornerRadius="50dp">
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/heart"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="3dp"
-                app:cardBackgroundColor="#f9aa4b"
-                app:cardCornerRadius="50dp">
-
-                <ImageButton
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/haha"/>
-
-            </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/haha"/>
 
             <TextView
                 android:layout_width="100dp"
@@ -170,9 +140,11 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginRight="6dp">
+            android:layout_marginRight="6dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <LinearLayout
                 android:layout_width="100dp"
@@ -237,7 +209,7 @@
                 <ImageButton
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:background="@drawable/chat"/>
+                    android:background="@drawable/copy"/>
 
                 <TextView
                     android:layout_width="50dp"
@@ -247,7 +219,7 @@
                     android:textStyle="bold"
                     android:paddingLeft="-5dp"
                     android:textSize="15sp"
-                    android:text="Send"/>
+                    android:text="Copy"/>
 
             </LinearLayout>
 

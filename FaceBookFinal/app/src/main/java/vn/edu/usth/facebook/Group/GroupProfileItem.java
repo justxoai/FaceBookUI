@@ -1,3 +1,4 @@
+
 package vn.edu.usth.facebook.Group;
 
 public class GroupProfileItem {

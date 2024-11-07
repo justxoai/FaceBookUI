@@ -95,9 +95,10 @@
                         android:layout_height="180dp">
 
                         <ImageView
+                            android:id="@+id/cover_image"
                             android:layout_width="match_parent"
                             android:layout_height="180dp"
-                            android:background="@drawable/background_profile"/>
+                            android:scaleType="centerCrop"/>
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="25dp"

@@ -1,6 +1,7 @@
 package vn.edu.usth.facebook.More;
 
 import android.app.ProgressDialog;
+
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
