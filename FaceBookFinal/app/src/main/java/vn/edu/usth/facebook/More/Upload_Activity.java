@@ -114,7 +114,7 @@ public class Upload_Activity extends AppCompatActivity {
                 Toast.makeText(this, "Image and Video URL saved", Toast.LENGTH_SHORT).show();
 
                 // Navigate back to HomeFragment
-                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -127,7 +127,7 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Image URL saved", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
                 startActivity(intent);
                 finish();
             }
@@ -140,13 +140,13 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Video URL saved", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
                 startActivity(intent);
                 finish();
             }
 
             else {
-                Toast.makeText(this, "Please enter a URL", Toast.LENGTH_SHORT).show();
+                onBackPressed();
             }
         });
 
@@ -156,15 +156,15 @@ public class Upload_Activity extends AppCompatActivity {
             onBackPressed();
         });
 
-        Button save_button = findViewById(R.id.save_button);
-        save_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+//        Button save_button = findViewById(R.id.save_button);
+//        save_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
 
     }
 

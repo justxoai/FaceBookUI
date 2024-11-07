@@ -261,7 +261,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/post_upload"
+                    android:id="@+id/photo_video_upload"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="30dp"
