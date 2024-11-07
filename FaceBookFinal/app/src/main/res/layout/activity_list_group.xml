@@ -43,13 +43,11 @@
                 android:textSize="28sp"
                 android:textStyle="bold"/>
 
-            <!-- Icon Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:orientation="horizontal">
 
-                <!-- Add Button -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -63,7 +61,6 @@
                         android:layout_margin="12dp"/>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Search Button -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
@@ -101,62 +98,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/white"
-            android:orientation="horizontal"
-            android:paddingTop="2.5dp">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="35dp"
-                android:text="Most visited"
-                android:textSize="16.5sp"
-                android:paddingLeft="10dp"
-                android:paddingTop="8dp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-        <!-- Search Bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:paddingTop="10dp"
-            android:background="@color/white">
-
-            <androidx.cardview.widget.CardView
+            <SearchView
+                android:id="@+id/searchView"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                app:cardBackgroundColor="@color/light_grey"
-                app:cardCornerRadius="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        app:cardBackgroundColor="@color/light_grey">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/social_media"
-                            android:layout_margin="5dp"/>
-                    </androidx.cardview.widget.CardView>
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Search group name"
-                        android:textSize="15sp"
-                        android:inputType="text"
-                        android:paddingLeft="10dp"
-                        android:background="@color/light_grey"/>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                android:layout_height="wrap_content"
+                android:queryHint="Search for Group"
+                android:iconifiedByDefault="false"
+                android:background="@drawable/edit_group_box"
+                app:searchIcon="@drawable/social_media"
+                android:layout_margin="8dp"/>
         </LinearLayout>
 
         <!-- Additional Section -->
