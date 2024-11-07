@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import vn.edu.usth.facebook.R;
 
 public class Create_Video_Activity extends AppCompatActivity {
@@ -28,8 +27,6 @@ public class Create_Video_Activity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
-
 
         ImageButton closeButton = findViewById(R.id.close_button);
         closeButton.setOnClickListener(view -> {

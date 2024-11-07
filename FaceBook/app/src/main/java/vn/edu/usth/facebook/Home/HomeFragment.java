@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -23,8 +22,6 @@ import java.util.List;
 import vn.edu.usth.facebook.R;
 
 public class HomeFragment extends Fragment {
-
-    private ImageView avatarImageView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,7 +39,6 @@ public class HomeFragment extends Fragment {
 
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerView.setAdapter(new HomeAdapter(requireContext(), items));
-
 
         ImageButton chatbutton = v.findViewById(R.id.chat_button);
         chatbutton.setOnClickListener(new View.OnClickListener() {
@@ -80,9 +76,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-
         return v;
     }
-
 
 }

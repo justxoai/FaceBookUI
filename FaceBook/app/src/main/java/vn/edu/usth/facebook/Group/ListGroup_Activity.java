@@ -5,39 +5,59 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-import vn.edu.usth.facebook.Home.HomeAdapter;
 import vn.edu.usth.facebook.R;
 
 public class ListGroup_Activity extends AppCompatActivity {
+    private SearchView searchView;
+    private RecyclerView recyclerView;
+    private GroupAdapter adapter;
+    private List<GroupItem> items;
+    private List<GroupItem> filteredItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_list_group);
 
-        RecyclerView recyclerView = findViewById(R.id.recyclerviewgroup_01);
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
 
-        List<GroupItem> items = new ArrayList<GroupItem>();
+        recyclerView = findViewById(R.id.recyclerviewgroup_01);
+        items = new ArrayList<>();
+        filteredItems = new ArrayList<>();
 
         items.add(new GroupItem("USTH",  "8 posts recently", R.drawable.usth_avatar));
         items.add(new GroupItem("Group",  "10 posts recently", R.drawable.usth_avatar));
 
+        filteredItems.addAll(items);
+
+        adapter = new GroupAdapter(this, filteredItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new GroupAdapter(this,items));
+        recyclerView.setAdapter(adapter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
 
         LinearLayout creategroup = findViewById(R.id.create_group);
         creategroup.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +73,21 @@ public class ListGroup_Activity extends AppCompatActivity {
             onBackPressed();
         });
 
+    }
 
+    private void filterList(String text) {
+        filteredItems.clear();
+        for (GroupItem item : items) {
+            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredItems.add(item);
+            }
+        }
+
+        if (filteredItems.isEmpty()) {
+            Toast.makeText(this, "No results found", Toast.LENGTH_SHORT).show();
+        }
+
+        adapter.notifyDataSetChanged();
     }
 
     @Override

@@ -47,7 +47,7 @@
         <TextView
             android:layout_width="300dp"
             android:layout_height="35dp"
-            android:text="Name"
+            android:text="Group name"
             android:textSize="22.5sp"
             android:textStyle="bold"
             android:paddingLeft="13dp"/>
@@ -69,7 +69,6 @@
             android:textColorHint="@color/black"
             android:padding="12dp"
             android:layout_margin="15dp" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -87,34 +86,65 @@
             <TextView
                 android:layout_width="300dp"
                 android:layout_height="35dp"
-                android:text="Privacy"
+                android:text="Description"
                 android:textSize="22.5sp"
                 android:textStyle="bold"
                 android:paddingLeft="13dp"/>
         </LinearLayout>
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
+            android:background="@color/white"
+            android:orientation="horizontal"
             android:paddingTop="2.5dp">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/edit_group_box"
-                android:layout_margin="12dp"/>
-
-            <Spinner
-                android:id="@+id/privacy"
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name your group"
+                android:hint="Write something"
+                android:background="@drawable/edit_group_box"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
                 android:padding="12dp"
-                android:layout_margin="15dp"
-                android:entries="@array/type_array"/>
+                android:layout_margin="15dp" />
 
-        </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:text="Background Image"
+                android:textSize="22.5sp"
+                android:textStyle="bold"
+                android:paddingLeft="13dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="URL"
+                android:background="@drawable/edit_group_box"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:padding="12dp"
+                android:layout_margin="15dp" />
+
+        </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

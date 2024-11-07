@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import vn.edu.usth.facebook.R;
 
 public class Create_Post_Activity extends AppCompatActivity {
