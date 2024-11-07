@@ -43,18 +43,14 @@ public class ListGroup_Activity extends AppCompatActivity {
         items = new ArrayList<>();
         filteredItems = new ArrayList<>();
 
-        RecyclerView recyclerView = findViewById(R.id.recyclerviewgroup_01);
-
-        List<GroupItem> items = new ArrayList<GroupItem>();
-
         items.add(new GroupItem("USTH",  "8 posts recently", R.drawable.usth_avatar));
         items.add(new GroupItem("Group",  "10 posts recently", R.drawable.usth_avatar));
 
         filteredItems.addAll(items);
         
-        adapter = new InvitePeopleAdapter(this, filteredItems);
+        adapter = new GroupAdapter(this, filteredItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new GroupAdapter(this,items));
+        recyclerView.setAdapter(adapter);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

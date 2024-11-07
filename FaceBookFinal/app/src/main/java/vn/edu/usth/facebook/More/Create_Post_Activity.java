@@ -1,10 +1,11 @@
 package vn.edu.usth.facebook.More;
 
 import android.os.Bundle;
-import android.widget.Button;
+
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import vn.edu.usth.facebook.R;
 
@@ -21,14 +22,11 @@ public class Create_Post_Activity extends AppCompatActivity {
             onBackPressed();
         });
 
-        Button postbutton = findViewById(R.id.post_button);
-        postbutton.setOnClickListener(view -> {
-            onBackPressed();
-        });
     }
 
     @Override
     public void onBackPressed(){
         super.onBackPressed();
     }
+
 }

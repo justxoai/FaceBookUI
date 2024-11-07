@@ -2,21 +2,24 @@ package vn.edu.usth.facebook.More;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 
 import vn.edu.usth.facebook.R;
 
-public class Search_Activity extends AppCompatActivity {
+public class Create_Video_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_create_video);
 
-        ImageButton backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(view -> {
+
+        ImageButton closeButton = findViewById(R.id.close_button);
+        closeButton.setOnClickListener(view -> {
             onBackPressed();
         });
 

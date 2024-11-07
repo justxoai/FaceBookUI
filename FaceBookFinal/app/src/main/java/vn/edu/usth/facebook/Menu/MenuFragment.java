@@ -13,7 +13,6 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import vn.edu.usth.facebook.FaceBookActivity;
-import vn.edu.usth.facebook.Login.ForgotPassword_Activity;
 import vn.edu.usth.facebook.R;
 
 public class MenuFragment extends Fragment {
@@ -28,7 +27,7 @@ public class MenuFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Search_Activity.class );
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Search.Search_Activity.class );
                 startActivity(i);
             }
         });
@@ -64,6 +63,15 @@ public class MenuFragment extends Fragment {
             }
         });
 
+        LinearLayout to_pages_list = v.findViewById(R.id.menu_to_listpage);
+        to_pages_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Page.List_Page_Activity.class);
+                startActivity(i);
+            }
+        });
+
         LinearLayout to_group_list = v.findViewById(R.id.menu_to_group_page);
         to_group_list.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +80,7 @@ public class MenuFragment extends Fragment {
                 startActivity(i);
             }
         });
+
 
         return v;
     }
