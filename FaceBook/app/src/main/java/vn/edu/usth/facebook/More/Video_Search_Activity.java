@@ -15,11 +15,15 @@ public class Video_Search_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_video_search);
 
+        setUpButton();
+
+    }
+
+    private void setUpButton(){
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
     }
 
     @Override

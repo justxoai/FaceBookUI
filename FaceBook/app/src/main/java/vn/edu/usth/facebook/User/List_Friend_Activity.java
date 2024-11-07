@@ -68,6 +68,11 @@ public class List_Friend_Activity extends AppCompatActivity {
             }
         });
 
+        setUpButton();
+
+    }
+
+    private void setUpButton() {
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
@@ -79,9 +84,9 @@ public class List_Friend_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(List_Friend_Activity.this, List_Add_Friend_Activity.class);
                 startActivity(i);
+                finish();
             }
         });
-
     }
 
     private void filterList(String text) {

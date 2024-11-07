@@ -19,6 +19,10 @@ public class About_Group_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_about_group);
 
+        setUpButton();
+    }
+
+    public void setUpButton(){
         ImageButton back = findViewById(R.id.back_button);
         back.setOnClickListener(view -> {
             onBackPressed();

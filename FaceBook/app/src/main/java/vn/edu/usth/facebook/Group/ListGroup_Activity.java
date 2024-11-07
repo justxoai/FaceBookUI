@@ -59,12 +59,18 @@ public class ListGroup_Activity extends AppCompatActivity {
             }
         });
 
+        setUpButton();
+
+    }
+
+    private void setUpButton (){
         LinearLayout creategroup = findViewById(R.id.create_group);
         creategroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(ListGroup_Activity.this, CreateGroup_Activity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -72,7 +78,6 @@ public class ListGroup_Activity extends AppCompatActivity {
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
     }
 
     private void filterList(String text) {

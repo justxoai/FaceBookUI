@@ -69,12 +69,18 @@ public class List_Page_Activity extends AppCompatActivity {
             }
         });
 
+        setUpButton();
+
+    }
+
+    private void setUpButton() {
         LinearLayout create_page = findViewById(R.id.create_page);
         create_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(List_Page_Activity.this, CreatePage_Activity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -82,7 +88,6 @@ public class List_Page_Activity extends AppCompatActivity {
         back_button.setOnClickListener(view -> {
             onBackPressed();
         });
-
     }
 
     private void filterList(String text) {

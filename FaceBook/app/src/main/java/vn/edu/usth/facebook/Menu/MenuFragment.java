@@ -22,6 +22,12 @@ public class MenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_menu, container, false);
 
+        setUpButton(v);
+
+        return v;
+    }
+
+    private void setUpButton(View v){
         ImageButton searchbutton = v.findViewById(R.id.home_search_button);
         searchbutton.setOnClickListener(new View.OnClickListener() {
 
@@ -80,7 +86,5 @@ public class MenuFragment extends Fragment {
                 startActivity(i);
             }
         });
-
-        return v;
     }
 }

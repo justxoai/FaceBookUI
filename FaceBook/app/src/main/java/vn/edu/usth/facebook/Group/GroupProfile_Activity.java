@@ -38,12 +38,17 @@ public class GroupProfile_Activity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new GroupProfileAdapter(this, items));
 
+        setUpButton();
+    }
+
+    private void setUpButton(){
         LinearLayout invitefriend = findViewById(R.id.invitefriend_button);
         invitefriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(GroupProfile_Activity.this, InvitePeople_Activity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -61,8 +66,9 @@ public class GroupProfile_Activity extends AppCompatActivity {
         about_group.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(GroupProfile_Activity.this, About_Group_Activity.class);
-                startActivity(intent);
+                Intent i = new Intent(GroupProfile_Activity.this, About_Group_Activity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

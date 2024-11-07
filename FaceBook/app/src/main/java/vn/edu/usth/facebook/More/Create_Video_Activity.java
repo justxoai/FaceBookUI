@@ -29,8 +29,6 @@ public class Create_Video_Activity extends AppCompatActivity {
 
         post_video = findViewById(R.id.cover_web_post);
 
-        Button upload = findViewById(R.id.post_button);
-
         SharedPreferences videoPreferences = getSharedPreferences("PostPrefs", Context.MODE_PRIVATE);
         String videoUrl = videoPreferences.getString("videoUrl", null);
         if (videoUrl != null) {
@@ -41,6 +39,12 @@ public class Create_Video_Activity extends AppCompatActivity {
             Toast.makeText(this, "No video URL found", Toast.LENGTH_SHORT).show();
         }
 
+        setUpButton();
+
+    }
+
+    private void setUpButton(){
+        Button upload = findViewById(R.id.post_button);
         upload.setOnClickListener(view -> {
             Intent intent = new Intent(Create_Video_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
             startActivity(intent);
@@ -54,10 +58,10 @@ public class Create_Video_Activity extends AppCompatActivity {
 
         LinearLayout phovid = findViewById(R.id.photo_video_upload);
         phovid.setOnClickListener(view -> {
-            Intent intent = new Intent(Create_Video_Activity.this, vn.edu.usth.facebook.More.Upload_Activity.class);
-            startActivity(intent);
+            Intent i = new Intent(Create_Video_Activity.this, vn.edu.usth.facebook.More.Upload_Activity.class);
+            startActivity(i);
+            finish();
         });
-
     }
 
     @Override

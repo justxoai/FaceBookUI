@@ -18,6 +18,11 @@ public class Create_Post_Page_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_create_post_page);
 
+        setUpButton();
+
+    }
+
+    private void setUpButton(){
         LinearLayout upload = findViewById(R.id.post_upload);
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +36,6 @@ public class Create_Post_Page_Activity extends AppCompatActivity {
         closeButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
     }
 
     @Override

@@ -19,6 +19,10 @@ public class About_Page_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_about_page);
 
+        setUpButton();
+    }
+
+    private void setUpButton(){
         ImageButton back_button = findViewById(R.id.back_button);
         back_button.setOnClickListener(view -> {
             onBackPressed();
