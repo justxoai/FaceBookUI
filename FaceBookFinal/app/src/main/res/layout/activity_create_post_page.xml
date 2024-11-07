@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/dark_grey"
-    tools:context=".More.Create_Post_Activity">
+    tools:context=".More.Create_Post_Page_Activity">
 
     <!--- header -->
     <LinearLayout
@@ -15,7 +15,6 @@
         android:layout_height="50dp"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:gravity="center_vertical"
         android:layout_marginBottom="1dp"
         android:padding="5dp">
 
@@ -35,34 +34,22 @@
         </LinearLayout>
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Create Post"
             android:textColor="@color/black"
             android:gravity="center"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginStart="70dp"/>
-
-        <Button
-            android:id="@+id/post_button"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:backgroundTint="@color/blue"
-            android:text="Post"
-            android:textColor="@color/white"
-            android:textSize="15sp"/>
+            android:textStyle="bold"/>
 
     </LinearLayout>
-
 
     <!-- Body -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,7 +65,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/avatar_profile" />
+                    android:src="@drawable/user"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -90,11 +77,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Page User"
                     android:paddingLeft="10dp"
-                    android:text="JustXoai"
-                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textColor="@color/black"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -119,19 +106,19 @@
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@drawable/blue_lock" />
+                                android:src="@drawable/blue_lock"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:padding="5dp"
                                 android:text="Only me"
-                                android:textColor="@color/blue" />
+                                android:textColor="@color/blue"
+                                android:padding="5dp"/>
 
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@drawable/blue_down" />
+                                android:src="@drawable/blue_down"/>
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -153,20 +140,21 @@
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@drawable/blue_plus" />
+                                android:src="@drawable/blue_plus"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:padding="5dp"
                                 android:text="Albums"
-                                android:textColor="@color/blue" />
+                                android:textColor="@color/blue"
+                                android:padding="5dp"/>
 
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@drawable/blue_down" />
+                                android:src="@drawable/blue_down"/>
                         </LinearLayout>
+
 
 
                     </androidx.cardview.widget.CardView>
@@ -188,20 +176,21 @@
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@drawable/ins" />
+                                android:src="@drawable/ins"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:padding="5dp"
                                 android:text="On"
-                                android:textColor="@color/blue" />
+                                android:textColor="@color/blue"
+                                android:padding="5dp"/>
 
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@drawable/blue_down" />
+                                android:src="@drawable/blue_down"/>
                         </LinearLayout>
+
 
 
                     </androidx.cardview.widget.CardView>
@@ -215,40 +204,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:layout_marginBottom="50dp">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
                 android:hint="What's on your mind?"
+                android:background="@color/white"
                 android:padding="15dp" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
-
-            <ImageView
-                android:id="@+id/cover_image"
-                android:layout_width="200dp"
-                android:layout_height="120dp"
-                android:contentDescription="Avatar"
-                android:scaleType="centerCrop" />
-
-            <WebView
-                android:id="@+id/cover_web"
-                android:layout_width="200dp"
-                android:layout_height="120dp"
-                android:scaleType="centerCrop"
-                android:layout_marginLeft="10dp"
-                tools:ignore="WebViewLayout" />
-
-        </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -265,24 +232,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingLeft="10dp">
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="8dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/photos" />
+                        android:src="@drawable/photos"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:text="Photo/Video"
                         android:textColor="@color/black"
                         android:textSize="28sp"
-                        android:textStyle="bold" />
+                        android:gravity="center"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -290,24 +257,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingLeft="10dp">
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="8dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/addfriend" />
+                        android:src="@drawable/addfriend"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:text="Tag people"
                         android:textColor="@color/black"
                         android:textSize="28sp"
-                        android:textStyle="bold" />
+                        android:gravity="center"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -315,24 +282,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingLeft="10dp">
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="8dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/feeling" />
+                        android:src="@drawable/feeling"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:text="Feeling/Activity"
                         android:textColor="@color/black"
                         android:textSize="28sp"
-                        android:textStyle="bold" />
+                        android:gravity="center"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -340,24 +307,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingLeft="10dp">
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="8dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/locate" />
+                        android:src="@drawable/locate"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:text="Check in"
                         android:textColor="@color/black"
                         android:textSize="28sp"
-                        android:textStyle="bold" />
+                        android:gravity="center"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 
@@ -365,24 +332,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="30dp"
-                    android:layout_marginBottom="8dp"
-                    android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingLeft="10dp">
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:layout_marginBottom="8dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/live_cam" />
+                        android:src="@drawable/live_cam"/>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:text="Live Video"
                         android:textColor="@color/black"
                         android:textSize="28sp"
-                        android:textStyle="bold" />
+                        android:gravity="center"
+                        android:textStyle="bold"/>
 
                 </LinearLayout>
 

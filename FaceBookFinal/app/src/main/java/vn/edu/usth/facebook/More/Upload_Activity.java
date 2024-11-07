@@ -2,11 +2,13 @@ package vn.edu.usth.facebook.More;
 
 import android.app.ProgressDialog;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -48,7 +50,7 @@ public class Upload_Activity extends AppCompatActivity {
         post_video = findViewById(R.id.cover_web);
         show_video = findViewById(R.id.video_show_button);
 
-        upload = findViewById(R.id.upload_button);
+        upload = findViewById(R.id.save_button);
 
         post_video.getSettings().setJavaScriptEnabled(true);
         post_video.setWebViewClient(new WebViewClient() {
@@ -111,7 +113,10 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Image and Video URL saved", Toast.LENGTH_SHORT).show();
 
-                onBackPressed();
+                // Navigate back to HomeFragment
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                startActivity(intent);
+                finish();
             }
             else if (!imageUrl.isEmpty()) {
 
@@ -122,7 +127,9 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Image URL saved", Toast.LENGTH_SHORT).show();
 
-                onBackPressed();
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                startActivity(intent);
+                finish();
             }
             else if (!videoUrl.isEmpty()){
 
@@ -133,7 +140,9 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Video URL saved", Toast.LENGTH_SHORT).show();
 
-                onBackPressed();
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                startActivity(intent);
+                finish();
             }
 
             else {
@@ -145,6 +154,16 @@ public class Upload_Activity extends AppCompatActivity {
         ImageButton backButton = findViewById(R.id.close_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
+        });
+
+        Button save_button = findViewById(R.id.save_button);
+        save_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
+                startActivity(intent);
+                finish();
+            }
         });
 
     }
