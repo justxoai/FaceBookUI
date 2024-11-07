@@ -140,7 +140,7 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Video URL saved", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Video_Activity.class);
                 startActivity(intent);
                 finish();
             }
