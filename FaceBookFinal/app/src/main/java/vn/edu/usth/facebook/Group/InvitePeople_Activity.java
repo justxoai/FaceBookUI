@@ -63,7 +63,6 @@ public class InvitePeople_Activity extends AppCompatActivity {
             }
         });
 
-        // Set up the back button
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> onBackPressed());
     }

@@ -95,28 +95,15 @@
         android:layout_height="wrap_content"
         android:padding="10dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            app:cardBackgroundColor="@color/light_grey">
-
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/social_media"
-                android:layout_margin="5dp"/>
-
-        </androidx.cardview.widget.CardView>
-
-        <EditText
+        <SearchView
+            android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Search "
-            android:textSize="15sp"
-            android:inputType="text"
-            android:paddingLeft="10dp"
-            android:background="@color/light_grey"/>
-
+            android:layout_height="wrap_content"
+            android:queryHint="Search for people"
+            android:iconifiedByDefault="false"
+            android:background="@drawable/edit_group_box"
+            app:searchIcon="@drawable/social_media"
+            android:layout_margin="8dp"/>
     </LinearLayout>
 
     <!--- Friends -->
