@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/dark_grey"
-    tools:context=".Home.ProfileFragment">
+    tools:context=".Profile.ProfileFragment">
 
     <!--- Header -->
     <LinearLayout
@@ -95,9 +95,10 @@
                         android:layout_height="180dp">
 
                         <ImageView
+                            android:id="@+id/cover_image"
                             android:layout_width="match_parent"
                             android:layout_height="180dp"
-                            android:background="@drawable/background_profile"/>
+                            android:scaleType="centerCrop"/>
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="25dp"
@@ -267,6 +268,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/edit_profile"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     app:cardBackgroundColor="@color/light_grey"
@@ -395,10 +397,12 @@
             <!--- Edit -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@color/white">
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/edit_public_details"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     app:cardBackgroundColor="@color/light_cyan"
@@ -431,13 +435,20 @@
                     android:paddingLeft="15dp"
                     android:textColor="@color/black"/>
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/find_friend"
                     android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:text="Find Friends"
-                    android:gravity="right|center"
-                    android:textSize="10sp"
-                    android:textColor="@color/blue"/>
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="Find Friends"
+                        android:gravity="right|center"
+                        android:textSize="10sp"
+                        android:textColor="@color/blue"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -477,6 +488,7 @@
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
+                            android:id="@+id/friend0"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -484,12 +496,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/usth_avatar"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="USTH"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -506,6 +518,7 @@
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
+                            android:id="@+id/friend1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -513,12 +526,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/vdd_avatar"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Duy"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -535,6 +548,7 @@
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
+                            android:id="@+id/friend2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -542,12 +556,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/hhp_avatar"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Hoang Anh"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -571,6 +585,7 @@
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
+                            android:id="@+id/friend3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -578,12 +593,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/at_avata"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Nguyen At"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -600,6 +615,7 @@
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
+                            android:id="@+id/friend4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -607,12 +623,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/circle_avatar"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Viet Anh"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -629,6 +645,7 @@
                         app:cardCornerRadius="8dp">
 
                         <LinearLayout
+                            android:id="@+id/friend5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
@@ -636,12 +653,12 @@
                             <ImageView
                                 android:layout_width="130dp"
                                 android:layout_height="130dp"
-                                android:background="@drawable/capybara_usth"/>
+                                android:background="@color/light_grey"/>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
-                                android:text="Cuong"
+                                android:text="User"
                                 android:textStyle="bold"
                                 android:paddingLeft="10dp"
                                 android:paddingTop="3dp"
@@ -656,15 +673,16 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/friends"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:background="@color/white"
-                android:paddingTop="5dp">
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    app:cardBackgroundColor="@color/dark_grey"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="5dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="15dp">
@@ -717,14 +735,20 @@
                     android:src="@drawable/avatar_profile"
                     android:paddingLeft="10dp"/>
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/create_post"
                     android:layout_width="300dp"
-                    android:layout_height="35dp"
-                    android:text="What's on your mind?"
-                    android:textSize="16.5sp"
-                    android:paddingLeft="5dp"
-                    android:paddingTop="8dp"
-                    android:textStyle="bold"/>
+                    android:layout_height="35dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="What's on your mind?"
+                        android:textSize="16.5sp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="8dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
 
                 <ImageButton
                     android:id="@+id/image_profile_button"
@@ -736,14 +760,14 @@
             <!--- Posts -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:background="@color/white"
-                android:paddingTop="5dp">
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    app:cardBackgroundColor="@color/dark_grey"
+                    app:cardBackgroundColor="@color/light_grey"
                     app:cardCornerRadius="5dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="15dp">
@@ -758,1101 +782,19 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <!--- Avatar Change -->
-            <LinearLayout
+            <!--- RecyclerView -->
+            <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:layout_marginTop="2dp">
+                android:layout_height="match_parent">
 
-                <LinearLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewprofile"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
 
-                    <ImageButton
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:background="@drawable/avatar_profile"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="5dp"/>
+            </androidx.core.widget.NestedScrollView>
 
-                    <LinearLayout
-                        android:layout_width="300dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
-                            android:text="JustXoai updated his profile picture"
-                            android:paddingLeft="5dp"
-                            android:paddingTop="5dp"
-                            android:textStyle="bold"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"/>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingLeft="5dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="4dp"
-                                android:text="1h ."/>
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/global"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:background="@drawable/dot"
-                        android:layout_gravity="center"/>
-
-                    <ImageButton
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"
-                        android:background="@drawable/close"
-                        android:layout_marginLeft="15dp"
-                        android:layout_gravity="center"/>
-
-                </LinearLayout>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="220dp"
-                    android:layout_height="220dp"
-                    android:layout_gravity="center"
-                    app:cardCornerRadius="120dp">
-
-                    <ImageButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/avatar_profile"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
-                        app:cardBackgroundColor="#197bff"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/like_fb"
-                            android:scaleType="centerInside"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
-                        app:cardBackgroundColor="#fd444c"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/heart"
-                            android:padding="8dp"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_gravity="center"
-                        app:cardBackgroundColor="#f9aa4b"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/haha"
-                            android:padding="8dp"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:paddingLeft="5dp"
-                        android:paddingTop="3dp"
-                        android:gravity="center_vertical"
-                        android:text="1.2k"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:layout_width="196dp"
-                        android:layout_height="40dp"
-                        android:paddingTop="10dp"
-                        android:gravity="right"
-                        android:paddingRight="5dp"
-                        android:text="1k comments  900 shares"
-                        android:textColor="@color/black"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="6dp">
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/like"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Like"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginRight="6dp"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/comment"/>
-
-                        <TextView
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="1dp"
-                            android:textSize="15sp"
-                            android:text="Comment"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/chat"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Send"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/share"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Share"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!--- Content -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:layout_marginTop="2dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:background="@drawable/avatar_profile"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="5dp"/>
-
-                    <LinearLayout
-                        android:layout_width="300dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
-                            android:text="JustXoai updated his cover picture"
-                            android:paddingLeft="5dp"
-                            android:paddingTop="5dp"
-                            android:textStyle="bold"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"/>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingLeft="5dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="4dp"
-                                android:text="1h ."/>
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/global"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:background="@drawable/dot"
-                        android:layout_gravity="center"/>
-
-                    <ImageButton
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"
-                        android:background="@drawable/close"
-                        android:layout_marginLeft="15dp"
-                        android:layout_gravity="center"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:background="@drawable/background_profile"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
-                        app:cardBackgroundColor="#197bff"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/like_fb"
-                            android:scaleType="centerInside"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
-                        app:cardBackgroundColor="#fd444c"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/heart"
-                            android:padding="8dp"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_gravity="center"
-                        app:cardBackgroundColor="#f9aa4b"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/haha"
-                            android:padding="8dp"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:paddingLeft="5dp"
-                        android:paddingTop="3dp"
-                        android:gravity="center_vertical"
-                        android:text="1.2k"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:layout_width="196dp"
-                        android:layout_height="40dp"
-                        android:paddingTop="10dp"
-                        android:gravity="right"
-                        android:paddingRight="5dp"
-                        android:text="1k comments  900 shares"
-                        android:textColor="@color/black"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="6dp">
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/like"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Like"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginRight="6dp"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/comment"/>
-
-                        <TextView
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="1dp"
-                            android:textSize="15sp"
-                            android:text="Comment"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/chat"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Send"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/share"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Share"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!--- Content -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:layout_marginTop="2dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:background="@drawable/avatar_profile"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="5dp"/>
-
-                    <LinearLayout
-                        android:layout_width="300dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
-                            android:text="JustXoai updated his cover picture"
-                            android:paddingLeft="5dp"
-                            android:paddingTop="5dp"
-                            android:textStyle="bold"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"/>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingLeft="5dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="4dp"
-                                android:text="1y."/>
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/global"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:background="@drawable/dot"
-                        android:layout_gravity="center"/>
-
-                    <ImageButton
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"
-                        android:background="@drawable/close"
-                        android:layout_marginLeft="15dp"
-                        android:layout_gravity="center"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:background="@drawable/a1_1"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
-                        app:cardBackgroundColor="#197bff"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/like_fb"
-                            android:scaleType="centerInside"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
-                        app:cardBackgroundColor="#fd444c"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/heart"
-                            android:padding="8dp"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_gravity="center"
-                        app:cardBackgroundColor="#f9aa4b"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/haha"
-                            android:padding="8dp"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:paddingLeft="5dp"
-                        android:paddingTop="3dp"
-                        android:gravity="center_vertical"
-                        android:text="1.2k"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:layout_width="196dp"
-                        android:layout_height="40dp"
-                        android:paddingTop="10dp"
-                        android:gravity="right"
-                        android:paddingRight="5dp"
-                        android:text="1k comments  900 shares"
-                        android:textColor="@color/black"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="6dp">
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/like"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Like"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginRight="6dp"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/comment"/>
-
-                        <TextView
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="1dp"
-                            android:textSize="15sp"
-                            android:text="Comment"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/chat"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Send"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/share"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Share"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <!--- Content -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:background="@color/white"
-                android:orientation="vertical"
-                android:layout_marginTop="2dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:background="@drawable/avatar_profile"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:layout_marginLeft="5dp"/>
-
-                    <LinearLayout
-                        android:layout_width="300dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="300dp"
-                            android:layout_height="wrap_content"
-                            android:text="JustXoai updated his cover picture"
-                            android:paddingLeft="5dp"
-                            android:paddingTop="5dp"
-                            android:textStyle="bold"
-                            android:textSize="15sp"
-                            android:textColor="@color/black"/>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingLeft="5dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="4dp"
-                                android:text="2y ."/>
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/global"/>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:background="@drawable/dot"
-                        android:layout_gravity="center"/>
-
-                    <ImageButton
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"
-                        android:background="@drawable/close"
-                        android:layout_marginLeft="15dp"
-                        android:layout_gravity="center"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:paddingLeft="8dp"
-                    android:paddingTop="3dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:background="@drawable/meme"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
-                        app:cardBackgroundColor="#197bff"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/like_fb"
-                            android:scaleType="centerInside"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="3dp"
-                        app:cardBackgroundColor="#fd444c"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/heart"
-                            android:padding="8dp"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_gravity="center"
-                        app:cardBackgroundColor="#f9aa4b"
-                        app:cardCornerRadius="20dp">
-
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/haha"
-                            android:padding="8dp"/>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="100dp"
-                        android:layout_height="40dp"
-                        android:paddingLeft="5dp"
-                        android:paddingTop="3dp"
-                        android:gravity="center_vertical"
-                        android:text="1.2k"
-                        android:textColor="@color/black"/>
-
-                    <TextView
-                        android:layout_width="196dp"
-                        android:layout_height="40dp"
-                        android:paddingTop="10dp"
-                        android:gravity="right"
-                        android:paddingRight="5dp"
-                        android:text="1k comments  900 shares"
-                        android:textColor="@color/black"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:orientation="horizontal"
-                    android:layout_marginRight="6dp">
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/like"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Like"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginRight="6dp"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/comment"/>
-
-                        <TextView
-                            android:layout_width="70dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="1dp"
-                            android:textSize="15sp"
-                            android:text="Comment"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:layout_marginRight="5dp"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/chat"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Send"/>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:background="@drawable/share"/>
-
-                        <TextView
-                            android:layout_width="50dp"
-                            android:layout_height="match_parent"
-                            android:textAlignment="center"
-                            android:gravity="center"
-                            android:textStyle="bold"
-                            android:paddingLeft="-5dp"
-                            android:textSize="15sp"
-                            android:text="Share"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </LinearLayout>
 
         </LinearLayout>
 

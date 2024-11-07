@@ -7,7 +7,7 @@
     android:background="@color/menu_grey"
     android:id="@+id/menu_page_fragment"
     android:orientation="vertical"
-    tools:context=".Home.MenuFragment">
+    tools:context=".Menu.MenuFragment">
 
     <!--- Header -->
     <LinearLayout
@@ -673,6 +673,7 @@
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
+                            android:id="@+id/menu_to_listpage"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -688,33 +689,18 @@
                                 <ImageButton
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/memories"/>
+                                    android:background="@drawable/invite"/>
 
                             </androidx.cardview.widget.CardView>
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Memories"
+                                android:text="Pages"
                                 android:paddingLeft="8dp"
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="@color/light_grey"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/down_list"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="5dp"/>
-
-                            </androidx.cardview.widget.CardView>
 
                         </LinearLayout>
 
@@ -761,22 +747,6 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="@color/light_grey"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/down_list"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="5dp"/>
-
-                            </androidx.cardview.widget.CardView>
-
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -803,6 +773,7 @@
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
+                            android:id="@+id/menu_to_group_page"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -830,25 +801,11 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="@color/light_grey"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/down_list"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="5dp"/>
-
-                            </androidx.cardview.widget.CardView>
 
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -864,6 +821,7 @@
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
+                            android:id="@+id/menu_to_video_page"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -890,22 +848,6 @@
                                 android:paddingLeft="8dp"
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="@color/light_grey"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/down_list"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="5dp"/>
-
-                            </androidx.cardview.widget.CardView>
 
                         </LinearLayout>
 
@@ -960,21 +902,6 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="@color/light_grey"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/down_list"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="5dp"/>
-
-                            </androidx.cardview.widget.CardView>
 
                         </LinearLayout>
 
@@ -994,6 +921,7 @@
                         app:cardCornerRadius="5dp">
 
                         <LinearLayout
+                            android:id="@+id/menu_to_friend_page"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
@@ -1020,22 +948,6 @@
                                 android:paddingLeft="8dp"
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="@color/light_grey"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/down_list"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="5dp"/>
-
-                            </androidx.cardview.widget.CardView>
 
                         </LinearLayout>
 
@@ -1090,22 +1002,6 @@
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="@color/light_grey"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/down_list"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="5dp"/>
-
-                            </androidx.cardview.widget.CardView>
-
                         </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
@@ -1150,22 +1046,6 @@
                                 android:paddingLeft="8dp"
                                 android:textStyle="bold"
                                 android:textColor="@color/black"/>
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_gravity="center"
-                                app:cardBackgroundColor="@color/light_grey"
-                                app:cardCornerRadius="50dp">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/down_list"
-                                    android:layout_gravity="center"
-                                    android:layout_margin="5dp"/>
-
-                            </androidx.cardview.widget.CardView>
 
                         </LinearLayout>
 

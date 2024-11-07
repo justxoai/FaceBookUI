@@ -13,12 +13,13 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+
 public class FaceBookActivity extends AppCompatActivity {
 
     private ViewPager2 mviewPager;
 
     private BottomNavigationView bottomNavigationView;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,5 +116,9 @@ public class FaceBookActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(android.R.id.content, loginFragment);
         transaction.commit();
+    }
+
+    public void to_video_page() {
+        mviewPager.setCurrentItem(1, true);
     }
 }
