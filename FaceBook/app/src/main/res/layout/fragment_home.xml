@@ -773,6 +773,19 @@
 
         </HorizontalScrollView>
 
+        <!--- RecyclerView -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewhome2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </androidx.core.widget.NestedScrollView>
+
     </LinearLayout>
 
 </ScrollView>

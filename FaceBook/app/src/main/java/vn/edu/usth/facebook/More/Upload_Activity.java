@@ -2,6 +2,7 @@ package vn.edu.usth.facebook.More;
 
 import android.app.ProgressDialog;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -111,7 +112,10 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Image and Video URL saved", Toast.LENGTH_SHORT).show();
 
-                onBackPressed();
+                // Navigate back to HomeFragment
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                startActivity(intent);
+                finish();
             }
             else if (!imageUrl.isEmpty()) {
 
@@ -122,7 +126,9 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Image URL saved", Toast.LENGTH_SHORT).show();
 
-                onBackPressed();
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                startActivity(intent);
+                finish();
             }
             else if (!videoUrl.isEmpty()){
 
@@ -133,7 +139,9 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Video URL saved", Toast.LENGTH_SHORT).show();
 
-                onBackPressed();
+                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+                startActivity(intent);
+                finish();
             }
 
             else {
