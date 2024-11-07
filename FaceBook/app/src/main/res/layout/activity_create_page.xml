@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:scrollbars="none"
     android:background="@color/white"
-    android:id="@+id/list_group">
+    tools:context=".Page.CreatePage_Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +27,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="Create Group"
+            android:text="Create Page"
             android:textColor="@color/black"
             android:paddingRight="55dp"
             android:textSize="28sp"
@@ -47,7 +46,7 @@
         <TextView
             android:layout_width="300dp"
             android:layout_height="35dp"
-            android:text="Group name"
+            android:text="Page name"
             android:textSize="22.5sp"
             android:textStyle="bold"
             android:paddingLeft="13dp"/>
@@ -63,7 +62,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name your group"
+            android:hint="Name your Page"
             android:background="@drawable/edit_group_box"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
@@ -151,14 +150,14 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/creategroup_button"
+                android:id="@+id/createpage_button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
                 android:backgroundTint="@color/blue"
                 android:padding="10dp"
-                android:text="Create group"
+                android:text="Create Page"
                 android:textColor="@color/colorAccentDark"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -171,8 +170,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
-
-
-
 
 </LinearLayout>
