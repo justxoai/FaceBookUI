@@ -1,6 +1,7 @@
 package vn.edu.usth.facebook.More;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,13 +16,17 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import vn.edu.usth.facebook.FaceBookActivity;
+import vn.edu.usth.facebook.Home.HomeFragment;
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.Video.VideoFragment;
 
 public class Upload_Activity extends AppCompatActivity {
 

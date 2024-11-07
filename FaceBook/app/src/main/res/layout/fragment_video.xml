@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:scrollbars="none"
     android:background="@color/dark_grey"
+    android:id="@+id/fragment_video"
     tools:context=".Video.VideoFragment">
 
     <LinearLayout

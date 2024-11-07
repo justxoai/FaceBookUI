@@ -74,7 +74,7 @@
 
         <Button
             android:id="@+id/image_show_button"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue"
             android:padding="10dp"
@@ -111,7 +111,7 @@
 
         <Button
             android:id="@+id/video_show_button"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue"
             android:padding="10dp"
