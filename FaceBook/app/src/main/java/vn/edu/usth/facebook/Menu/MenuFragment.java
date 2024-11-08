@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import vn.edu.usth.facebook.FaceBookActivity;
+import vn.edu.usth.facebook.Page.ListPageActivity;
 import vn.edu.usth.facebook.R;
 
 public class MenuFragment extends Fragment {
@@ -73,7 +74,7 @@ public class MenuFragment extends Fragment {
         to_pages_list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Page.List_Page_Activity.class);
+                Intent i = new Intent(requireContext(), ListPageActivity.class);
                 startActivity(i);
             }
         });
