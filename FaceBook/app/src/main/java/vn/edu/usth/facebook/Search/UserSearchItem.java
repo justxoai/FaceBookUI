@@ -4,12 +4,12 @@ public class UserSearchItem {
 
     String name;
     String content;
-    int avatar;
+    String imageAvatarUrl;
 
-    public UserSearchItem(String name, String content, int avatar) {
+    public UserSearchItem(String name, String content, String imageAvatarUrl) {
         this.name = name;
         this.content = content;
-        this.avatar = avatar;
+        this.imageAvatarUrl = imageAvatarUrl;
     }
 
     public String getName() {
@@ -28,12 +28,20 @@ public class UserSearchItem {
         this.content = content;
     }
 
-    public int getAvatar() {
-        return avatar;
+    public String getImageAvatarUrl() {
+        return imageAvatarUrl;
     }
 
-    public void setAvatar(int avatar) {
-        this.avatar = avatar;
+    public void setImageAvatarUrl(String imageAvatarUrl) {
+        this.imageAvatarUrl = imageAvatarUrl;
     }
 
+    @Override
+    public String toString() {
+        return "UserSearchItem{" +
+                ", name='" + name + '\'' +
+                ", content='" + content + '\'' +
+                ", imageAvatarUrl='" + imageAvatarUrl + '\'' +
+                '}';
+    }
 }

@@ -16,7 +16,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.model.response.group.GroupResponse;
+import vn.edu.usth.facebook.retrofit.GroupApi;
+import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class ListGroup_Activity extends AppCompatActivity {
     private SearchView searchView;
@@ -24,6 +30,7 @@ public class ListGroup_Activity extends AppCompatActivity {
     private GroupAdapter adapter;
     private List<GroupItem> items;
     private List<GroupItem> filteredItems;
+    private RetrofitService retrofitService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +44,40 @@ public class ListGroup_Activity extends AppCompatActivity {
         items = new ArrayList<>();
         filteredItems = new ArrayList<>();
 
-        items.add(new GroupItem("USTH",  "8 posts recently", R.drawable.usth_avatar));
-        items.add(new GroupItem("Group",  "10 posts recently", R.drawable.usth_avatar));
+        retrofitService = new RetrofitService(this);
+        GroupApi groupApi = retrofitService.getRetrofit().create(GroupApi.class);
 
-        filteredItems.addAll(items);
+        Call<List<GroupResponse>> call = groupApi.getAllGroups();
+        call.enqueue(new Callback<List<GroupResponse>>() {
+            @Override
+            public void onResponse(Call<List<GroupResponse>> call, Response<List<GroupResponse>> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    List<GroupResponse> groupResponses = response.body();
 
-        adapter = new GroupAdapter(this, filteredItems);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+                    // Convert each GroupResponse into a GroupItem and add to items
+                    for (GroupResponse groupResponse : groupResponses) {
+                        items.add(new GroupItem(
+                                groupResponse.getTitle(),
+                                groupResponse.getDescription(),
+                                groupResponse.getBackgroundImageUrl()
+                        ));
+                    }
+
+                    // Update the adapter with the new data
+                    filteredItems.addAll(items);
+                    adapter = new GroupAdapter(ListGroup_Activity.this, filteredItems);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(ListGroup_Activity.this));
+                    recyclerView.setAdapter(adapter);
+                } else {
+                    Toast.makeText(ListGroup_Activity.this, "Failed to load groups", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<GroupResponse>> call, Throwable t) {
+                Toast.makeText(ListGroup_Activity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

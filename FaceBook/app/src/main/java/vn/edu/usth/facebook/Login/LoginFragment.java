@@ -90,6 +90,15 @@ public class LoginFragment extends Fragment {
                     if (response.isSuccessful()) {
                         Toast.makeText(getContext(), "Login successful!", Toast.LENGTH_SHORT).show();
 
+                        String token = response.body().getToken();
+
+                        // Assuming this is where you receive the token after successful login
+                        SharedPreferences sharedTokenPreferences = requireActivity().getSharedPreferences("AuthPrefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editorToken = sharedTokenPreferences.edit();
+                        editorToken.putString("auth_token", token);
+                        editorToken.apply();
+
+
                         // Lưu trạng thái đăng nhập và thời gian hết hạn trong SharedPreferences
                         SharedPreferences sharedPreferences = requireActivity().getSharedPreferences("TOLogin", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();

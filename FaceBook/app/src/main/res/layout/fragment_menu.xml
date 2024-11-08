@@ -92,10 +92,10 @@
                         app:cardBackgroundColor="@color/light_grey"
                         app:cardCornerRadius="50dp">
 
-                        <ImageButton
+                        <ImageView
+                            android:id="@+id/menu_avatar"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/avatar_profile"/>
+                            android:layout_height="match_parent" />
 
                     </androidx.cardview.widget.CardView>
 

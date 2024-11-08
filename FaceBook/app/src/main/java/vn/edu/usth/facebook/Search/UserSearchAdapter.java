@@ -9,6 +9,8 @@ import android.widget.Filterable;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +36,14 @@ public class UserSearchAdapter extends RecyclerView.Adapter<UserSearchViewHolder
     public void onBindViewHolder(@NonNull UserSearchViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
         holder.contentView.setText(items.get(position).getContent());
-        holder.avatarView.setImageResource(items.get(position).getAvatar());
+        String imageUrl = items.get(position).getImageAvatarUrl();
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            Glide.with(context)
+                    .load(imageUrl)
+                    .into(holder.avatarView);
+        } else {
+            holder.avatarView.setImageResource(R.drawable.avatar);
+        }
     }
 
     @Override

@@ -3,12 +3,12 @@ package vn.edu.usth.facebook.Group;
 public class GroupItem {
     String name;
     String post;
-    int avatar;
+    String imageUrl;
 
-    public GroupItem(String name, String post, int avatar) {
+    public GroupItem(String name, String post, String imageUrl) {
         this.name = name;
         this.post = post;
-        this.avatar = avatar;
+        this.imageUrl = imageUrl;
     }
 
     public String getPost() {
@@ -27,11 +27,11 @@ public class GroupItem {
         this.name = name;
     }
 
-    public int getAvatar() {
-        return avatar;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setAvatar(int avatar) {
-        this.avatar = avatar;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

@@ -76,9 +76,9 @@
                 app:cardCornerRadius="50dp">
 
                 <ImageView
+                    android:id="@+id/avatar_create_post"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/avatar_profile" />
+                    android:layout_height="match_parent" />
 
             </androidx.cardview.widget.CardView>
 
@@ -219,6 +219,7 @@
             android:padding="10dp">
 
             <EditText
+                android:id="@+id/content_post"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
