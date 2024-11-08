@@ -38,25 +38,37 @@ public class GroupProfile_Activity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new GroupProfileAdapter(this, items));
 
+        setUpButton();
+    }
+
+    private void setUpButton(){
         LinearLayout invitefriend = findViewById(R.id.invitefriend_button);
         invitefriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(GroupProfile_Activity.this, InvitePeople_Activity.class);
                 startActivity(i);
+                finish();
             }
         });
 
-        ImageButton closeButton = findViewById(R.id.close_button); // Fix the variable v -> use this correctly
-
-        // Set an OnClickListener for the close button
+        ImageButton closeButton = findViewById(R.id.close_button);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Create an Intent to go to FacebookActivity
                 Intent intent = new Intent(GroupProfile_Activity.this, FaceBookActivity.class);
-                startActivity(intent); // Start the FacebookActivity
-                finish(); // Optionally close the current activity after navigating
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        LinearLayout about_group = findViewById(R.id.group_about);
+        about_group.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(GroupProfile_Activity.this, About_Group_Activity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

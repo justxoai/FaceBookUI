@@ -36,7 +36,12 @@ public class Page_Profile_Activity extends AppCompatActivity {
         // Set up the RecyclerView with a layout manager and adapter
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new PagePostAdapter(this, items));
+        
+        setUpButton();
 
+    }
+
+    private void setUpButton() {
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
@@ -48,16 +53,27 @@ public class Page_Profile_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(Page_Profile_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class );
                 startActivity(i);
+                finish();
             }
         });
 
         ImageButton searchbutton = findViewById(R.id.page_search_button);
         searchbutton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(Page_Profile_Activity.this, vn.edu.usth.facebook.Search.Search_Activity.class );
                 startActivity(i);
+                finish();
+            }
+        });
+
+        LinearLayout page_about = findViewById(R.id.page_about);
+        page_about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Page_Profile_Activity.this, About_Page_Activity.class );
+                startActivity(i);
+                finish();
             }
         });
     }

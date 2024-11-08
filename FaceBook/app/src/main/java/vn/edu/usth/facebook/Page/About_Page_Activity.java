@@ -1,27 +1,30 @@
-package vn.edu.usth.facebook.More;
+package vn.edu.usth.facebook.Page;
 
 import android.os.Bundle;
 import android.widget.ImageButton;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import vn.edu.usth.facebook.R;
 
-public class Video_Search_Activity extends AppCompatActivity {
+public class About_Page_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_video_search);
+        setContentView(R.layout.activity_about_page);
 
         setUpButton();
-
     }
 
     private void setUpButton(){
-        ImageButton backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(view -> {
+        ImageButton back_button = findViewById(R.id.back_button);
+        back_button.setOnClickListener(view -> {
             onBackPressed();
         });
     }

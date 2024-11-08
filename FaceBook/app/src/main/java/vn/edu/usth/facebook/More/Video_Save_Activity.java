@@ -15,11 +15,15 @@ public class Video_Save_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_video_save);
 
+        setUpButton();
+
+    }
+
+    private void setUpButton(){
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
     }
 
     @Override

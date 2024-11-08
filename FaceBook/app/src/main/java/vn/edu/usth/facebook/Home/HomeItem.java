@@ -1,13 +1,14 @@
 package vn.edu.usth.facebook.Home;
 
 public class HomeItem {
+    private String name;
+    private String time;
+    private String content;
+    private int avatar;
+    private int postimage; // drawable resource ID
+    private String postimageUrl; // URL for uploaded image
 
-    String name;
-    String time;
-    String content;
-    int avatar;
-    int postimage;
-
+    // Constructor for drawable-based posts
     public HomeItem(String name, String time, String content, int avatar, int postimage) {
         this.name = name;
         this.time = time;
@@ -16,44 +17,19 @@ public class HomeItem {
         this.postimage = postimage;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    // Constructor for URL-based posts
+    public HomeItem(String name, String time, String content, int avatar, String postimageUrl) {
         this.name = name;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
         this.time = time;
-    }
-
-    public String getContent(){
-        return content;
-    }
-
-    public void setContent(String content){
         this.content = content;
-    }
-
-    public int getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(int avatar) {
         this.avatar = avatar;
+        this.postimageUrl = postimageUrl;
     }
 
-    public int getPostimage() {
-        return postimage;
-    }
-
-    public void setPostimage(int postimage) {
-        this.postimage = postimage;
-    }
-
+    public String getName() { return name; }
+    public String getTime() { return time; }
+    public String getContent() { return content; }
+    public int getAvatar() { return avatar; }
+    public int getPostimage() { return postimage; }
+    public String getPostimageUrl() { return postimageUrl; }
 }

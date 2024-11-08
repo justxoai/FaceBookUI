@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,7 +38,7 @@ public class ProfileFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
         RecyclerView recyclerview = v.findViewById(R.id.recyclerviewprofile);
-        avatarImageView = v.findViewById(R.id.cover_image);
+        avatarImageView = v.findViewById(R.id.cover_image_profile);
 
         List<ProfileItem> items = new ArrayList<>();
         items.add(new ProfileItem("JustXoai updated his profile picture", "12h", "", R.drawable.avatar_profile, R.drawable.avatar_profile));
@@ -53,6 +54,18 @@ public class ProfileFragment extends Fragment {
         if (imageUrl != null) {
             new FetchImage(imageUrl).start();
         }
+
+        setUpButton(v);
+
+        return v;
+    }
+
+    private void setUpButton (View v){
+        CardView edit_profile = v.findViewById(R.id.edit_public_details);
+        edit_profile.setOnClickListener(view -> {
+            Intent i = new Intent(requireContext(), vn.edu.usth.facebook.More.Edit_Profile_Activity.class);
+            startActivity(i);
+        });
 
         ImageButton searchButton = v.findViewById(R.id.home_search_button);
         searchButton.setOnClickListener(view -> {
@@ -90,7 +103,6 @@ public class ProfileFragment extends Fragment {
             startActivity(i);
         });
 
-        return v;
     }
 
     class FetchImage extends Thread {

@@ -71,12 +71,17 @@ public class Messenger_Activity extends AppCompatActivity {
             }
         });
 
+        setUpButton();
 
+    }
+
+    private void setUpButton(){
         LinearLayout back = findViewById(R.id.back_button);
         back.setOnClickListener(view -> {
             onBackPressed();
         });
     }
+
     @Override
     public void onBackPressed(){
         super.onBackPressed();

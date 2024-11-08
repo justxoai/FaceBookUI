@@ -65,6 +65,10 @@ public class List_Add_Friend_Activity extends AppCompatActivity {
             }
         });
 
+        setUpButton();
+    }
+
+    private void setUpButton() {
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
@@ -76,6 +80,7 @@ public class List_Add_Friend_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(List_Add_Friend_Activity.this, vn.edu.usth.facebook.Search.Search_Activity.class);
                 startActivity(i);
+                finish();
             }
         });
     }

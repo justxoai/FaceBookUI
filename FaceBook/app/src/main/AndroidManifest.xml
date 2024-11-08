@@ -17,6 +17,15 @@
         android:theme="@style/Theme.FaceBook"
         tools:targetApi="31">
         <activity
+            android:name=".Group.About_Group_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Page.About_Page_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".User.About_User_Activity"
+            android:exported="false" />
+        <activity
             android:name=".More.Create_Post_Page_Activity"
             android:exported="false" />
         <activity

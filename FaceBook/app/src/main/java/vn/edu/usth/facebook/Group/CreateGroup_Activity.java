@@ -21,16 +21,21 @@ public class CreateGroup_Activity extends AppCompatActivity {
 
         buttonCreateGroup = findViewById(R.id.creategroup_button);
 
+        setUpButton();
+
+    }
+
+    private void setUpButton(){
         buttonCreateGroup.setOnClickListener(view -> {
             Intent i = new Intent(CreateGroup_Activity.this, GroupProfile_Activity.class);
             startActivity(i);
+            finish();
         });
 
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
     }
 
     @Override
