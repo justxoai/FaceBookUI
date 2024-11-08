@@ -60,6 +60,12 @@ public class VideoFragment extends Fragment {
         recyclerview3.setAdapter(new VideoAdapter(requireContext(), item3s));
 
 
+        setUpButton(v);
+
+        return v;
+    }
+
+    private void setUpButton(View v) {
         LinearLayout create_video = v.findViewById(R.id.createVideo);
         create_video.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +101,5 @@ public class VideoFragment extends Fragment {
                 startActivity(i);
             }
         });
-
-        return v;
     }
 }

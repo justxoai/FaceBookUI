@@ -42,7 +42,7 @@ public class Upload_Activity extends AppCompatActivity {
 
         // Image URL
         image_etURL = findViewById(R.id.image_etURL);
-        post_image = findViewById(R.id.cover_image);
+        post_image = findViewById(R.id.cover_image_post);
         show_image = findViewById(R.id.image_show_button);
 
         // Video URL
@@ -155,16 +155,6 @@ public class Upload_Activity extends AppCompatActivity {
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
-//        Button save_button = findViewById(R.id.save_button);
-//        save_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
 
     }
 

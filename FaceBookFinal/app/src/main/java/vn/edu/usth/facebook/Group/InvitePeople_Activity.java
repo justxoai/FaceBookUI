@@ -30,26 +30,21 @@ public class InvitePeople_Activity extends AppCompatActivity {
         searchView = findViewById(R.id.searchView);
         searchView.clearFocus();
 
-        // Initialize RecyclerView and data list
         recyclerView = findViewById(R.id.recyclerview_invitepeople);
         items = new ArrayList<>();
         filteredItems = new ArrayList<>();
 
-        // Add items to the list
         items.add(new InvitePeopleItem("USTH", R.drawable.usth_avatar));
         items.add(new InvitePeopleItem("Group", R.drawable.usth_avatar));
         items.add(new InvitePeopleItem("USTH", R.drawable.usth_avatar));
         items.add(new InvitePeopleItem("Group", R.drawable.usth_avatar));
 
-        // Initially, the filtered list should contain all items
         filteredItems.addAll(items);
 
-        // Set up the adapter with the filtered list
         adapter = new InvitePeopleAdapter(this, filteredItems);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        // Set up the search functionality
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {

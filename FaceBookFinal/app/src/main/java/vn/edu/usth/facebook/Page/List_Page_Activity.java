@@ -1,8 +1,11 @@
 package vn.edu.usth.facebook.Page;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -66,11 +69,25 @@ public class List_Page_Activity extends AppCompatActivity {
             }
         });
 
+        setUpButton();
+
+    }
+
+    private void setUpButton() {
+        LinearLayout create_page = findViewById(R.id.create_page);
+        create_page.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(List_Page_Activity.this, CreatePage_Activity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
         ImageButton back_button = findViewById(R.id.page_back_button);
         back_button.setOnClickListener(view -> {
             onBackPressed();
         });
-
     }
 
     private void filterList(String text) {

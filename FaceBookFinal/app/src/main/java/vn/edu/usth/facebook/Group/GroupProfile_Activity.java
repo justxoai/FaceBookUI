@@ -28,33 +28,47 @@ public class GroupProfile_Activity extends AppCompatActivity {
 
         List<GroupProfileItem> items = new ArrayList<GroupProfileItem>();
 
-        items.add(new GroupProfileItem("Grace Morgan", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.girl, R.drawable.bridge));
-        items.add(new GroupProfileItem("Isabella Lewis", "16h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.girl_mountain, R.drawable.woods));
-        items.add(new GroupProfileItem("Evelyn", "2d", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.closegirl, R.drawable.girl_hat));
-        items.add(new GroupProfileItem("Rag - Demi Store", "5h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.drawable.jean_store, R.drawable.jeans));
+        items.add(new GroupProfileItem("Group Page", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.color.light_grey, R.color.light_grey));
+        items.add(new GroupProfileItem("Group Page", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.color.light_grey, R.color.light_grey));
+        items.add(new GroupProfileItem("Group Page", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.color.light_grey, R.color.light_grey));
+        items.add(new GroupProfileItem("Group Page", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.color.light_grey, R.color.light_grey));
+        items.add(new GroupProfileItem("Group Page", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.color.light_grey, R.color.light_grey));
+        items.add(new GroupProfileItem("Group Page", "12h", "Lorem ipsum text praesent tincidunt ipsum lipsum.", R.color.light_grey, R.color.light_grey));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new GroupProfileAdapter(this, items));
 
+        setUpButton();
+    }
+
+    private void setUpButton(){
         LinearLayout invitefriend = findViewById(R.id.invitefriend_button);
         invitefriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(GroupProfile_Activity.this, InvitePeople_Activity.class);
                 startActivity(i);
+                finish();
             }
         });
 
-        ImageButton closeButton = findViewById(R.id.close_button); // Fix the variable v -> use this correctly
-
-        // Set an OnClickListener for the close button
+        ImageButton closeButton = findViewById(R.id.close_button);
         closeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Create an Intent to go to FacebookActivity
                 Intent intent = new Intent(GroupProfile_Activity.this, FaceBookActivity.class);
-                startActivity(intent); // Start the FacebookActivity
-                finish(); // Optionally close the current activity after navigating
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        LinearLayout about_group = findViewById(R.id.group_about);
+        about_group.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(GroupProfile_Activity.this, About_Group_Activity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

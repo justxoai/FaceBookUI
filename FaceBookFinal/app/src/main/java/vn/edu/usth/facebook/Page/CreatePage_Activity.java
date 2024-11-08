@@ -22,12 +22,18 @@ public class CreatePage_Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_create_page);
 
+        setUpButton();
+
+    }
+
+    private void setUpButton(){
         Button create_page = findViewById(R.id.createpage_button);
         create_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(CreatePage_Activity.this, vn.edu.usth.facebook.Page.Page_Profile_Activity.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -36,9 +42,8 @@ public class CreatePage_Activity extends AppCompatActivity {
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
-
     }
+
     @Override
     public void onBackPressed(){
         super.onBackPressed();

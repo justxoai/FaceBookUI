@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,16 +38,19 @@ public class NotificationFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerView.setAdapter(new NotificationAdapter(requireContext(), items));
 
+        setUpButton(v);
+
+        return v;
+    }
+
+    private void setUpButton (View v){
         ImageButton searchbutton = v.findViewById(R.id.home_search_button);
         searchbutton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Search.Search_Activity.class );
                 startActivity(i);
             }
         });
-
-        return v;
     }
 }

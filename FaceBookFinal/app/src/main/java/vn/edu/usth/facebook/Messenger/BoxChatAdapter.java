@@ -15,7 +15,7 @@ import java.util.List;
 import vn.edu.usth.facebook.R;
 
 public class BoxChatAdapter  extends RecyclerView.Adapter<BoxChatViewHolder> {
-
+    
     Context context;
     List<BoxChatItem> items;
 
@@ -42,5 +42,5 @@ public class BoxChatAdapter  extends RecyclerView.Adapter<BoxChatViewHolder> {
     public int getItemCount() {
         return items.size();
     }
-
+    
 }

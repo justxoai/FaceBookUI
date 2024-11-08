@@ -40,13 +40,10 @@ public class Create_Post_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_post);
 
-        // Image and video views
-        post_image = findViewById(R.id.cover_image);
-        post_video = findViewById(R.id.cover_web);
+        post_image = findViewById(R.id.cover_image_post);
+        post_video = findViewById(R.id.cover_web_post);
 
-        avatarImageView = findViewById(R.id.cover_image);
-
-        Button upload = findViewById(R.id.post_button);
+        avatarImageView = findViewById(R.id.cover_image_post);
 
         // Load image URL from SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
@@ -66,22 +63,7 @@ public class Create_Post_Activity extends AppCompatActivity {
             Toast.makeText(this, "No video URL found", Toast.LENGTH_SHORT).show();
         }
 
-        // Upload button listener
-        upload.setOnClickListener(view -> {
-            Intent intent = new Intent(Create_Post_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
-            startActivity(intent);
-            finish();
-        });
-
-
-        ImageButton closeButton = findViewById(R.id.close_button);
-        closeButton.setOnClickListener(view -> onBackPressed());
-
-        LinearLayout phovid = findViewById(R.id.photo_video_upload);
-        phovid.setOnClickListener(view -> {
-            Intent intent = new Intent(Create_Post_Activity.this, vn.edu.usth.facebook.More.Upload_Activity.class);
-            startActivity(intent);
-        });
+        setUpButton();
     }
 
     // Fetch image in a separate thread
@@ -114,6 +96,27 @@ public class Create_Post_Activity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private void setUpButton(){
+        // Upload button listener
+        Button upload = findViewById(R.id.post_button);
+        upload.setOnClickListener(view -> {
+            Intent intent = new Intent(Create_Post_Activity.this, vn.edu.usth.facebook.FaceBookActivity.class);
+            startActivity(intent);
+            finish();
+        });
+
+        // Close button listener
+        ImageButton closeButton = findViewById(R.id.close_button);
+        closeButton.setOnClickListener(view -> onBackPressed());
+
+        // Navigate to Upload_Activity
+        LinearLayout phovid = findViewById(R.id.photo_video_upload);
+        phovid.setOnClickListener(view -> {
+            Intent intent = new Intent(Create_Post_Activity.this, vn.edu.usth.facebook.More.Upload_Activity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

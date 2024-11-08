@@ -34,7 +34,7 @@ public class Edit_Profile_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
 
         etURL = findViewById(R.id.etURL);
-        avatarImage = findViewById(R.id.cover_image);
+        avatarImage = findViewById(R.id.cover_image_profile);
         fetchButton = findViewById(R.id.fetchbtn);
         saveButton = findViewById(R.id.save_button);
 

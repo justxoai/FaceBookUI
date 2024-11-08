@@ -19,7 +19,7 @@ public class FaceBookActivity extends AppCompatActivity {
     private ViewPager2 mviewPager;
 
     private BottomNavigationView bottomNavigationView;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

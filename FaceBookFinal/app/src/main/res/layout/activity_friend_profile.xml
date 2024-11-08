@@ -298,6 +298,7 @@
                     android:paddingTop="3dp"/>
 
                 <LinearLayout
+                    android:id="@+id/user_about"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:orientation="horizontal">

@@ -45,14 +45,13 @@ public class HomeFragment extends Fragment {
 
         if (uploadedImageUrl != null) {
             // Add new post with uploaded image URL if available
-            items.add(0, new HomeItem("You", "Just now", "Uploaded a new image", R.drawable.girl_hat, uploadedImageUrl));
+            items.add(0, new HomeItem("Just Xoai", "Just now", "Uploaded a new image", R.drawable.avatar_profile, uploadedImageUrl));
         }
 
         adapter = new HomeAdapter(requireContext(), items);
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerView.setAdapter(adapter);
 
-        // Set up button listeners
         setupButtons(v);
 
         return v;

@@ -39,5 +39,5 @@ public class ListPageAdapter extends RecyclerView.Adapter<ListPageViewHolder>{
     public int getItemCount() {
         return items.size();
     }
-
+    
 }
