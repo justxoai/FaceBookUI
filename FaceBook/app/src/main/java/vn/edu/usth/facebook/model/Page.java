@@ -1,12 +1,10 @@
 package vn.edu.usth.facebook.model;
 
 public class Page {
-    public Page() {
-    }
-
-    public Page(Integer id, String name, Integer categoryId, Integer ownedBy, String avatarUrl, String backgroundUrl, String address, String mobile, String email, String instagram) {
+    public Page(Integer id, String name, String description, Integer categoryId, Integer ownedBy, String avatarUrl, String backgroundUrl, String address, String mobile, String email, String instagram) {
         this.id = id;
         this.name = name;
+        this.description = description;
         this.categoryId = categoryId;
         this.ownedBy = ownedBy;
         this.avatarUrl = avatarUrl;
@@ -16,9 +14,9 @@ public class Page {
         this.email = email;
         this.instagram = instagram;
     }
-
     private Integer id;
     private String name;
+    private String description;
     private Integer categoryId;
     private Integer ownedBy;
     private String avatarUrl;
@@ -40,6 +38,14 @@ public class Page {
     public void setName(String name) {
         this.name = name;
     }
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public Integer getCategoryId() {
         return categoryId;
     }

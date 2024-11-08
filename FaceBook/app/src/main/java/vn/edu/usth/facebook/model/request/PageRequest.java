@@ -3,6 +3,7 @@ package vn.edu.usth.facebook.model.request;
 public class PageRequest {
     private Integer id;
     private String name;
+    private String description;
     private Integer categoryId;
     private Integer ownedBy;
     private String avatarUrl;
@@ -27,6 +28,14 @@ public class PageRequest {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Integer getCategoryId() {

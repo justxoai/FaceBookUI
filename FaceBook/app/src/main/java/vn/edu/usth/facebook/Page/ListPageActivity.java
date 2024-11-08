@@ -40,7 +40,7 @@ public class ListPageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_page);
-
+// TODO: clean
         searchView = findViewById(R.id.searchView);
         searchView.clearFocus();
         recyclerView = findViewById(R.id.recyclerviewlistpage);
@@ -49,7 +49,7 @@ public class ListPageActivity extends AppCompatActivity {
 
         retrofitService = new RetrofitService();
         pageAPI = retrofitService.getRetrofit().create(PageAPI.class);
-        getAllPage(name);
+        sendRequest(name);
         filteredItems.addAll(items);
 
         adapter = new ListPageAdapter(this, items);
@@ -65,14 +65,14 @@ public class ListPageActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 name = newText;
-                getAllPage(name);
+                sendRequest(name);
                 return true;
             }
         });
-        setUpButton();
+        setUpButtonListeners();
     }
 
-    private void setUpButton() {
+    private void setUpButtonListeners() {
         LinearLayout create_page = findViewById(R.id.create_page);
         create_page.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,9 +88,9 @@ public class ListPageActivity extends AppCompatActivity {
         });
     }
 
-    private void getAllPage(String name) {
+    private void sendRequest(String name) {
         items.clear();
-        pageAPI.getAllPage(name).enqueue(new Callback<List<Page>>() {
+        pageAPI.findAllByNameContains(name).enqueue(new Callback<List<Page>>() {
             @Override
             public void onResponse(Call<List<Page>> call, Response<List<Page>> response) {
                 if (response.isSuccessful()) {
