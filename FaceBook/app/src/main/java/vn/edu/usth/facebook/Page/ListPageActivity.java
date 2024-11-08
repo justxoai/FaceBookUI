@@ -1,6 +1,8 @@
 package vn.edu.usth.facebook.Page;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -87,7 +89,6 @@ public class ListPageActivity extends AppCompatActivity {
             onBackPressed();
         });
     }
-
     private void sendRequest(String name) {
         items.clear();
         pageAPI.findAllByNameContains(name).enqueue(new Callback<List<Page>>() {
@@ -95,17 +96,26 @@ public class ListPageActivity extends AppCompatActivity {
             public void onResponse(Call<List<Page>> call, Response<List<Page>> response) {
                 if (response.isSuccessful()) {
                     for (Page page : response.body()) {
-                        items.add(new ListPageItem(page.getName(), R.drawable.capybara_usth));
+                        Bitmap avatarBitmap = null; // Direct byte[] from API
+                        if (page.getAvatarImg() != null) {
+                            byte[] avatarImgBytes = page.getAvatarImg().getBytes();
+                            Log.d("ListPageActivity", "avatarImgBytes length: " + avatarImgBytes.length);
+                            BitmapFactory.Options options = new BitmapFactory.Options();
+                            options.inSampleSize = 2;  // Scale down by a factor of 2
+                            avatarBitmap = BitmapFactory.decodeByteArray(avatarImgBytes, 0, avatarImgBytes.length, options);
+                            Log.d("ListPageActivity", "bitmap: "+avatarBitmap);
+                        }
+                        items.add(new ListPageItem(page.getName(), avatarBitmap));
                     }
                     adapter.notifyDataSetChanged();
-                    Log.i("ListPageActivity", ""+items.size());
+                    Log.i("ListPageActivity", "items size: "+items.size());
                 } else {
                     Log.e("ListPageActivity", "have response but fail " + response);
                 }
             }
             @Override
             public void onFailure(Call<List<Page>> call, Throwable t) {
-                Log.e("ListPageActivity", "no response");
+                Log.e("ListPageActivity", "onFailure: " + t);
             }
         });
     }

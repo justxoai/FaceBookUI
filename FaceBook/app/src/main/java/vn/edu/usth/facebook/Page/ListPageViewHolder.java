@@ -13,7 +13,6 @@ public class ListPageViewHolder extends RecyclerView.ViewHolder{
 
     ImageView avatarView;
     TextView nameView;
-
     public ListPageViewHolder(@NonNull View itemView) {
         super(itemView);
         avatarView = itemView.findViewById(R.id.page_avatar);

@@ -93,22 +93,18 @@ public class CreatePageActivity extends AppCompatActivity {
         try {
             ContentResolver resolver = context.getContentResolver();
             InputStream inputStream = resolver.openInputStream(contentUri);
-
             // Get the file extension from the URI
             String fileExtension = MimeTypeMap.getSingleton()
                     .getExtensionFromMimeType(resolver.getType(contentUri));
             if (fileExtension == null) fileExtension = "jpg"; // Default if unknown
-
             // Create a temporary file with the correct extension
             file = File.createTempFile("avatar_", "." + fileExtension, context.getCacheDir());
             OutputStream outputStream = new FileOutputStream(file);
-
             byte[] buffer = new byte[1024];
             int length;
             while ((length = inputStream.read(buffer)) > 0) {
                 outputStream.write(buffer, 0, length);
             }
-
             outputStream.close();
             inputStream.close();
         } catch (Exception e) {
@@ -152,7 +148,7 @@ public class CreatePageActivity extends AppCompatActivity {
             if (mimeType == null) mimeType = "image/jpeg"; // Default if unknown
             RequestBody requestFile = RequestBody.create(avatarFile, MediaType.parse(mimeType));
             avatarImgFile = MultipartBody.Part.createFormData("avatarImgFile", avatarFile.getName(), requestFile);
-            Log.i("CreatePageActivity", "FormData created.");
+            Log.i("CreatePageActivity", "FormData created, requestFile: "+requestFile+"\navatarImgFile: "+avatarImgFile);
         } else {
             Log.e("CreatePageActivity", "Avatar image file is null or does not exist");
         }

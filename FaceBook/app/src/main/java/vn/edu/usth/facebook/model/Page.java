@@ -1,7 +1,7 @@
 package vn.edu.usth.facebook.model;
 
 public class Page {
-    public Page(Integer id, String name, String description, Integer categoryId, Integer ownedBy, String avatarUrl, String backgroundUrl, String address, String mobile, String email, String instagram) {
+    public Page(Integer id, String name, String description, Integer categoryId, Integer ownedBy, String avatarUrl, String backgroundUrl, String address, String mobile, String email, String instagram, String avatarImg) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -13,6 +13,7 @@ public class Page {
         this.mobile = mobile;
         this.email = email;
         this.instagram = instagram;
+        this.avatarImg = avatarImg;
     }
     private Integer id;
     private String name;
@@ -25,6 +26,7 @@ public class Page {
     private String mobile;
     private String email;
     private String instagram;
+    private String avatarImg;
 
     public Integer getId() {
         return id;
@@ -41,11 +43,9 @@ public class Page {
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
-
     public Integer getCategoryId() {
         return categoryId;
     }
@@ -93,5 +93,11 @@ public class Page {
     }
     public void setInstagram(String instagram) {
         this.instagram = instagram;
+    }
+    public String getAvatarImg() {
+        return avatarImg;
+    }
+    public void setAvatarImg(String avatarImg) {
+        this.avatarImg = avatarImg;
     }
 }
