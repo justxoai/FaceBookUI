@@ -1,8 +1,6 @@
 package vn.edu.usth.facebook.Page;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -10,9 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,13 +16,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import vn.edu.usth.facebook.Login.LoginFragment;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.Page;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
@@ -56,7 +49,7 @@ public class ListPageActivity extends AppCompatActivity {
 
         retrofitService = new RetrofitService();
         pageAPI = retrofitService.getRetrofit().create(PageAPI.class);
-        fetchPage(name);
+        getAllPage(name);
         filteredItems.addAll(items);
 
         adapter = new ListPageAdapter(this, items);
@@ -72,7 +65,7 @@ public class ListPageActivity extends AppCompatActivity {
             @Override
             public boolean onQueryTextChange(String newText) {
                 name = newText;
-                fetchPage(name);
+                getAllPage(name);
                 return true;
             }
         });
@@ -84,34 +77,18 @@ public class ListPageActivity extends AppCompatActivity {
         create_page.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(ListPageActivity.this, CreatePage_Activity.class);
+                Intent i = new Intent(ListPageActivity.this, CreatePageActivity.class);
                 startActivity(i);
                 finish();
             }
         });
-
         ImageButton back_button = findViewById(R.id.page_back_button);
         back_button.setOnClickListener(view -> {
             onBackPressed();
         });
     }
 
-    private void filterList(String text) {
-        filteredItems.clear();
-        for (ListPageItem item : items) {
-            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
-                filteredItems.add(item);
-            }
-        }
-
-        if (filteredItems.isEmpty()) {
-            Toast.makeText(this, "No results found", Toast.LENGTH_SHORT).show();
-        }
-
-        adapter.notifyDataSetChanged();
-    }
-
-    private void fetchPage(String name) {
+    private void getAllPage(String name) {
         items.clear();
         pageAPI.getAllPage(name).enqueue(new Callback<List<Page>>() {
             @Override

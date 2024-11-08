@@ -29,7 +29,7 @@
             android:name=".More.Create_Post_Page_Activity"
             android:exported="false" />
         <activity
-            android:name=".Page.CreatePage_Activity"
+            android:name=".Page.CreatePageActivity"
             android:exported="false" />
         <activity
             android:name=".More.Create_Video_Activity"
