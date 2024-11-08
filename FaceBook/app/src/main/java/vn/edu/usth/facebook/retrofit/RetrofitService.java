@@ -6,17 +6,22 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService {
-    private static final String BASE_URL = "http://192.168.212.77:8080/";
+    private static final String BASE_URL = "http://192.168.212.77:8080";
 
-    private static Retrofit retrofit;
+    private Retrofit retrofit;
 
-    public static Retrofit getInstance() {
-        if (retrofit == null) {
-            retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .build();
-        }
+    public RetrofitService() {
+        initializeRetrofit();
+    }
+
+    private void initializeRetrofit() {
+        retrofit = new Retrofit.Builder()
+                .baseUrl(BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create(new Gson()))
+                .build();
+    }
+
+    public Retrofit getRetrofit() {
         return retrofit;
     }
 }

@@ -8,6 +8,6 @@ import retrofit2.http.Query;
 import vn.edu.usth.facebook.model.Page;
 
 public interface PageAPI {
-    @GET("api/v1/page")
+    @GET("/api/v1/page")
     Call<List<Page>> getAllPage(@Query("name") String name);
 }
