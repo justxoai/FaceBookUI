@@ -1,17 +1,25 @@
 package vn.edu.usth.facebook.model.request;
 
 public class ResetPasswordRequest {
-    private String password;
+    private String token;
+    private String newPassword;
     private String confirmPassword;
 
     // Getters and Setters
-
-    public String getPassword() {
-        return password;
+    public String getToken() {
+        return token;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getNewPassword() {
+        return newPassword;
+    }
+
+    public void setNewPassword(String newPassword) {
+        this.newPassword = newPassword;
     }
 
     public String getConfirmPassword() {
@@ -26,7 +34,8 @@ public class ResetPasswordRequest {
     public String toString() {
         return "ResetPasswordRequest{" +
                 "confirmPassword='" + confirmPassword + '\'' +
-                ", password='" + password + '\'' +
+                ", token='" + token + '\'' +
+                ", newPassword='" + newPassword + '\'' +
                 '}';
     }
 }

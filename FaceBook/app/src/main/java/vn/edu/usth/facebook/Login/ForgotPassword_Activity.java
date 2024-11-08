@@ -1,6 +1,8 @@
 package vn.edu.usth.facebook.Login;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.widget.Button;
@@ -63,7 +65,18 @@ public class ForgotPassword_Activity extends AppCompatActivity {
                     .enqueue(new Callback<JwtAuthenticationResponse>() {
                         @Override
                         public void onResponse(Call<JwtAuthenticationResponse> call, Response<JwtAuthenticationResponse> response) {
-                            Toast.makeText(ForgotPassword_Activity.this, "Send request to reset password successfully!", Toast.LENGTH_SHORT).show();
+                            if(response.isSuccessful()) {
+                                // Get the token from the response body
+                                String token = response.body().getToken();
+
+                                // Save the token in SharedPreferences
+                                SharedPreferences sharedPreferencesForToken = getSharedPreferences("AuthPreferences", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editorForToken = sharedPreferencesForToken.edit();
+                                editorForToken.putString("authToken", token);
+                                editorForToken.apply();
+
+                                Toast.makeText(ForgotPassword_Activity.this, "Send request to reset password successfully!", Toast.LENGTH_SHORT).show();
+                            }
                         }
 
                         @Override

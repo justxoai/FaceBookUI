@@ -1,5 +1,7 @@
 package vn.edu.usth.facebook.Login;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -7,7 +9,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -46,6 +47,10 @@ public class ResetPassword_Activity extends AppCompatActivity {
         RetrofitService retrofitService = new RetrofitService();
         AuthenticationApi authenticationApi = retrofitService.getRetrofit().create(AuthenticationApi.class);
 
+        // Retrieve the token from SharedPreferences
+        SharedPreferences sharedPreferencesForToken = getSharedPreferences("AuthPreferences", Context.MODE_PRIVATE);
+        String token = sharedPreferencesForToken.getString("authToken", null);
+
         buttonReset.setOnClickListener(view -> {
             String password = String.valueOf(inputEditTextPassword.getText());
             String confirmPassword = String.valueOf(inputEditTextConfirmPassword.getText());
@@ -64,7 +69,8 @@ public class ResetPassword_Activity extends AppCompatActivity {
 
             // Create the ResetPasswordRequest object
             ResetPasswordRequest resetPasswordRequest = new ResetPasswordRequest();
-            resetPasswordRequest.setPassword(password);
+            resetPasswordRequest.setToken(token);
+            resetPasswordRequest.setNewPassword(password);
             resetPasswordRequest.setConfirmPassword(confirmPassword);
 
             // Send the request to the server
@@ -73,6 +79,10 @@ public class ResetPassword_Activity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<JwtAuthenticationResponse> call, Response<JwtAuthenticationResponse> response) {
                             Toast.makeText(ResetPassword_Activity.this, "Reset Password successful!", Toast.LENGTH_SHORT).show();
+                            Fragment loginFragment = new LoginFragment();
+                            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                            transaction.replace(android.R.id.content, loginFragment);
+                            transaction.commit();
                         }
 
                         @Override
@@ -81,11 +91,6 @@ public class ResetPassword_Activity extends AppCompatActivity {
                             Logger.getLogger(Register_Activity.class.getName()).log(Level.SEVERE, "Error occurred, Please enter password again to change", t);
                         }
                     });
-
-            Fragment loginFragment = new LoginFragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(android.R.id.content, loginFragment);
-            transaction.commit();
         });
     }
 
@@ -97,5 +102,4 @@ public class ResetPassword_Activity extends AppCompatActivity {
     private boolean validateResetPassword(String text) {
         return !text.isEmpty();
     }
-
 }
