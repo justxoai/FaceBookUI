@@ -1,6 +1,8 @@
 package vn.edu.usth.facebook.Page;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -18,10 +20,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import vn.edu.usth.facebook.Login.LoginFragment;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.Page;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
@@ -41,47 +46,21 @@ public class ListPageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_list_page);
 
         searchView = findViewById(R.id.searchView);
         searchView.clearFocus();
-        retrofitService = new RetrofitService();
-        items = new ArrayList<>();
         recyclerView = findViewById(R.id.recyclerviewlistpage);
+        items = new ArrayList<>();
         filteredItems = new ArrayList<>();
 
-        pageAPI = RetrofitService.getInstance().create(PageAPI.class);
-        Call<List<Page>> call = pageAPI.getAllPage(name);
-        call.enqueue(new Callback<List<Page>>() {
-            @Override
-            public void onResponse(Call<List<Page>> call, Response<List<Page>> response) {
-                if (response.isSuccessful()) {
-                    for (Page page : response.body()) {
-                        items.add(new ListPageItem(page.getName(), R.drawable.bridge));
-                    }
-                } else {
-                    Log.e("ListPageActivity", "request fail");
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Page>> call, Throwable t) {
-                // Handle failure
-            }
-        });
-
-//        items.add(new ListPageItem("Nature Exploring",  R.drawable.bridge));
-//        items.add(new ListPageItem("Love from Nature",  R.drawable.woods));
-//        items.add(new ListPageItem("Beauty of the Sea",  R.drawable.girl_hat));
-//        items.add(new ListPageItem("Rag - Demi Store",  R.drawable.jeans));
-//        items.add(new ListPageItem("Capybara",  R.drawable.capybara_usth));
-//        items.add(new ListPageItem("USTH",  R.drawable.usth_avatar));
-//        items.add(new ListPageItem("12A1.1",  R.drawable.a1_1));
-
+        retrofitService = new RetrofitService();
+        pageAPI = retrofitService.getRetrofit().create(PageAPI.class);
+        fetchPage(name);
         filteredItems.addAll(items);
 
-        adapter = new ListPageAdapter(this, filteredItems);
+        adapter = new ListPageAdapter(this, items);
+        Log.i("ListPageActivity", "" + adapter.getItemCount());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
@@ -90,17 +69,14 @@ public class ListPageActivity extends AppCompatActivity {
             public boolean onQueryTextSubmit(String query) {
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
-//                filterList(newText);
                 name = newText;
+                fetchPage(name);
                 return true;
             }
         });
-
         setUpButton();
-
     }
 
     private void setUpButton() {
@@ -133,6 +109,28 @@ public class ListPageActivity extends AppCompatActivity {
         }
 
         adapter.notifyDataSetChanged();
+    }
+
+    private void fetchPage(String name) {
+        items.clear();
+        pageAPI.getAllPage(name).enqueue(new Callback<List<Page>>() {
+            @Override
+            public void onResponse(Call<List<Page>> call, Response<List<Page>> response) {
+                if (response.isSuccessful()) {
+                    for (Page page : response.body()) {
+                        items.add(new ListPageItem(page.getName(), R.drawable.capybara_usth));
+                    }
+                    adapter.notifyDataSetChanged();
+                    Log.i("ListPageActivity", ""+items.size());
+                } else {
+                    Log.e("ListPageActivity", "have response but fail " + response);
+                }
+            }
+            @Override
+            public void onFailure(Call<List<Page>> call, Throwable t) {
+                Log.e("ListPageActivity", "no response");
+            }
+        });
     }
 
     @Override

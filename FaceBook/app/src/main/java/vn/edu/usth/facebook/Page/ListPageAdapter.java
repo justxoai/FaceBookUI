@@ -20,24 +20,18 @@ public class ListPageAdapter extends RecyclerView.Adapter<ListPageViewHolder>{
         this.context = context;
         this.items = items;
     }
-
     @NonNull
     @Override
     public ListPageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ListPageViewHolder(LayoutInflater.from(context).inflate(R.layout.page_frame,parent, false));
     }
-
     @Override
     public void onBindViewHolder(@NonNull ListPageViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
-
         holder.avatarView.setImageResource(items.get(position).getAvatar());
-
     }
-
     @Override
     public int getItemCount() {
         return items.size();
     }
-    
 }
