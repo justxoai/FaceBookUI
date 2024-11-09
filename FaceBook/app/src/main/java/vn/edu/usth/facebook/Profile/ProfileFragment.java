@@ -66,11 +66,17 @@ public class ProfileFragment extends Fragment {
             coverTimeAgo = DateUtils.getRelativeTimeSpanString(coverUpdateTime, System.currentTimeMillis(), DateUtils.MINUTE_IN_MILLIS).toString();
         }
 
+        SharedPreferences sharedPreferencesName = getActivity().getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
+        String firstName = sharedPreferencesName.getString("firstName", "DefaultFirstName");
+        String lastName = sharedPreferencesName.getString("lastName", "DefaultLastName");
+
+        String fullName = firstName + " " + lastName;
+
         List<ProfileItem> items = new ArrayList<>();
-        items.add(new ProfileItem("JustXoai", avatarTimeAgo, "", avatarUrl, avatarUrl));
-        items.add(new ProfileItem("JustXoai", coverTimeAgo, "", avatarUrl, coverUrl));
-        items.add(new ProfileItem("JustXoai", "2 days ago", "1 chut dang yeu", avatarUrl, "https://cdn.nguyenkimmall.com/images/companies/_1/stt-yeu-doi-5.jpg"));
-        items.add(new ProfileItem("JustXoai", "5 days ago", "Not a bug", avatarUrl, "https://media.makeameme.org/created/its-not-a-2a30a4c44e.jpg"));
+        items.add(new ProfileItem(fullName, avatarTimeAgo, "", avatarUrl, avatarUrl));
+        items.add(new ProfileItem(fullName, coverTimeAgo, "", avatarUrl, coverUrl));
+        items.add(new ProfileItem(fullName, "2 days ago", "1 chut dang yeu", avatarUrl, "https://cdn.nguyenkimmall.com/images/companies/_1/stt-yeu-doi-5.jpg"));
+        items.add(new ProfileItem(fullName, "5 days ago", "Not a bug", avatarUrl, "https://media.makeameme.org/created/its-not-a-2a30a4c44e.jpg"));
 
         recyclerview.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerview.setAdapter(new ProfileAdapter(requireContext(), items));

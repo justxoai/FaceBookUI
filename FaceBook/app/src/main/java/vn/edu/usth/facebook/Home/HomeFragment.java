@@ -64,18 +64,26 @@ public class HomeFragment extends Fragment {
         if (postTimeMillis != -1) {
             timeAgo = getTimeAgo(postTimeMillis);
         }
+
+        SharedPreferences sharedPreferencesName = getActivity().getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
+        String firstName = sharedPreferencesName.getString("firstName", "DefaultFirstName");
+        String lastName = sharedPreferencesName.getString("lastName", "DefaultLastName");
+
+// Use the retrieved names
+        String fullName = firstName + " " + lastName;
+
         if (postContent != null) {
             if (uploadedImageUrl != null) {
                 if (uploadedVideoUrl != null) {
                     // Add new post with content, image, and video URLs if available
-                    items.add(0, new HomeItem("Just Xoai", timeAgo, postContent, avatarUrl, uploadedImageUrl, uploadedVideoUrl));
+                    items.add(0, new HomeItem(fullName, timeAgo, postContent, avatarUrl, uploadedImageUrl, uploadedVideoUrl));
                 } else {
                     // Add new post with content and only image URL if no video
-                    items.add(0, new HomeItem("Just Xoai", timeAgo, postContent, avatarUrl, uploadedImageUrl));
+                    items.add(0, new HomeItem(fullName, timeAgo, postContent, avatarUrl, uploadedImageUrl));
                 }
             } else {
                 // Add new post with content but no image or video
-                items.add(0, new HomeItem("Just Xoai", timeAgo, postContent, avatarUrl));
+                items.add(0, new HomeItem(fullName, timeAgo, postContent, avatarUrl));
             }
         }
 
