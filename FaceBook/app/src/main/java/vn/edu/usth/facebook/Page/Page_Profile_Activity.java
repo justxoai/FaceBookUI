@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.Search.SearchActivity;
 
 public class Page_Profile_Activity extends AppCompatActivity {
 
@@ -61,7 +62,7 @@ public class Page_Profile_Activity extends AppCompatActivity {
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Page_Profile_Activity.this, vn.edu.usth.facebook.Search.Search_Activity.class );
+                Intent i = new Intent(Page_Profile_Activity.this, SearchActivity.class );
                 startActivity(i);
                 finish();
             }

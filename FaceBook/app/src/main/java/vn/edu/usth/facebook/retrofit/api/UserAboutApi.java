@@ -1,10 +1,9 @@
-package vn.edu.usth.facebook.retrofit;
+package vn.edu.usth.facebook.retrofit.api;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import vn.edu.usth.facebook.model.request.user.UserAboutRequest;
 import vn.edu.usth.facebook.model.response.user.UserAboutResponse;
 

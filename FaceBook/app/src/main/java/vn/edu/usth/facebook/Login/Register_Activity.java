@@ -26,7 +26,7 @@ import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.request.SignUpRequest;
 
 import vn.edu.usth.facebook.model.response.JwtAuthenticationResponse;
-import vn.edu.usth.facebook.retrofit.AuthenticationApi;
+import vn.edu.usth.facebook.retrofit.api.AuthenticationApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class Register_Activity extends AppCompatActivity {

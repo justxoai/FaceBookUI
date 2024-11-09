@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
     android:orientation="vertical"
-    tools:context=".Search.Search_Activity">
+    tools:context=".Search.SearchActivity">
 
     <!--- Search FaceBook -->
     <LinearLayout

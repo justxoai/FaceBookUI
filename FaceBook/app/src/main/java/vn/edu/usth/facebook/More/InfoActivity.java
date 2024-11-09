@@ -17,7 +17,7 @@ import retrofit2.Response;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.response.user.UserAboutResponse;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
-import vn.edu.usth.facebook.retrofit.UserAboutApi;
+import vn.edu.usth.facebook.retrofit.api.UserAboutApi;
 
 public class InfoActivity extends AppCompatActivity {
     private EditText firstName, lastName, email, phone, dateOfBirth, gender, userName, occupation,

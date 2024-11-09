@@ -1,4 +1,4 @@
-package vn.edu.usth.facebook.retrofit;
+package vn.edu.usth.facebook.retrofit.api;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

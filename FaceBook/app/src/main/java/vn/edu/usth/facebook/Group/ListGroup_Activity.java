@@ -21,7 +21,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.response.group.GroupResponse;
-import vn.edu.usth.facebook.retrofit.GroupApi;
+import vn.edu.usth.facebook.retrofit.api.GroupApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class ListGroup_Activity extends AppCompatActivity {

@@ -17,14 +17,12 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import vn.edu.usth.facebook.Page.ListPageAdapter;
-import vn.edu.usth.facebook.Page.ListPageItem;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.response.user.SearchUserResponse;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
-import vn.edu.usth.facebook.retrofit.SearchUserApi;
+import vn.edu.usth.facebook.retrofit.api.SearchUserApi;
 
-public class Search_Activity extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
 
     private SearchView searchView;
     private RecyclerView recyclerView;
@@ -65,15 +63,15 @@ public class Search_Activity extends AppCompatActivity {
 
                     // Cập nhật adapter và dữ liệu
                     filteredItems.addAll(items);
-                    adapter = new UserSearchAdapter(Search_Activity.this, filteredItems);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(Search_Activity.this));
+                    adapter = new UserSearchAdapter(SearchActivity.this, filteredItems);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(SearchActivity.this));
                     recyclerView.setAdapter(adapter);
                 }
             }
 
             @Override
             public void onFailure(Call<List<SearchUserResponse>> call, Throwable t) {
-                Toast.makeText(Search_Activity.this, "Error fetching users", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SearchActivity.this, "Error fetching users", Toast.LENGTH_SHORT).show();
             }
         });
 

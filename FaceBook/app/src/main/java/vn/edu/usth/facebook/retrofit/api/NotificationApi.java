@@ -1,6 +1,4 @@
-package vn.edu.usth.facebook.retrofit;
-
-import java.util.List;
+package vn.edu.usth.facebook.retrofit.api;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

@@ -1,14 +1,16 @@
 package vn.edu.usth.facebook.User;
 
+import android.graphics.Bitmap;
+
 public class NotFriendItem {
 
     String name;
-    int avatar;
+    Bitmap avatarBitmap;
 
 
-    public NotFriendItem(String name, int avatar) {
+    public NotFriendItem(String name, Bitmap avatarBitmap) {
         this.name = name;
-        this.avatar = avatar;
+        this.avatarBitmap = avatarBitmap;
     }
 
     public String getName() {
@@ -19,12 +21,12 @@ public class NotFriendItem {
         this.name = name;
     }
 
-    public int getAvatar() {
-        return avatar;
+    public Bitmap getAvatarBitmap() {
+        return avatarBitmap;
     }
 
-    public void setAvatar(int avatar) {
-        this.avatar = avatar;
+    public void setAvatarBitmap(Bitmap avatarBitmap) {
+        this.avatarBitmap = avatarBitmap;
     }
 
 }

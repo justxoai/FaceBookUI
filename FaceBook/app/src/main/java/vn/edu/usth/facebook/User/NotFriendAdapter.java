@@ -1,6 +1,7 @@
 package vn.edu.usth.facebook.User;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import vn.edu.usth.facebook.Page.ListPageItem;
 import vn.edu.usth.facebook.R;
 
 public class NotFriendAdapter extends RecyclerView.Adapter<NotFriendViewHolder>{
@@ -29,8 +31,16 @@ public class NotFriendAdapter extends RecyclerView.Adapter<NotFriendViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull NotFriendViewHolder holder, int position) {
-        holder.nameView.setText(items.get(position).getName());
-        holder.avatarView.setImageResource(items.get(position).getAvatar());
+        NotFriendItem item = items.get(position);
+        // Set the name
+        holder.nameView.setText(item.getName());
+        // Set the avatar bitmap to the ImageView
+        Bitmap avatarBitmap = item.getAvatarBitmap();
+        if (avatarBitmap != null) {
+            holder.avatarView.setImageBitmap(avatarBitmap);  // Use Bitmap instead of image resource ID
+        } else {
+            holder.avatarView.setImageResource(R.drawable.capybara_usth);  // Use a default avatar if Bitmap is null
+        }
     }
 
     @Override

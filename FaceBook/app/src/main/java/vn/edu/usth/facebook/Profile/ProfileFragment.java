@@ -28,6 +28,7 @@ import java.util.List;
 import vn.edu.usth.facebook.More.InfoActivity;
 import vn.edu.usth.facebook.More.Upload_Activity;
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.Search.SearchActivity;
 import vn.edu.usth.facebook.User.ListAddFriendActivity;
 
 import android.text.format.DateUtils;
@@ -97,7 +98,7 @@ public class ProfileFragment extends Fragment {
 
         ImageButton searchButton = v.findViewById(R.id.home_search_button);
         searchButton.setOnClickListener(view -> {
-            Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Search.Search_Activity.class);
+            Intent i = new Intent(requireContext(), SearchActivity.class);
             startActivity(i);
         });
 

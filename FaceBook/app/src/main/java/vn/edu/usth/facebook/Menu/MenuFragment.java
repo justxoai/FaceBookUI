@@ -25,8 +25,9 @@ import retrofit2.Response;
 import vn.edu.usth.facebook.FaceBookActivity;
 import vn.edu.usth.facebook.Page.ListPageActivity;
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.Search.SearchActivity;
 import vn.edu.usth.facebook.User.ListAddFriendActivity;
-import vn.edu.usth.facebook.retrofit.AuthenticationApi;
+import vn.edu.usth.facebook.retrofit.api.AuthenticationApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class MenuFragment extends Fragment {
@@ -67,7 +68,7 @@ public class MenuFragment extends Fragment {
 
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Search.Search_Activity.class );
+                Intent i = new Intent(requireContext(), SearchActivity.class );
                 startActivity(i);
             }
         });

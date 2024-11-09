@@ -21,7 +21,7 @@ import retrofit2.Response;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.request.ForgotPasswordRequest;
 import vn.edu.usth.facebook.model.response.JwtAuthenticationResponse;
-import vn.edu.usth.facebook.retrofit.AuthenticationApi;
+import vn.edu.usth.facebook.retrofit.api.AuthenticationApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class ForgotPassword_Activity extends AppCompatActivity {

@@ -9,8 +9,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -37,7 +35,7 @@ import vn.edu.usth.facebook.FaceBookActivity;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.request.user.PostRequest;
 import vn.edu.usth.facebook.model.response.user.PostResponse;
-import vn.edu.usth.facebook.retrofit.PostApi;
+import vn.edu.usth.facebook.retrofit.api.PostApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class Create_Post_Activity extends AppCompatActivity {

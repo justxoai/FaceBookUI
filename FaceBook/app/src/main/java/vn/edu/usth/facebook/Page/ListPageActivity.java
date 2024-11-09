@@ -36,7 +36,7 @@ public class ListPageActivity extends AppCompatActivity {
     private List<ListPageItem> items;
     private PageAPI pageAPI;
     private RetrofitService retrofitService;
-    private String name = "";
+    private String query = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class ListPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_page);
 
         init();
-        sendRequest(name);
+        sendRequest(query);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -52,8 +52,8 @@ public class ListPageActivity extends AppCompatActivity {
             }
             @Override
             public boolean onQueryTextChange(String newText) {
-                name = newText;
-                sendRequest(name);
+                query = newText;
+                sendRequest(query);
                 return true;
             }
         });
@@ -85,9 +85,9 @@ public class ListPageActivity extends AppCompatActivity {
             onBackPressed();
         });
     }
-    private void sendRequest(String name) {
+    private void sendRequest(String query) {
         items.clear();
-        pageAPI.findAllByNameContains(name).enqueue(new Callback<List<Page>>() {
+        pageAPI.findAllByNameContains(query).enqueue(new Callback<List<Page>>() {
             @Override
             public void onResponse(Call<List<Page>> call, Response<List<Page>> response) {
                 if (response.isSuccessful()) {

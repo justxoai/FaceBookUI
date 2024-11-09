@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.Search.SearchActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -132,7 +133,7 @@ public class HomeFragment extends Fragment {
 
         ImageButton searchButton = v.findViewById(R.id.home_search_button);
         searchButton.setOnClickListener(view -> {
-            Intent i = new Intent(requireContext(), vn.edu.usth.facebook.Search.Search_Activity.class);
+            Intent i = new Intent(requireContext(), SearchActivity.class);
             startActivity(i);
         });
 
