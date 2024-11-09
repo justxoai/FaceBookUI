@@ -59,7 +59,7 @@ public class LoginFragment extends Fragment {
 
         Button buttonLogin = view.findViewById(R.id.buttonLogin);
 
-        RetrofitService retrofitService = new RetrofitService();
+        RetrofitService retrofitService = new RetrofitService(requireContext());
         authenticationApi = retrofitService.getRetrofit().create(AuthenticationApi.class);
 
         buttonLogin.setOnClickListener(v -> {

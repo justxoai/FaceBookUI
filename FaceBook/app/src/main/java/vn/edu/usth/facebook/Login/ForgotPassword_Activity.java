@@ -44,7 +44,7 @@ public class ForgotPassword_Activity extends AppCompatActivity {
 
         Button buttonForgot = findViewById(R.id.reset_password);
 
-        RetrofitService retrofitService = new RetrofitService();
+        RetrofitService retrofitService = new RetrofitService(this);
         AuthenticationApi authenticationApi = retrofitService.getRetrofit().create(AuthenticationApi.class);
 
         buttonForgot.setOnClickListener(view -> {

@@ -67,7 +67,7 @@ public class ListPageActivity extends AppCompatActivity {
         adapter = new ListPageAdapter(this, items);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
-        retrofitService = new RetrofitService();
+        retrofitService = new RetrofitService(this);
         pageAPI = retrofitService.getRetrofit().create(PageAPI.class);
     }
     private void setUpButtonListeners() {

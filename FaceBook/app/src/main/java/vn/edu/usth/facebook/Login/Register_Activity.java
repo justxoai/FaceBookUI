@@ -62,7 +62,7 @@ public class Register_Activity extends AppCompatActivity {
 
         Button buttonRegister = findViewById(R.id.RegisterForAccount);
 
-        RetrofitService retrofitService = new RetrofitService();
+        RetrofitService retrofitService = new RetrofitService(this);
         AuthenticationApi authenticationApi = retrofitService.getRetrofit().create(AuthenticationApi.class);
 
         buttonRegister.setOnClickListener(view -> {

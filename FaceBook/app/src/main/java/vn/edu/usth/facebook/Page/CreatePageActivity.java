@@ -77,7 +77,7 @@ public class CreatePageActivity extends AppCompatActivity {
         editDescription = findViewById(R.id.create_page_description);
         avatarSelect = findViewById(R.id.create_page_select_avatar);
         avatarPreview = findViewById(R.id.create_page_preview_avatar);
-        retrofitService = new RetrofitService();
+        retrofitService = new RetrofitService(this);
         pageAPI = retrofitService.getRetrofit().create(PageAPI.class);
     }
     private void setUpButtonListeners(){

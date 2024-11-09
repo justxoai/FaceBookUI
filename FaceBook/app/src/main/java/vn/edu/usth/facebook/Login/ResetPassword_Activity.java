@@ -44,7 +44,7 @@ public class ResetPassword_Activity extends AppCompatActivity {
 
         Button buttonReset = findViewById(R.id.change_password);
 
-        RetrofitService retrofitService = new RetrofitService();
+        RetrofitService retrofitService = new RetrofitService(this);
         AuthenticationApi authenticationApi = retrofitService.getRetrofit().create(AuthenticationApi.class);
 
         // Retrieve the token from SharedPreferences
