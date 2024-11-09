@@ -82,7 +82,7 @@ public class List_Friend_Activity extends AppCompatActivity {
         addfriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(List_Friend_Activity.this, List_Add_Friend_Activity.class);
+                Intent i = new Intent(List_Friend_Activity.this, ListAddFriendActivity.class);
                 startActivity(i);
                 finish();
             }

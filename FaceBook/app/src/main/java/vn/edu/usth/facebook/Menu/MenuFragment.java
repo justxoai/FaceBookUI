@@ -9,6 +9,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,13 +19,21 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import vn.edu.usth.facebook.FaceBookActivity;
 import vn.edu.usth.facebook.Page.ListPageActivity;
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.User.ListAddFriendActivity;
+import vn.edu.usth.facebook.retrofit.AuthenticationApi;
+import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class MenuFragment extends Fragment {
 
     private ImageView avatarMenu; //
+    private RetrofitService retrofitService;
+    private AuthenticationApi authenticationApi;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -32,6 +41,8 @@ public class MenuFragment extends Fragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_menu, container, false);
 
+        retrofitService = new RetrofitService(requireContext());
+        authenticationApi = retrofitService.getRetrofit().create(AuthenticationApi.class);
         avatarMenu = v.findViewById(R.id.menu_avatar);
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
         String avatarUrl = sharedPreferences.getString("avatarUrl", null);
@@ -70,6 +81,17 @@ public class MenuFragment extends Fragment {
                 fragmentTransaction.replace(android.R.id.content, loginFragment);
                 fragmentTransaction.commit();
 
+                authenticationApi.logout().enqueue(new Callback<Void>() {
+                    @Override
+                    public void onResponse(Call<Void> call, Response<Void> response) {
+                        if (response.isSuccessful()) {
+                            Log.d("MenuFragment", "logged out");
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<Void> call, Throwable t) {
+                    }
+                });
             }
         });
 
@@ -87,7 +109,7 @@ public class MenuFragment extends Fragment {
         to_list_add_friend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(requireContext(), vn.edu.usth.facebook.User.List_Add_Friend_Activity.class );
+                Intent i = new Intent(requireContext(), ListAddFriendActivity.class );
                 startActivity(i);
             }
         });

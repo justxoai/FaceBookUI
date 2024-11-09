@@ -28,6 +28,8 @@ import java.util.List;
 import vn.edu.usth.facebook.More.InfoActivity;
 import vn.edu.usth.facebook.More.Upload_Activity;
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.User.ListAddFriendActivity;
+
 import android.text.format.DateUtils;
 
 public class ProfileFragment extends Fragment {
@@ -107,7 +109,7 @@ public class ProfileFragment extends Fragment {
 
         LinearLayout findFriend = v.findViewById(R.id.find_friend);
         findFriend.setOnClickListener(view -> {
-            Intent i = new Intent(requireContext(), vn.edu.usth.facebook.User.List_Add_Friend_Activity.class);
+            Intent i = new Intent(requireContext(), ListAddFriendActivity.class);
             startActivity(i);
         });
 

@@ -16,7 +16,7 @@ import java.util.List;
 
 import vn.edu.usth.facebook.R;
 
-public class List_Add_Friend_Activity extends AppCompatActivity {
+public class ListAddFriendActivity extends AppCompatActivity {
 
     private SearchView searchView;
     private RecyclerView recyclerView;
@@ -78,7 +78,7 @@ public class List_Add_Friend_Activity extends AppCompatActivity {
         searchbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(List_Add_Friend_Activity.this, vn.edu.usth.facebook.Search.Search_Activity.class);
+                Intent i = new Intent(ListAddFriendActivity.this, vn.edu.usth.facebook.Search.Search_Activity.class);
                 startActivity(i);
                 finish();
             }

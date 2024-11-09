@@ -10,6 +10,7 @@
 
 
     <application
+        android:enableOnBackInvokedCallback="true"
         android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -63,7 +64,7 @@
             android:name=".User.Friend_Profile_Activity"
             android:exported="false" />
         <activity
-            android:name=".User.List_Add_Friend_Activity"
+            android:name=".User.ListAddFriendActivity"
             android:exported="false" />
         <activity
             android:name=".User.List_Friend_Activity"

@@ -19,7 +19,7 @@ public class FaceBookActivity extends AppCompatActivity {
     private ViewPager2 mviewPager;
 
     private BottomNavigationView bottomNavigationView;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,14 +27,14 @@ public class FaceBookActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
         long expirationTime = sharedPreferences.getLong("expirationTime", 0);
-
         // Kiểm tra trạng thái đăng nhập và thời gian hết hạn
         if (!isLoggedIn || System.currentTimeMillis() > expirationTime) {
             // Xóa SharedPreferences và điều hướng đến LoginFragment
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.clear();
+            editor.remove("auth_token");  // Only remove the auth token
+            editor.remove("isLoggedIn");
+            editor.remove("expirationTime");
             editor.apply();
-
             navigateToLoginFragment();
             return;
         }

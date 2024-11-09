@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/dark_grey"
-    tools:context=".User.List_Add_Friend_Activity">
+    tools:context=".User.ListAddFriendActivity">
 
     <!--- Header -->
     <LinearLayout

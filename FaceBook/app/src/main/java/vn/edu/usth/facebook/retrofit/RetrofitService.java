@@ -12,7 +12,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService {
-    private static final String BASE_URL = "http://172.19.200.141:8080";
+    private static final String BASE_URL = "http://172.19.200.141:8080"; //BACKEND IP ADDRESS
     private final Retrofit retrofit;
     public RetrofitService(Context context) {
         OkHttpClient.Builder okHttpClient = new OkHttpClient.Builder()
