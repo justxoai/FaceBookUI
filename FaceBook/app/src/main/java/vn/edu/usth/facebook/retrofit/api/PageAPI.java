@@ -15,12 +15,8 @@ import vn.edu.usth.facebook.model.Page;
 import vn.edu.usth.facebook.model.response.CommonResponse;
 
 public interface PageAPI {
-    @GET("/api/v2/page")
+    @GET("/api/v1/page")
     Call<List<Page>> findAllByNameContains(@Query("name") String name);
-    @Multipart
-    @POST("/api/v2/page")
-    Call<CommonResponse> createPageOld(@Part MultipartBody.Part avatarImgFile,
-                                       @Part("pageRequest") RequestBody requestBody);
-    @POST("/api/v2/page")
+    @POST("/api/v1/page")
     Call<CommonResponse> createPage(@Body RequestBody requestBody);
 }
