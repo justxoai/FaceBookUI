@@ -12,7 +12,7 @@ public class PageRequest {
     private String mobile;
     private String email;
     private String instagram;
-    private byte[] avatarImg;
+    private String avatarB64;
 
     public Integer getId() {
         return id;
@@ -102,11 +102,11 @@ public class PageRequest {
         this.instagram = instagram;
     }
 
-    public byte[] getAvatarImg() {
-        return avatarImg;
+    public String getAvatarB64() {
+        return avatarB64;
     }
 
-    public void setAvatarImg(byte[] avatarImg) {
-        this.avatarImg = avatarImg;
+    public void setAvatarB64(String avatarImg) {
+        this.avatarB64 = avatarImg;
     }
 }

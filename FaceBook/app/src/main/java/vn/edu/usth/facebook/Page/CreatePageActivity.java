@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -20,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.gson.Gson;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -81,7 +83,7 @@ public class CreatePageActivity extends AppCompatActivity {
     private void setUpButtonListeners(){
         avatarSelect.setOnClickListener(view -> openImagePicker());
         createPageButton.setOnClickListener(view -> collectData());
-        backButton.setOnClickListener(view -> onBackPressed());
+        backButton.setOnClickListener(view -> finish());
     }
     private void openImagePicker() {
         // Intent to pick an image
@@ -112,52 +114,44 @@ public class CreatePageActivity extends AppCompatActivity {
         }
         return file;
     }
-    private File uriToFile(Uri uri) {
-        Log.d("CreatePageActivity", "Selected avatar URI to convert to File: " + avatarUri);
-        String filePath = null;
-        if (uri.getScheme().equals("file")) {
-            filePath = uri.getPath();
-        } else if (uri.getScheme().equals("content")) {
-            Cursor cursor = getContentResolver().query(uri, new String[]{MediaStore.Images.Media.DATA}, null, null, null);
-            if (cursor != null) {
-                cursor.moveToFirst();
-                filePath = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA));
-                cursor.close();
-            }
+    private String encodeImageToBase64(File imageFile) {
+        try {
+            FileInputStream fileInputStream = new FileInputStream(imageFile);
+            byte[] bytes = new byte[(int) imageFile.length()];
+            fileInputStream.read(bytes);
+            fileInputStream.close();
+            return Base64.encodeToString(bytes, Base64.DEFAULT); // Base64 encoding
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return filePath != null ? new File(filePath) : null;
+        return null;
     }
     private void collectData() {
         // Collect data from EditTexts
         String name = editName.getText().toString().trim();
         String description = editDescription.getText().toString().trim();
-//        File avatarFile = uriToFile(avatarUri);
-        File avatarFile = getFileFromContentUri(avatarUri, this);
+        // Convert the selected avatar image file to a Base64 string
+        String avatarB64 = null;
+        if (avatarUri != null) {
+            File avatarFile = getFileFromContentUri(avatarUri, this);
+            if (avatarFile != null && avatarFile.exists()) {
+                avatarB64 = encodeImageToBase64(avatarFile);
+            }
+        }
         // Build PageRequest object TODO: more fields
         PageRequest pageRequest = new PageRequest();
         pageRequest.setName(name);
         pageRequest.setDescription(description);
+        pageRequest.setAvatarB64(avatarB64);
         // Convert PageRequest to JSON
         String pageRequestJson = new Gson().toJson(pageRequest);
         RequestBody pageRequestBody = RequestBody.create(pageRequestJson, MediaType.parse("application/json"));
-        // Prepare the avatar image file as MultipartBody.Part (if available)
-        MultipartBody.Part avatarImgFile = null;
-        if (avatarFile != null && avatarFile.exists()) {
-            // Get MIME type dynamically
-            String mimeType = getContentResolver().getType(avatarUri);
-            if (mimeType == null) mimeType = "image/jpeg"; // Default if unknown
-            RequestBody requestFile = RequestBody.create(avatarFile, MediaType.parse(mimeType));
-            avatarImgFile = MultipartBody.Part.createFormData("avatarImgFile", avatarFile.getName(), requestFile);
-            Log.i("CreatePageActivity", "FormData created, requestFile: "+requestFile+"\navatarImgFile: "+avatarImgFile);
-        } else {
-            Log.e("CreatePageActivity", "Avatar image file is null or does not exist");
-        }
         // Make network call
-        sendRequest(avatarImgFile, pageRequestBody);
+        sendRequest(pageRequestBody);
     }
-    private void sendRequest(MultipartBody.Part avatarImgFile, RequestBody pageRequestBody) {
+    private void sendRequest(RequestBody pageRequestBody) {
         // Send the request
-        Call<CommonResponse> call = pageAPI.createPage(avatarImgFile, pageRequestBody);
+        Call<CommonResponse> call = pageAPI.createPage(pageRequestBody);
         call.enqueue(new Callback<CommonResponse>() {
             @Override
             public void onResponse(Call<CommonResponse> call, Response<CommonResponse> response) {
@@ -176,8 +170,4 @@ public class CreatePageActivity extends AppCompatActivity {
             }
         });
     }
-//    @Override TODO:test
-//    public void onBackPressed(){
-//        super.onBackPressed();
-//    }
 }

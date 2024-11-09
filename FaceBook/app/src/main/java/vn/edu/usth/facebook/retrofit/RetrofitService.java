@@ -9,7 +9,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitService {
-    private static final String BASE_URL = "http://192.168.0.105:8080";
+    private static final String BASE_URL = "http://172.19.200.141:8080";
     private final Retrofit retrofit;
     public RetrofitService() {
         // Create the OkHttpClient with the timeouts

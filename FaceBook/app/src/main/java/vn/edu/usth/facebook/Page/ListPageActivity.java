@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -33,32 +34,17 @@ public class ListPageActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ListPageAdapter adapter;
     private List<ListPageItem> items;
-    private List<ListPageItem> filteredItems;
     private PageAPI pageAPI;
-    private String name = "";
     private RetrofitService retrofitService;
+    private String name = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_page);
-// TODO: clean
-        searchView = findViewById(R.id.searchView);
-        searchView.clearFocus();
-        recyclerView = findViewById(R.id.recyclerviewlistpage);
-        items = new ArrayList<>();
-        filteredItems = new ArrayList<>();
 
-        retrofitService = new RetrofitService();
-        pageAPI = retrofitService.getRetrofit().create(PageAPI.class);
+        init();
         sendRequest(name);
-        filteredItems.addAll(items);
-
-        adapter = new ListPageAdapter(this, items);
-        Log.i("ListPageActivity", "" + adapter.getItemCount());
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -73,7 +59,17 @@ public class ListPageActivity extends AppCompatActivity {
         });
         setUpButtonListeners();
     }
-
+    private void init() {
+        items = new ArrayList<>();
+        searchView = findViewById(R.id.searchView);
+        searchView.clearFocus();
+        recyclerView = findViewById(R.id.recyclerviewlistpage);
+        adapter = new ListPageAdapter(this, items);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+        retrofitService = new RetrofitService();
+        pageAPI = retrofitService.getRetrofit().create(PageAPI.class);
+    }
     private void setUpButtonListeners() {
         LinearLayout create_page = findViewById(R.id.create_page);
         create_page.setOnClickListener(new View.OnClickListener() {
@@ -96,19 +92,15 @@ public class ListPageActivity extends AppCompatActivity {
             public void onResponse(Call<List<Page>> call, Response<List<Page>> response) {
                 if (response.isSuccessful()) {
                     for (Page page : response.body()) {
-                        Bitmap avatarBitmap = null; // Direct byte[] from API
-                        if (page.getAvatarImg() != null) {
-                            byte[] avatarImgBytes = page.getAvatarImg().getBytes();
-                            Log.d("ListPageActivity", "avatarImgBytes length: " + avatarImgBytes.length);
-                            BitmapFactory.Options options = new BitmapFactory.Options();
-                            options.inSampleSize = 2;  // Scale down by a factor of 2
-                            avatarBitmap = BitmapFactory.decodeByteArray(avatarImgBytes, 0, avatarImgBytes.length, options);
-                            Log.d("ListPageActivity", "bitmap: "+avatarBitmap);
+                        Bitmap avatarBitmap = null;
+                        if (page.getAvatarB64() != null) {
+                            byte[] avatarB64Bytes = Base64.decode(page.getAvatarB64(), Base64.DEFAULT);
+                            avatarBitmap = BitmapFactory.decodeByteArray(avatarB64Bytes, 0, avatarB64Bytes.length);
                         }
                         items.add(new ListPageItem(page.getName(), avatarBitmap));
                     }
                     adapter.notifyDataSetChanged();
-                    Log.i("ListPageActivity", "items size: "+items.size());
+                    Log.i("ListPageActivity", "items size: " + items.size());
                 } else {
                     Log.e("ListPageActivity", "have response but fail " + response);
                 }
@@ -119,7 +111,6 @@ public class ListPageActivity extends AppCompatActivity {
             }
         });
     }
-
     @Override
     public void onBackPressed() {
         super.onBackPressed();
