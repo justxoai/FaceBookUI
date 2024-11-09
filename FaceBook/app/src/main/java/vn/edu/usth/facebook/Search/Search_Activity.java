@@ -14,9 +14,15 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import vn.edu.usth.facebook.Page.ListPageAdapter;
 import vn.edu.usth.facebook.Page.ListPageItem;
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.model.response.user.SearchUserResponse;
+import vn.edu.usth.facebook.retrofit.RetrofitService;
+import vn.edu.usth.facebook.retrofit.SearchUserApi;
 
 public class Search_Activity extends AppCompatActivity {
 
@@ -25,6 +31,8 @@ public class Search_Activity extends AppCompatActivity {
     private UserSearchAdapter adapter;
     private List<UserSearchItem> items;
     private List<UserSearchItem> filteredItems;
+    private RetrofitService retrofitService;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,21 +47,35 @@ public class Search_Activity extends AppCompatActivity {
         items = new ArrayList<>();
         filteredItems = new ArrayList<>();
 
-        items.add(new UserSearchItem("Kieu Quoc Viet", "USTH",  R.drawable.kqv));
-        items.add(new UserSearchItem("Huynh Vinh Nam", "USTH",  R.drawable.hvn));
-        items.add(new UserSearchItem("Le Hiep", "USTH",  R.drawable.lth));
-        items.add(new UserSearchItem("Le Pham Hoang Lan", "USTH",  R.drawable.usth_avatar));
-        items.add(new UserSearchItem("Nguyen Viet Anh", "USTH",  R.drawable.circle_avatar));
-        items.add(new UserSearchItem("Nguyen At", "USTH",  R.drawable.at_avata));
-        items.add(new UserSearchItem("Lam Chi Cuong", "USTH",  R.drawable.capybara_usth));
-        items.add(new UserSearchItem("Pham Hoang Anh", "USTH",  R.drawable.hhp_avatar));
-        items.add(new UserSearchItem("Pham Duc Viet", "USTH",  R.drawable.vdd_avatar));
+        retrofitService = new RetrofitService(this);
+        SearchUserApi searchUserApi = retrofitService.getRetrofit().create(SearchUserApi.class);
 
-        filteredItems.addAll(items);
+        // Gọi API getAllUsers
+        Call<List<SearchUserResponse>> call = searchUserApi.getAllUsers();
+        call.enqueue(new Callback<List<SearchUserResponse>>() {
+            @Override
+            public void onResponse(Call<List<SearchUserResponse>> call, Response<List<SearchUserResponse>> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    List<SearchUserResponse> userList = response.body();
+                    for (SearchUserResponse user : userList) {
+                        String imageUrl = user.getImageUrl();
+                        UserSearchItem item = new UserSearchItem(user.getFirstName() + " " + user.getLastName(), user.getUserName(), imageUrl);
+                        items.add(item);
+                    }
 
-        adapter = new UserSearchAdapter(this, filteredItems);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+                    // Cập nhật adapter và dữ liệu
+                    filteredItems.addAll(items);
+                    adapter = new UserSearchAdapter(Search_Activity.this, filteredItems);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(Search_Activity.this));
+                    recyclerView.setAdapter(adapter);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<SearchUserResponse>> call, Throwable t) {
+                Toast.makeText(Search_Activity.this, "Error fetching users", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -68,18 +90,16 @@ public class Search_Activity extends AppCompatActivity {
             }
         });
 
-
         ImageButton backButton = findViewById(R.id.back_button);
         backButton.setOnClickListener(view -> {
             onBackPressed();
         });
-
     }
 
     private void filterList(String text) {
         filteredItems.clear();
         for (UserSearchItem item : items) {
-            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+            if (item.getName().toLowerCase().contains(text.toLowerCase()) || item.getContent().toLowerCase().contains(text.toLowerCase())) {
                 filteredItems.add(item);
             }
         }

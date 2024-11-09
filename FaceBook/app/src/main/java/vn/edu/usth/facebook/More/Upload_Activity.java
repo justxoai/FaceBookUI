@@ -31,7 +31,7 @@ public class Upload_Activity extends AppCompatActivity {
     private ImageView post_image;
     private WebView post_video;
     private Button show_image, show_video, upload;
-    private Handler mainHandler= new Handler();
+    private Handler mainHandler = new Handler();
     private ProgressDialog progressDialog;
 
     @Override
@@ -99,8 +99,8 @@ public class Upload_Activity extends AppCompatActivity {
         upload.setOnClickListener(view -> {
             String imageUrl = image_etURL.getText().toString();
             String videoUrl = video_etURL.getText().toString().trim();
-            if(!imageUrl.isEmpty() && !videoUrl.isEmpty()){
 
+            if (!imageUrl.isEmpty() && !videoUrl.isEmpty()) {
                 SharedPreferences image_sharedPreferences = getSharedPreferences("ProfilePrefs", MODE_PRIVATE);
                 SharedPreferences.Editor image_editor = image_sharedPreferences.edit();
                 image_editor.putString("imageUrl", imageUrl);
@@ -113,39 +113,45 @@ public class Upload_Activity extends AppCompatActivity {
 
                 Toast.makeText(this, "Image and Video URL saved", Toast.LENGTH_SHORT).show();
 
-                // Navigate back to HomeFragment
+                // Navigate back to Create_Post_Activity
                 Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
                 startActivity(intent);
                 finish();
-            }
-            else if (!imageUrl.isEmpty()) {
-
+            } else if (!imageUrl.isEmpty()) {
                 SharedPreferences sharedPreferences = getSharedPreferences("ProfilePrefs", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("imageUrl", imageUrl);
                 editor.apply();
+
+                // Xóa videoUrl nếu có trong SharedPreferences
+                SharedPreferences video_sharedPreferences = getSharedPreferences("PostPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor video_editor = video_sharedPreferences.edit();
+                video_editor.remove("videoUrl"); // Xóa videoUrl
+                video_editor.apply();
 
                 Toast.makeText(this, "Image URL saved", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Post_Activity.class);
                 startActivity(intent);
                 finish();
-            }
-            else if (!videoUrl.isEmpty()){
-
+            } else if (!videoUrl.isEmpty() && imageUrl.isEmpty()) {
                 SharedPreferences sharedPreferences = getSharedPreferences("PostPrefs", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("videoUrl", videoUrl);
                 editor.apply();
+
+                // Xóa imageUrl nếu có trong SharedPreferences
+                SharedPreferences image_sharedPreferences = getSharedPreferences("ProfilePrefs", MODE_PRIVATE);
+                SharedPreferences.Editor image_editor = image_sharedPreferences.edit();
+                image_editor.remove("imageUrl"); // Xóa imageUrl
+                image_editor.apply();
 
                 Toast.makeText(this, "Video URL saved", Toast.LENGTH_SHORT).show();
 
                 Intent intent = new Intent(Upload_Activity.this, vn.edu.usth.facebook.More.Create_Video_Activity.class);
                 startActivity(intent);
                 finish();
-            }
-
-            else {
+            } else {
                 onBackPressed();
             }
         });
@@ -159,7 +165,7 @@ public class Upload_Activity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         super.onBackPressed();
     }
 
@@ -203,5 +209,4 @@ public class Upload_Activity extends AppCompatActivity {
             });
         }
     }
-
 }

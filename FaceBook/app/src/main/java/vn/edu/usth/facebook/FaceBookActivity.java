@@ -26,14 +26,19 @@ public class FaceBookActivity extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
+        long expirationTime = sharedPreferences.getLong("expirationTime", 0);
 
-        if (!isLoggedIn) {
+        if (!isLoggedIn || System.currentTimeMillis() > expirationTime) {
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.apply();
+
             navigateToLoginFragment();
             return;
         }
 
         setContentView(R.layout.activity_face_book);
-
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -42,7 +47,6 @@ public class FaceBookActivity extends AppCompatActivity {
         mviewPager.setUserInputEnabled(false);
 
         mviewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 super.onPageScrolled(position, positionOffset, positionOffsetPixels);
@@ -50,8 +54,7 @@ public class FaceBookActivity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                switch (position)
-                {
+                switch (position) {
                     case 0:
                         bottomNavigationView.getMenu().findItem(R.id.home_page).setChecked(true);
                         break;
@@ -80,23 +83,23 @@ public class FaceBookActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.home_page) {
-                    mviewPager.setCurrentItem(0, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(0, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.video_page) {
-                    mviewPager.setCurrentItem(1, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(1, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.profile_page) {
-                    mviewPager.setCurrentItem(2, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(2, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.notification_page) {
-                    mviewPager.setCurrentItem(3, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(3, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.menu_page) {
-                    mviewPager.setCurrentItem(4, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(4, true);
                     return true;
                 }
 

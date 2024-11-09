@@ -5,15 +5,31 @@ public class ProfileItem {
     String name;
     String time;
     String content;
-    int avatar;
-    int postimage;
+    String avatarUrl;
+    String postImageUrl;
 
-    public ProfileItem(String name, String time, String content, int avatar, int postimage) {
+    public ProfileItem(String name, String time, String content, String avatarUrl, String postImageUrl) {
         this.name = name;
         this.time = time;
         this.content = content;
-        this.avatar = avatar;
-        this.postimage = postimage;
+        this.avatarUrl = avatarUrl;
+        this.postImageUrl = postImageUrl;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getName() {
@@ -24,6 +40,14 @@ public class ProfileItem {
         this.name = name;
     }
 
+    public String getPostImageUrl() {
+        return postImageUrl;
+    }
+
+    public void setPostImageUrl(String postImageUrl) {
+        this.postImageUrl = postImageUrl;
+    }
+
     public String getTime() {
         return time;
     }
@@ -32,28 +56,14 @@ public class ProfileItem {
         this.time = time;
     }
 
-    public String getContent(){
-        return content;
+    @Override
+    public String toString() {
+        return "ProfileItem{" +
+                "avatarUrl='" + avatarUrl + '\'' +
+                ", name='" + name + '\'' +
+                ", time='" + time + '\'' +
+                ", content='" + content + '\'' +
+                ", postImageUrl='" + postImageUrl + '\'' +
+                '}';
     }
-
-    public void setContent(String content){
-        this.content = content;
-    }
-
-    public int getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(int avatar) {
-        this.avatar = avatar;
-    }
-
-    public int getPostimage() {
-        return postimage;
-    }
-
-    public void setPostimage(int postimage) {
-        this.postimage = postimage;
-    }
-
 }

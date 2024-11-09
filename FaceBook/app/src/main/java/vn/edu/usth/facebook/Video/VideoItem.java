@@ -6,6 +6,7 @@ public class VideoItem {
     String time;
     String content;
     int avatar;
+    String avatarUrl;
     String url;
 
     public VideoItem(String name, String time, String content, int avatar, String url) {
@@ -14,6 +15,29 @@ public class VideoItem {
         this.content = content;
         this.avatar = avatar;
         this.url = url;
+    }
+
+    public VideoItem(String name, String time, String content, String avatarUrl, String url) {
+        this.name = name;
+        this.time = time;
+        this.content = content;
+        this.avatarUrl = avatarUrl;
+        this.url = url;
+    }
+
+    public VideoItem(String name, String time, String content, String avatarUrl) {
+        this.name = name;
+        this.time = time;
+        this.content = content;
+        this.avatarUrl = avatarUrl;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 
     public String getName() {

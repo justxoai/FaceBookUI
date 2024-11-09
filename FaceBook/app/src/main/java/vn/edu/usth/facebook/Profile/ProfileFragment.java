@@ -25,34 +25,60 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.edu.usth.facebook.More.InfoActivity;
 import vn.edu.usth.facebook.More.Upload_Activity;
 import vn.edu.usth.facebook.R;
+import android.text.format.DateUtils;
 
 public class ProfileFragment extends Fragment {
 
-    private ImageView avatarImageView;
+    private ImageView avatarProfileImageView, coverImageView, avatarImageView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_profile, container, false);
 
+        avatarImageView = v.findViewById(R.id.avatar_image_post);
+        avatarProfileImageView = v.findViewById(R.id.avatar_image_profile);
+        coverImageView = v.findViewById(R.id.cover_image_profile);
+
         RecyclerView recyclerview = v.findViewById(R.id.recyclerviewprofile);
-        avatarImageView = v.findViewById(R.id.cover_image_profile);
+
+        // Lấy URL ảnh avatar và ảnh cover từ SharedPreferences
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
+        String avatarUrl = sharedPreferences.getString("avatarUrl", null);
+        String coverUrl = sharedPreferences.getString("coverUrl", null);
+        long avatarUpdateTime = sharedPreferences.getLong("avatarUpdateTime", -1);
+        long coverUpdateTime = sharedPreferences.getLong("coverUpdateTime", -1);
+
+        String avatarTimeAgo = "";
+        String coverTimeAgo = "";
+
+        if (avatarUpdateTime != -1) {
+            avatarTimeAgo = DateUtils.getRelativeTimeSpanString(avatarUpdateTime, System.currentTimeMillis(), DateUtils.MINUTE_IN_MILLIS).toString();
+        }
+
+        if (coverUpdateTime != -1) {
+            coverTimeAgo = DateUtils.getRelativeTimeSpanString(coverUpdateTime, System.currentTimeMillis(), DateUtils.MINUTE_IN_MILLIS).toString();
+        }
 
         List<ProfileItem> items = new ArrayList<>();
-        items.add(new ProfileItem("JustXoai updated his profile picture", "12h", "", R.drawable.avatar_profile, R.drawable.avatar_profile));
-        items.add(new ProfileItem("JustXoai updated his cover picture", "16h", "", R.drawable.avatar_profile, R.drawable.background_profile));
-        items.add(new ProfileItem("JustXoai", "2d", "1 chut dang yeu", R.drawable.avatar_profile, R.drawable.a1_1));
-        items.add(new ProfileItem("JustXoai", "5h", "Not a bug", R.drawable.avatar_profile, R.drawable.meme));
+        items.add(new ProfileItem("JustXoai", avatarTimeAgo, "", avatarUrl, avatarUrl));
+        items.add(new ProfileItem("JustXoai", coverTimeAgo, "", avatarUrl, coverUrl));
+        items.add(new ProfileItem("JustXoai", "2 days ago", "1 chut dang yeu", avatarUrl, "https://cdn.nguyenkimmall.com/images/companies/_1/stt-yeu-doi-5.jpg"));
+        items.add(new ProfileItem("JustXoai", "5 days ago", "Not a bug", avatarUrl, "https://media.makeameme.org/created/its-not-a-2a30a4c44e.jpg"));
 
         recyclerview.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerview.setAdapter(new ProfileAdapter(requireContext(), items));
 
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE);
-        String imageUrl = sharedPreferences.getString("imageUrl", null);
-        if (imageUrl != null) {
-            new FetchImage(imageUrl).start();
+        // Tải hình ảnh từ URL đã lưu
+        if (avatarUrl != null) {
+            new FetchImage(avatarUrl, avatarProfileImageView).start();
+            new FetchImage(avatarUrl, avatarImageView).start();
+        }
+        if (coverUrl != null) {
+            new FetchImage(coverUrl, coverImageView).start();
         }
 
         setUpButton(v);
@@ -103,14 +129,22 @@ public class ProfileFragment extends Fragment {
             startActivity(i);
         });
 
+        ImageButton imageInfoButton = v.findViewById(R.id.seeInfoButton);
+        imageInfoButton.setOnClickListener(view -> {
+            Intent i = new Intent(requireContext(), InfoActivity.class);
+            startActivity(i);
+        });
+
     }
 
     class FetchImage extends Thread {
         private String url;
+        private ImageView imageView;
         private Bitmap bitmap;
 
-        public FetchImage(String url) {
+        public FetchImage(String url, ImageView imageView) {
             this.url = url;
+            this.imageView = imageView;
         }
 
         @Override
@@ -126,13 +160,15 @@ public class ProfileFragment extends Fragment {
                 e.printStackTrace();
             }
 
-            getActivity().runOnUiThread(() -> {
-                if (bitmap != null) {
-                    avatarImageView.setImageBitmap(bitmap);
-                } else {
-                    Toast.makeText(getActivity(), "Failed to load image", Toast.LENGTH_SHORT).show();
-                }
-            });
+            if (getActivity() != null) { // Ensure getActivity() is not null
+                getActivity().runOnUiThread(() -> {
+                    if (bitmap != null) {
+                        imageView.setImageBitmap(bitmap);
+                    } else {
+                        Toast.makeText(getActivity(), "Failed to load image", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
         }
     }
 }

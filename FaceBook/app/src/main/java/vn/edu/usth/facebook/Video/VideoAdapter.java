@@ -2,10 +2,14 @@ package vn.edu.usth.facebook.Video;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -37,9 +41,21 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoViewHolder> {
 
         holder.contentView.setText(items.get(position).getContent());
 
-        holder.avatarView.setImageResource(items.get(position).getAvatar());
+        if (link.getAvatarUrl() != null) {
+            Glide.with(context).load(link.getAvatarUrl()).into(holder.avatarView);
+        }
+        if (link.getUrl() != null) {
+            holder.url.setVisibility(View.VISIBLE);
+            WebSettings webSettings = holder.url.getSettings();
+            webSettings.setJavaScriptEnabled(true);
+            holder.url.loadUrl(link.getUrl());
+        } else {
+            holder.url.setVisibility(View.GONE);  // Hide WebView if no video URL
+        }
 
-        holder.bind(link);
+//        holder.avatarView.setImageResource(items.get(position).getAvatar());
+//
+//        holder.bind(link);
 
     }
 

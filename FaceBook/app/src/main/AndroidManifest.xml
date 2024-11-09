@@ -4,8 +4,13 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
 
     <application
+        android:networkSecurityConfig="@xml/network_security_config"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FaceBook"
         tools:targetApi="31">
+        <activity
+            android:name=".More.InfoActivity"
+            android:exported="false" />
         <activity
             android:name=".Group.About_Group_Activity"
             android:exported="false" />
@@ -28,7 +36,7 @@
             android:name=".More.Create_Post_Page_Activity"
             android:exported="false" />
         <activity
-            android:name=".Page.CreatePage_Activity"
+            android:name=".Page.CreatePageActivity"
             android:exported="false" />
         <activity
             android:name=".More.Create_Video_Activity"
@@ -46,7 +54,7 @@
             android:name=".Group.CreateGroup_Activity"
             android:exported="false" />
         <activity
-            android:name=".Page.List_Page_Activity"
+            android:name=".Page.ListPageActivity"
             android:exported="false" />
         <activity
             android:name=".Page.Page_Profile_Activity"

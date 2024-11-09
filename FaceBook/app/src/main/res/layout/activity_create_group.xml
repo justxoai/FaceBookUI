@@ -61,6 +61,7 @@
         android:paddingTop="2.5dp">
 
         <EditText
+            android:id="@+id/group_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Name your group"
@@ -100,6 +101,7 @@
             android:paddingTop="2.5dp">
 
             <EditText
+                android:id="@+id/groupDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Write something"
@@ -135,6 +137,7 @@
             android:paddingTop="2.5dp">
 
             <EditText
+                android:id="@+id/groupBackgroundImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="URL"

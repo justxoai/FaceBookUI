@@ -1,5 +1,6 @@
 package vn.edu.usth.facebook.Login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,68 +11,120 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import vn.edu.usth.facebook.R;
+import vn.edu.usth.facebook.model.request.SignInRequest;
+import vn.edu.usth.facebook.model.response.JwtAuthenticationResponse;
+import vn.edu.usth.facebook.retrofit.AuthenticationApi;
+import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class LoginFragment extends Fragment {
-
-    private EditText editTextEmail, editTextPassword;
-    private Button buttonLogin;
+    private AuthenticationApi authenticationApi;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_login, container, false);
 
-        editTextEmail = view.findViewById(R.id.editText);
-        editTextPassword = view.findViewById(R.id.editText2);
-        buttonLogin = view.findViewById(R.id.button);
+        initializeComponents(view);
 
-        buttonLogin.setOnClickListener(v -> {
-            String email = editTextEmail.getText().toString();
-            String password = editTextPassword.getText().toString();
-
-            if (validateLogin(email, password)) {
-
-                SharedPreferences sharedPreferences = getActivity().getSharedPreferences("TOLogin", getContext().MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putBoolean("isLoggedIn", true);
-                editor.apply();
-
-                Intent intent = new Intent(getActivity(), vn.edu.usth.facebook.FaceBookActivity.class);
-                startActivity(intent);
-                getActivity().finish();
-            } else {
-
-                Toast.makeText(getActivity(), "Enter email or phone number to log in", Toast.LENGTH_SHORT).show();
-            }
+        LinearLayout createAccount = view.findViewById(R.id.create_account);
+        createAccount.setOnClickListener(v -> {
+            Intent i = new Intent(requireContext(), Register_Activity.class);
+            startActivity(i);
         });
 
-        LinearLayout create_account = view.findViewById(R.id.create_account);
-        create_account.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(requireContext(), Register_Activity.class );
-                startActivity(i);
-            }
-        });
-
-        LinearLayout forgot_password = view.findViewById(R.id.forgot_password);
-        forgot_password.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(requireContext(), ForgotPassword_Activity.class );
-                startActivity(i);
-            }
+        LinearLayout forgotPassword = view.findViewById(R.id.forgot_password);
+        forgotPassword.setOnClickListener(v -> {
+            Intent i = new Intent(requireContext(), ForgotPassword_Activity.class);
+            startActivity(i);
         });
 
         return view;
     }
 
-    private boolean validateLogin(String email, String password) {
-        return !email.isEmpty() && !password.isEmpty();
+    private void initializeComponents(View view) {
+        TextInputEditText inputEditTextEmail = view.findViewById(R.id.emailLogin);
+        TextInputEditText inputEditTextPassword = view.findViewById(R.id.passwordLogin);
+
+        Button buttonLogin = view.findViewById(R.id.buttonLogin);
+
+        RetrofitService retrofitService = new RetrofitService(requireContext());
+        authenticationApi = retrofitService.getRetrofit().create(AuthenticationApi.class);
+
+        buttonLogin.setOnClickListener(v -> {
+            String email = String.valueOf(inputEditTextEmail.getText());
+            String password = String.valueOf(inputEditTextPassword.getText());
+
+            // Validate email format
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(getContext(), "Invalid email format", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Validate password length
+            if (password.length() < 6) {
+                Toast.makeText(getContext(), "Password must be at least 6 characters long", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Create the SignInRequest object
+            SignInRequest signInRequest = new SignInRequest();
+            signInRequest.setEmail(email);
+            signInRequest.setPassword(password);
+
+            // Send the request to the server
+            authenticationApi.signIn(signInRequest).enqueue(new Callback<JwtAuthenticationResponse>() {
+                @Override
+                public void onResponse(Call<JwtAuthenticationResponse> call, Response<JwtAuthenticationResponse> response) {
+                    if (response.isSuccessful()) {
+                        Toast.makeText(getContext(), "Login successful!", Toast.LENGTH_SHORT).show();
+
+                        String token = response.body().getToken();
+
+                        // Assuming this is where you receive the token after successful login
+                        SharedPreferences sharedTokenPreferences = requireActivity().getSharedPreferences("AuthPrefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editorToken = sharedTokenPreferences.edit();
+                        editorToken.putString("auth_token", token);
+                        editorToken.apply();
+
+
+                        // Lưu trạng thái đăng nhập và thời gian hết hạn trong SharedPreferences
+                        SharedPreferences sharedPreferences = requireActivity().getSharedPreferences("TOLogin", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean("isLoggedIn", true);
+
+                        // Tính thời gian hết hạn từ thời điểm hiện tại
+                        long expirationTime = System.currentTimeMillis() + 1440000; // 1440000ms = 24 phút
+                        editor.putLong("expirationTime", expirationTime);
+                        editor.apply();
+
+                        // Điều hướng đến FacebookActivity
+                        Intent intent = new Intent(getActivity(), vn.edu.usth.facebook.FaceBookActivity.class);
+                        startActivity(intent);
+                        requireActivity().finish();
+                    } else {
+                        Toast.makeText(getContext(), "Login failed! Incorrect email or password.", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+
+                @Override
+                public void onFailure(Call<JwtAuthenticationResponse> call, Throwable t) {
+                    Toast.makeText(getContext(), "Login failed: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                    Logger.getLogger(LoginFragment.class.getName()).log(Level.SEVERE, "Error occurred", t);
+                }
+            });
+        });
     }
 }
