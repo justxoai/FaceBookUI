@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/dark_grey"
-    tools:context=".Page.List_Page_Activity">
+    tools:context=".Page.ListPageActivity">
 
     <!--- Header -->
     <LinearLayout
