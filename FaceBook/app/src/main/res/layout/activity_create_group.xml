@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:background="@color/white"
+    android:id="@+id/list_group">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:text="Create Group"
+            android:textColor="@color/black"
+            android:paddingRight="55dp"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="2.5dp">
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="35dp"
+            android:text="Group name"
+            android:textSize="22.5sp"
+            android:textStyle="bold"
+            android:paddingLeft="13dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="2.5dp">
+
+        <EditText
+            android:id="@+id/group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name your group"
+            android:background="@drawable/edit_group_box"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:padding="12dp"
+            android:layout_margin="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:text="Description"
+                android:textSize="22.5sp"
+                android:textStyle="bold"
+                android:paddingLeft="13dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp">
+
+            <EditText
+                android:id="@+id/groupDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Write something"
+                android:background="@drawable/edit_group_box"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:padding="12dp"
+                android:layout_margin="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="35dp"
+                android:text="Background Image"
+                android:textSize="22.5sp"
+                android:textStyle="bold"
+                android:paddingLeft="13dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingTop="2.5dp">
+
+            <EditText
+                android:id="@+id/groupBackgroundImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="URL"
+                android:background="@drawable/edit_group_box"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:padding="12dp"
+                android:layout_margin="15dp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/creategroup_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:backgroundTint="@color/blue"
+                android:padding="10dp"
+                android:text="Create group"
+                android:textColor="@color/colorAccentDark"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.928" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

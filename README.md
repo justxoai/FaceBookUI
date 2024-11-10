@@ -1,1 +1,1 @@
-"FaceBook Client UI" 
+"FaceBook Client" 
