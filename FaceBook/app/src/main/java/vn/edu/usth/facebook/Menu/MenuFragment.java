@@ -27,8 +27,8 @@ import vn.edu.usth.facebook.Page.ListPageActivity;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.Search.SearchActivity;
 import vn.edu.usth.facebook.User.ListAddFriendActivity;
-import vn.edu.usth.facebook.retrofit.api.AuthenticationApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
+import vn.edu.usth.facebook.retrofit.api.AuthenticationApi;
 
 public class MenuFragment extends Fragment {
 

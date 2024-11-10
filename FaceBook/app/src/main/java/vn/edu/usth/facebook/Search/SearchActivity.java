@@ -20,7 +20,7 @@ import retrofit2.Response;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.response.user.SearchUserResponse;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
-import vn.edu.usth.facebook.retrofit.api.SearchUserApi;
+import vn.edu.usth.facebook.retrofit.SearchUserApi;
 
 public class SearchActivity extends AppCompatActivity {
 

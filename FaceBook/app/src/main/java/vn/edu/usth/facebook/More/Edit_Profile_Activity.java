@@ -38,7 +38,7 @@ import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.request.user.UserAboutRequest;
 import vn.edu.usth.facebook.model.response.user.UserAboutResponse;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
-import vn.edu.usth.facebook.retrofit.api.UserAboutApi;
+import vn.edu.usth.facebook.retrofit.UserAboutApi;
 
 public class Edit_Profile_Activity extends AppCompatActivity {
 

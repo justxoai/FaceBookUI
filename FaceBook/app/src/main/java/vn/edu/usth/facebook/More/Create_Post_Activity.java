@@ -35,7 +35,7 @@ import vn.edu.usth.facebook.FaceBookActivity;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.request.user.PostRequest;
 import vn.edu.usth.facebook.model.response.user.PostResponse;
-import vn.edu.usth.facebook.retrofit.api.PostApi;
+import vn.edu.usth.facebook.retrofit.PostApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class Create_Post_Activity extends AppCompatActivity {
@@ -242,4 +242,3 @@ public class Create_Post_Activity extends AppCompatActivity {
         }
     }
 }
-

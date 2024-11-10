@@ -27,9 +27,9 @@ public class FaceBookActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("TOLogin", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
         long expirationTime = sharedPreferences.getLong("expirationTime", 0);
-        // Kiểm tra trạng thái đăng nhập và thời gian hết hạn
+
         if (!isLoggedIn || System.currentTimeMillis() > expirationTime) {
-            // Xóa SharedPreferences và điều hướng đến LoginFragment
+
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.remove("auth_token");  // Only remove the auth token
             editor.remove("isLoggedIn");
@@ -39,7 +39,6 @@ public class FaceBookActivity extends AppCompatActivity {
             return;
         }
 
-        // Tiếp tục thiết lập giao diện nếu người dùng vẫn còn đăng nhập hợp lệ
         setContentView(R.layout.activity_face_book);
         mviewPager = findViewById(R.id.view_pager);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -85,23 +84,23 @@ public class FaceBookActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.home_page) {
-                    mviewPager.setCurrentItem(0, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(0, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.video_page) {
-                    mviewPager.setCurrentItem(1, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(1, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.profile_page) {
-                    mviewPager.setCurrentItem(2, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(2, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.notification_page) {
-                    mviewPager.setCurrentItem(3, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(3, true);
                     return true;
                 }
                 if (item.getItemId() == R.id.menu_page) {
-                    mviewPager.setCurrentItem(4, true); // Switch to the first fragment
+                    mviewPager.setCurrentItem(4, true);
                     return true;
                 }
 

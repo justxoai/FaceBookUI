@@ -22,7 +22,7 @@ import retrofit2.Response;
 import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.Search.SearchActivity;
 import vn.edu.usth.facebook.model.response.user.NotificationResponse;
-import vn.edu.usth.facebook.retrofit.api.NotificationApi;
+import vn.edu.usth.facebook.retrofit.NotificationApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class NotificationFragment extends Fragment {

@@ -1,7 +1,6 @@
 package vn.edu.usth.facebook.Login;
 
 import android.annotation.SuppressLint;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -27,7 +26,7 @@ import vn.edu.usth.facebook.R;
 import vn.edu.usth.facebook.model.request.SignUpRequest;
 
 import vn.edu.usth.facebook.model.response.JwtAuthenticationResponse;
-import vn.edu.usth.facebook.retrofit.api.AuthenticationApi;
+import vn.edu.usth.facebook.retrofit.AuthenticationApi;
 import vn.edu.usth.facebook.retrofit.RetrofitService;
 
 public class Register_Activity extends AppCompatActivity {
@@ -134,18 +133,12 @@ public class Register_Activity extends AppCompatActivity {
             signUpRequest.setGender(gender);
             signUpRequest.setType(userType);
 
-            SharedPreferences sharedPreferences = getSharedPreferences("ProfilePrefs", MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("firstName", firstName);
-            editor.putString("lastName", lastName);
-            editor.apply();
             // Send the request to the server
             authenticationApi.signUp(signUpRequest)
                     .enqueue(new Callback<JwtAuthenticationResponse>() {
                         @Override
                         public void onResponse(Call<JwtAuthenticationResponse> call, Response<JwtAuthenticationResponse> response) {
                             Toast.makeText(Register_Activity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
-
                         }
 
                         @Override
